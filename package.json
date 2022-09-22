@@ -1,7 +1,15 @@
 {
   "name": "portfolio",
+  "author": "monciego",
+  "description": "my portfolio",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "yarn": ">=1.22.0",
+    "npm": "please-use-yarn"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
