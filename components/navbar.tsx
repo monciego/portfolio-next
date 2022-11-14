@@ -1,15 +1,8 @@
 import Link from 'next/link';
 import Logo from 'public/images/logo.svg';
 import React, { useState } from 'react';
-import {
-  AnimatedBurgerButton,
-  AnimatedBurgerDiv,
-  AnimatedBurgerFirstSpan,
-  AnimatedBurgerSecondSpan,
-  AnimatedBurgerThirdSpan,
-  StyledAnimatedBurger,
-  StyledNavbar,
-} from '../styles/Navbar.styled';
+import { StyledNavbar } from '../styles/Navbar.styled';
+import { AnimatedBurger } from './animated-burger';
 
 export interface INavbarProps {}
 
@@ -23,17 +16,7 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
           <Logo style={{ cursor: 'pointer' }} />
         </a>
       </Link>
-      <StyledAnimatedBurger>
-        <nav>
-          <AnimatedBurgerButton onClick={() => setOpen(!open)}>
-            <AnimatedBurgerDiv>
-              <AnimatedBurgerFirstSpan isOpen={open} />
-              <AnimatedBurgerSecondSpan isOpen={open} />
-              <AnimatedBurgerThirdSpan isOpen={open} />
-            </AnimatedBurgerDiv>
-          </AnimatedBurgerButton>
-        </nav>
-      </StyledAnimatedBurger>
+      <AnimatedBurger isOpen={open} setOpen={setOpen} />
     </StyledNavbar>
   );
 };
