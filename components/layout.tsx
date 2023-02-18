@@ -26,6 +26,7 @@ const Layout: React.FunctionComponent<ILayoutProps> = ({ children }) => {
 const Main = styled.main`
   width: 90%;
   margin: 0 auto;
+  overflow-x: hidden;
 `;
 
 export default Layout;
