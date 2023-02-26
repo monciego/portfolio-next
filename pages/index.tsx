@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Hero } from '../components/hero';
 import Layout from '../components/layout';
+import { Terminal } from '../components/terminal';
 import { RadialGradient } from '../styles/Hero.styled';
 
 const Home: NextPage = () => {
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
       </Head>
       <RadialGradient />
       <Hero />
+      <Terminal />
     </Layout>
   );
 };
