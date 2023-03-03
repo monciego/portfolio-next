@@ -6,6 +6,7 @@ export const theme = {
     syncopate: "'Syncopate', sans-serif;",
     poppins: "'Poppins', sans-serif;",
     firaCode: "'Fira Code', monospace;",
+    playfairDisplay: "'Playfair Display', serif;",
   },
   colors: {
     white: '#ffffff',
