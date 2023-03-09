@@ -1,12 +1,17 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Hero } from '../components/hero';
 import Layout from '../components/layout';
 import Projects from '../components/projects';
 import { Terminal } from '../components/terminal';
+import Project from '../interfaces/project';
+import { getAllProjects } from '../lib/api';
 import { RadialGradient } from '../styles/Hero.styled';
 
-const Home: NextPage = () => {
+type Props = {
+  allProjects: Project[];
+};
+
+export default function Home({ allProjects }: Props) {
   return (
     <Layout>
       <Head>
@@ -17,9 +22,27 @@ const Home: NextPage = () => {
       <RadialGradient />
       <Hero />
       <Terminal />
-      <Projects />
+      <Projects allProjects={allProjects} />
     </Layout>
   );
-};
+}
 
-export default Home;
+export async function getStaticProps() {
+  const allProjects = getAllProjects([
+    'slug',
+    'title',
+    'githubCode',
+    'livePreview',
+    'date',
+    'coverImage',
+    'transitionImage',
+    'subTitle',
+  ]);
+
+  console.log(allProjects);
+  return {
+    props: {
+      allProjects,
+    },
+  };
+}

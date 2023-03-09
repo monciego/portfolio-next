@@ -1,6 +1,5 @@
 import React from 'react';
-
-import { projects } from '../constants';
+import Project from '../interfaces/project';
 import {
   ProjectContainer,
   ProjectListContainer,
@@ -8,9 +7,12 @@ import {
 import ProjectList from './project-list';
 import { SectionHeading } from './section-heading';
 
-export interface IProjectsProps {}
+export interface IProjectsProps {
+  allProjects: Project[];
+}
 
-const Projects: React.FunctionComponent<IProjectsProps> = (props) => {
+const Projects: React.FunctionComponent<IProjectsProps> = ({ allProjects }) => {
+  console.log(allProjects);
   return (
     <ProjectContainer id="projects">
       <SectionHeading
@@ -23,35 +25,16 @@ const Projects: React.FunctionComponent<IProjectsProps> = (props) => {
       />
 
       <ProjectListContainer>
-        {projects.slice(0, 2).map((project) => {
-          return (
-            <ProjectList
-              key={project.slug}
-              subTitle={project.subTitle}
-              title={project.title}
-              githubCode={project.githubCode}
-              livePreview={project.livePreview}
-              coverImage={project.coverImage}
-              transitionImage={project.transitionImage}
-              slug={project.slug}
-            />
-          );
+        {allProjects.slice(0, 2).map((project) => {
+          return <ProjectList key={project.slug} {...project} />;
         })}
       </ProjectListContainer>
-      <ProjectListContainer templateColumns="repeat(3, minmax(0, 1fr))">
-        {projects.slice(2).map((project) => {
-          return (
-            <ProjectList
-              key={project.id}
-              subTitle={project.subTitle}
-              title={project.title}
-              githubCode={project.githubCode}
-              livePreview={project.livePreview}
-              coverImage={project.coverImage}
-              transitionImage={project.transitionImage}
-              slug={project.slug}
-            />
-          );
+      <ProjectListContainer
+        style={{ marginTop: '1rem' }}
+        templateColumns="repeat(3, minmax(0, 1fr))"
+      >
+        {allProjects.slice(2).map((project) => {
+          return <ProjectList key={project.slug} {...project} />;
         })}
       </ProjectListContainer>
     </ProjectContainer>

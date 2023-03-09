@@ -19,11 +19,11 @@ import {
 export interface IProjectListProps {
   subTitle: string;
   title: string;
-  slug: string;
   githubCode: string;
   livePreview: string;
   coverImage: string | StaticImageData;
   transitionImage: string | StaticImageData;
+  slug: string;
 }
 
 const ProjectList: React.FunctionComponent<IProjectListProps> = ({
@@ -37,7 +37,7 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
 }) => {
   return (
     <ProjectStyledContainer>
-      <Link href={`project/${slug}`}>
+      <Link href={`/project/${slug}`}>
         <a>
           <ProjectImageContainer>
             <StyledProjectImage
@@ -61,7 +61,7 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
       </Link>
       <CategoryLabel>{subTitle}</CategoryLabel>
       <ProjectTitleContainer>
-        <Link href={`project/${slug}`}>
+        <Link href={`/project/${slug}`}>
           <a>
             <ProjectTitle>{title}</ProjectTitle>
           </a>

@@ -1,0 +1,19 @@
+---
+title: 'A Meditation and Relaxation App that Designed to Take you Some Moment to Relax and Breathe.'
+subTitle: 'a meditation app'
+githubCode: 'https://github.com/monciego/meditation-app'
+livePreview: 'https://umatter.netlify.app/'
+date: 'March 5, 2021'
+coverImage: '/images/projects/project-1-laptop.jpg'
+transitionImage: '/images/projects/project-1-mobile.jpg'
+---
+
+In today's complicated and chaotic world, our time is constantly taken by a variety of things. We fail to make time for ourselves to connect with our life experiences and existence. We have come to a point where we've normalized major issues like ADHD, depression, and anxiety. And most of us suffer from it, still, in silence.
+
+An idea comes to me to be build an app that can help people from this issues. **[U Matter](https://umatter.netlify.app/)** helps you to relax your body and mind with meditation music, nature scenery with sounds, an AI voice asistant to talk to and breathing exercises to help you cope with your stress and anxiety. U Matter can help you to let go of the busy mind, and relax your body.
+
+> “Meditation is not about stopping thoughts, but recognizing that we are more than our thoughts and our feelings.”
+
+When I was still learning vanilla javascript, I built this app to practice the fundamentals of JavaScript. From manipulating the Document Object Model (DOM) to using the video and audio APIs, EventListener, and more. I learnt a lot by completing this project.
+
+I am planning to update this web app with more feature and with the right technology, it is ready to scale.
