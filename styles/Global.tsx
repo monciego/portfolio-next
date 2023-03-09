@@ -42,6 +42,12 @@ export const GlobalStyles = createGlobalStyle<MyProps>`
         padding: 6.32875rem  0 2.6125rem 0;
     }
 
+    section {
+        width: 90%;
+        margin: 0 auto;
+        overflow-x: hidden;
+    }
+
     
     @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
         padding: 6.32875rem 0 7.6125rem 0;

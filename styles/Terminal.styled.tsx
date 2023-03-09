@@ -12,7 +12,8 @@ export const StyledTerminal = styled.div`
   );
   border-radius: 5px;
   font-family: ${({ theme }) => theme.fonts.firaCode};
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   height: 25rem;
   overflow-y: auto;
 

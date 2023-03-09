@@ -5,7 +5,9 @@ interface ImageProps {
   readonly down?: boolean;
 }
 
-export const AboutContainer = styled.section``;
+export const AboutContainer = styled.section`
+  margin-bottom: 5rem;
+`;
 
 export const AboutImageContainer = styled.div`
   display: grid;

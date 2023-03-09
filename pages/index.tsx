@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { About } from '../components/about';
 import { Hero } from '../components/hero';
 import Layout from '../components/layout';
+import { Mantra } from '../components/mantra';
 import Projects from '../components/projects';
 import { Terminal } from '../components/terminal';
 import Project from '../interfaces/project';
@@ -25,6 +26,7 @@ export default function Home({ allProjects }: Props) {
       <Terminal />
       <Projects allProjects={allProjects} />
       <About />
+      <Mantra />
     </Layout>
   );
 }
