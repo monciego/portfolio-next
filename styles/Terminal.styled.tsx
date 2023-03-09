@@ -13,7 +13,7 @@ export const StyledTerminal = styled.div`
   border-radius: 5px;
   font-family: ${({ theme }) => theme.fonts.firaCode};
   width: 100%;
-  height: 33rem;
+  height: 25rem;
   overflow-y: auto;
 
   &&::-webkit-scrollbar {
@@ -37,6 +37,10 @@ export const StyledTerminal = styled.div`
   &&::-webkit-scrollbar-thumb {
     background: #3a194d;
     border-radius: 5px;
+  }
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    height: 33rem;
   }
 `;
 
