@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { About } from '../components/about';
 import { Hero } from '../components/hero';
 import Layout from '../components/layout';
 import Projects from '../components/projects';
@@ -23,6 +24,7 @@ export default function Home({ allProjects }: Props) {
       <Hero />
       <Terminal />
       <Projects allProjects={allProjects} />
+      <About />
     </Layout>
   );
 }
