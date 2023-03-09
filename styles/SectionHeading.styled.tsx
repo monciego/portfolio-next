@@ -21,7 +21,7 @@ export const SectionTitle = styled.h2<sectionHeadingProps>`
   margin-bottom: 1.5rem;
   position: relative;
   font-weight: 800;
-  text-transform: capitalize;
+  text-transform: uppercase;
   z-index: 1;
   color: #f2f2f2;
   display: inline-block;
