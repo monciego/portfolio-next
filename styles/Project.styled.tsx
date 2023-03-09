@@ -65,7 +65,11 @@ export const ProjectImageContainer = styled.div`
   background-color: #1f2937;
   transition-property: all;
   border-radius: 0.375rem;
-  height: 350px;
+  height: 250px;
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    height: 350px;
+  }
 `;
 
 export const StyledProjectImage = styled(Image)`

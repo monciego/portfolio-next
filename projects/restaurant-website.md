@@ -3,7 +3,7 @@ title: 'Experience unique and tasty dish serve from underground. An oasis of ple
 githubCode: 'https://github.com/monciego/lediable-restaurant'
 subTitle: 'restaurant website'
 livePreview: 'https://lediable.netlify.app/'
-date: 'March 6, 2021'
+date: '2023-07-16T05:35:07.322Z'
 coverImage: '/images/projects/project-2-laptop.jpg'
 transitionImage: '/images/projects/project-2-mobile.jpg'
 ---

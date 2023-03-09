@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import Layout from '../../components/layout';
 import ProjectBody from '../../components/project-body';
 import ProjectType from '../../interfaces/project';
@@ -17,9 +16,6 @@ export interface IProjectProps {
 }
 
 const Project: React.FunctionComponent<IProjectProps> = ({ project }) => {
-  const router = useRouter();
-  const { slug } = router.query;
-
   return (
     <Layout>
       <Head>

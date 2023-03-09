@@ -3,7 +3,7 @@ title: 'Make Your Home Exquisite. Elegance your way.'
 subTitle: 'interior design company'
 githubCode: 'https://github.com/monciego/elegancev1'
 livePreview: 'https://eleganceee.netlify.app/'
-date: 'March 7, 2021'
+date: '2023-09-16T05:35:07.322Z'
 coverImage: '/images/projects/project-3-laptop.jpg'
 transitionImage: '/images/projects/project-3-mobile.jpg'
 ---

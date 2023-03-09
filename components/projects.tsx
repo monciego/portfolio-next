@@ -12,7 +12,6 @@ export interface IProjectsProps {
 }
 
 const Projects: React.FunctionComponent<IProjectsProps> = ({ allProjects }) => {
-  console.log(allProjects);
   return (
     <ProjectContainer id="projects">
       <SectionHeading
@@ -26,7 +25,9 @@ const Projects: React.FunctionComponent<IProjectsProps> = ({ allProjects }) => {
 
       <ProjectListContainer>
         {allProjects.slice(0, 2).map((project) => {
-          return <ProjectList key={project.slug} {...project} />;
+          return (
+            <ProjectList key={project.slug} {...project} preloadImage={true} />
+          );
         })}
       </ProjectListContainer>
       <ProjectListContainer
@@ -34,7 +35,9 @@ const Projects: React.FunctionComponent<IProjectsProps> = ({ allProjects }) => {
         templateColumns="repeat(3, minmax(0, 1fr))"
       >
         {allProjects.slice(2).map((project) => {
-          return <ProjectList key={project.slug} {...project} />;
+          return (
+            <ProjectList key={project.slug} {...project} preloadImage={true} />
+          );
         })}
       </ProjectListContainer>
     </ProjectContainer>

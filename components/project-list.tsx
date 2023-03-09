@@ -24,6 +24,7 @@ export interface IProjectListProps {
   coverImage: string | StaticImageData;
   transitionImage: string | StaticImageData;
   slug: string;
+  preloadImage: boolean;
 }
 
 const ProjectList: React.FunctionComponent<IProjectListProps> = ({
@@ -34,6 +35,7 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
   coverImage,
   transitionImage,
   slug,
+  preloadImage,
 }) => {
   return (
     <ProjectStyledContainer>
@@ -46,7 +48,7 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
               sizes="80vw"
               layout="fill"
               objectFit="cover"
-              priority={true}
+              priority={preloadImage ? true : false}
             />
             <ProjectTransitionImage
               src={transitionImage}
@@ -54,7 +56,7 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
               sizes="80vw"
               layout="fill"
               objectFit="cover"
-              priority={true}
+              priority={preloadImage ? true : false}
             />
           </ProjectImageContainer>
         </a>

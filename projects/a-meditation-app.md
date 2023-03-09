@@ -3,7 +3,7 @@ title: 'A Meditation and Relaxation App that Designed to Take you Some Moment to
 subTitle: 'a meditation app'
 githubCode: 'https://github.com/monciego/meditation-app'
 livePreview: 'https://umatter.netlify.app/'
-date: 'March 5, 2021'
+date: '2023-06-16T05:35:07.322Z'
 coverImage: '/images/projects/project-1-laptop.jpg'
 transitionImage: '/images/projects/project-1-mobile.jpg'
 ---

@@ -29,8 +29,12 @@ export const ProjectDetailImage = styled(Image)`
 `;
 
 export const ContentContainer = styled.div`
-  width: 80%;
+  width: 90%;
   margin: 1rem auto;
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    width: 80%;
+  }
 `;
 
 export const LinkContainer = styled.div`
@@ -39,4 +43,5 @@ export const LinkContainer = styled.div`
   align-items: center;
   justify-content: center;
   color: #3b82f6;
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
 `;

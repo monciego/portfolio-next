@@ -39,7 +39,6 @@ export async function getStaticProps() {
     'subTitle',
   ]);
 
-  console.log(allProjects);
   return {
     props: {
       allProjects,
