@@ -15,7 +15,7 @@ export const SectionStyledHeading = styled.div`
 `;
 
 export const SectionTitle = styled.h2<sectionHeadingProps>`
-  --min: 2.25em;
+  --min: 2em;
   --val: 4.5vw;
   --max: 7em;
   margin-bottom: 1.5rem;

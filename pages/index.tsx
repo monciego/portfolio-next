@@ -5,6 +5,7 @@ import Layout from '../components/layout';
 import { Mantra } from '../components/mantra';
 import Projects from '../components/projects';
 import { Terminal } from '../components/terminal';
+import { Testimonials } from '../components/testimonials';
 import Project from '../interfaces/project';
 import { getAllProjects } from '../lib/api';
 import { RadialGradient } from '../styles/Hero.styled';
@@ -27,6 +28,7 @@ export default function Home({ allProjects }: Props) {
       <Projects allProjects={allProjects} />
       <About />
       <Mantra />
+      <Testimonials />
     </Layout>
   );
 }
