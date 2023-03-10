@@ -29,7 +29,7 @@ export const Hero: React.FunctionComponent<IHeroProps> = (props) => {
         <span className="responsive">v</span>
         <span className="responsive">e</span> websites.
       </HeroSubTitle>
-      <Button>Explore Projects</Button>
+      <Button href="#projects">Explore Projects</Button>
     </HeroContainer>
   );
 };
