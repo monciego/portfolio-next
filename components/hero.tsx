@@ -9,7 +9,7 @@ import { Button } from './button';
 
 export interface IHeroProps {}
 
-export const Hero: React.FunctionComponent<IHeroProps> = (props) => {
+export const Hero: React.FunctionComponent<IHeroProps> = () => {
   return (
     <HeroContainer>
       <HeroName>Jericho Bantiquete</HeroName>

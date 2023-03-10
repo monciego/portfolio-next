@@ -24,7 +24,7 @@ const toTop = () => {
 
 export interface IFooterProps {}
 
-export const Footer: React.FunctionComponent<IFooterProps> = (props) => {
+export const Footer: React.FunctionComponent<IFooterProps> = () => {
   const year = new Date().getFullYear();
   return (
     <FooterStyled>
