@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../styles/Global';
 import { theme } from '../styles/theme';
+import { Footer } from './footer';
 import Navbar from './navbar';
 
 export interface ILayoutProps {
@@ -18,6 +19,7 @@ const Layout: React.FunctionComponent<ILayoutProps> = ({ children }) => {
         <GlobalStyles />
         <Navbar />
         <main>{children}</main>
+        <Footer />
       </ThemeProvider>
     </>
   );

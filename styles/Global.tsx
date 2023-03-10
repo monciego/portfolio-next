@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle<MyProps>`
 
     html {
         overflow-x: hidden;
+        scroll-behavior: smooth;
     }
 
     body {
@@ -46,6 +47,10 @@ export const GlobalStyles = createGlobalStyle<MyProps>`
         width: 90%;
         margin: 0 auto;
         overflow-x: hidden;
+    }
+
+    footer {
+        padding: 4.32875rem 5% 7.6125rem 5%;
     }
 
     

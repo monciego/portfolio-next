@@ -13,7 +13,7 @@ export const Testimonials: React.FunctionComponent<ITestimonialsProps> = (
   props
 ) => {
   return (
-    <TestimonialsContainer>
+    <TestimonialsContainer id="testimonials">
       <SectionHeading
         titleNumber="03"
         sectionTitle="testimonials"
