@@ -119,7 +119,24 @@ export const Terminal: React.FunctionComponent<ITerminalProps> = () => {
               newOutput = `${commandOutput} <h2><span>> </span>${commandInput}<h2> `;
               switch (commandInput.toLowerCase().trim()) {
                 case 'projects':
-                  newOutput += `<h3>List of projects</h3>`;
+                  newOutput += `<h4>
+                      <a target="__blank" href="https://umatter.netlify.app/">• a meditation app</a>
+                  </h4>`;
+                  newOutput += `<h4>
+                      <a target="__blank" href="https://lediable.netlify.app/">• restaurant website</a>
+                  </h4>`;
+                  newOutput += `<h4>
+                      <a target="__blank" href="https://intrepide.netlify.app/">• gym fitness website</a>
+                  </h4>`;
+                  newOutput += `<h4>
+                      <a target="__blank" href="https://eleganceee.netlify.app/">• interior design company</a>
+                  </h4>`;
+                  newOutput += `<h4>
+                      <a target="__blank" href="https://codeegrid.netlify.app/">• it company</a>
+                  </h4>`;
+                  newOutput += `<h4>
+                      <a target="__blank" href="https://github.com/monciego">• Want to see more?</a>
+                  </h4>`;
                   break;
                 case 'cd projects':
                   window.location.replace(`${currentURL}#projects`);
@@ -127,9 +144,20 @@ export const Terminal: React.FunctionComponent<ITerminalProps> = () => {
                   newOutput += `<h3>Redirected to project section</h3>`;
                   break;
                 case 'about':
-                  newOutput += `<h3>My name is Jericho P. Bantiquete, A bachelor's degree holder with web development experience and passion for responsive website design and a firm believer in the mobile-first approach.
-                   <br/> I am a passionate front-end developer based in Philippines. I love to design and create responsive websites or web apps from scratch.
-                    <br/>  The technologies, tools and languages I am using to build my personal projects are HTML5, CSS3, JavaScript, REACT JS, TailwindCSS, NEXT, Bootstrap, PHP Laravel, Git and GitHub, Figma and VS Code. And I am currently learning Astro JS, Python, NEXT13. I have eagerness to learn something new every day and I love to share my knowledge to my fellow students and developers. And I am looking forward to talk with you!</h3>`;
+                  newOutput += `<h3>My name is Jericho P. Bantiquete, A bachelorߴs degree holder with web
+                    development experience and passion for responsive website design and a
+                    firm believer in the mobile-first approach. I am a passionate
+                    front-end developer based in Philippines.
+                    <br/>I love to design and create responsive websites or web apps from
+                    scratch. The technologies, tools and languages I am using to build my
+                    personal projects are HTML5, CSS3, JavaScript, REACT JS, TailwindCSS,
+                    NEXT, Bootstrap, PHP Laravel, Git and GitHub, Figma and VS Code. And I
+                    am currently learning Data Structures & Algorithm, Astro JS, Python,
+                    NEXT13 (app directory) and GO.
+                    <br/>I have eagerness to learn something new every day and I love to share
+                    my knowledge to my fellow students and developers. And I am looking
+                    forward to talk with you!
+                    </h3>`;
                   break;
                 case 'cd about':
                   window.location.replace(`${currentURL}#about`);
