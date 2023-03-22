@@ -9,9 +9,7 @@ import { TestimonialCard } from './testimonial-card';
 
 export interface ITestimonialsProps {}
 
-export const Testimonials: React.FunctionComponent<ITestimonialsProps> = (
-  props
-) => {
+export const Testimonials: React.FunctionComponent<ITestimonialsProps> = () => {
   return (
     <TestimonialsContainer id="testimonials">
       <SectionHeading
