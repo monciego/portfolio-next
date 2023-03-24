@@ -26,7 +26,7 @@ const Projects: React.FunctionComponent<IProjectsProps> = ({ allProjects }) => {
       <ProjectListContainer>
         {allProjects.slice(0, 2).map((project) => {
           return (
-            <ProjectList key={project.slug} {...project} preloadImage={true} />
+            <ProjectList key={project.slug} {...project} preloadImage={false} />
           );
         })}
       </ProjectListContainer>
@@ -36,7 +36,7 @@ const Projects: React.FunctionComponent<IProjectsProps> = ({ allProjects }) => {
       >
         {allProjects.slice(2).map((project) => {
           return (
-            <ProjectList key={project.slug} {...project} preloadImage={true} />
+            <ProjectList key={project.slug} {...project} preloadImage={false} />
           );
         })}
       </ProjectListContainer>

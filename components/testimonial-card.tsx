@@ -32,7 +32,7 @@ export const TestimonialCard: React.FunctionComponent<
               alt={name}
               layout="fill"
               objectFit="cover"
-              priority={true}
+              priority={false}
             />
           </AvatarContainer>
           <TestimonialInformation>
