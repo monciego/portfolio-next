@@ -153,7 +153,7 @@ export const Terminal: React.FunctionComponent<ITerminalProps> = () => {
                     personal projects are HTML5, CSS3, JavaScript, REACT JS, TailwindCSS,
                     NEXT, Bootstrap, PHP Laravel, Git and GitHub, Figma and VS Code. And I
                     am currently learning Data Structures & Algorithm, Astro JS, Python,
-                    NEXT13 (app directory) and GO.
+                    NEXT13 (app directory), T3 Stack and GO.
                     <br/>I have eagerness to learn something new every day and I love to share
                     my knowledge to my fellow students and developers. And I am looking
                     forward to talk with you!
