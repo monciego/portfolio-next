@@ -5,8 +5,8 @@ export const TestimonialsContainer = styled.section``;
 
 export const TestimonialCardsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 0.9rem;
   grid-row-gap: 0.9rem;
 

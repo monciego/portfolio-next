@@ -1,38 +1,12 @@
-import avatarOne from '../public/images/about/about-image-1.jpg';
-import avatarTwo from '../public/images/about/about-image-2.jpg';
-import avatarThree from '../public/images/about/about-image-3.jpg';
+import avatarOne from '../public/images/testimonials/avatar-1.png';
 
 export const testimonials = [
   {
     id: 1,
     avatar: avatarOne,
-    name: 'Jericho P. Bantiquete',
-    position: 'Software Engineer',
+    name: 'Kurt Philip Danlog, MIT',
+    position: 'University Web Admin',
     content:
-      'Jericho is a Staff Engineer specialising in Frontend at Vercel, as well as being a co-founder of Acme and the content management system Sanity. Prior to this, he was a Senior Engineer at Apple.',
-  },
-  {
-    id: 2,
-    avatar: avatarTwo,
-    name: 'Clark Kent',
-    position: 'Software Engineer',
-    content:
-      'Jericho is a Staff Engineer specialising in Frontend at Vercel, as well as being a co-founder of Acme and the content management system Sanity. Prior to this, he was a Senior Engineer at Apple.',
-  },
-  {
-    id: 3,
-    avatar: avatarThree,
-    name: 'Bruce Wayne',
-    position: 'Software Engineer',
-    content:
-      'Jericho is a Staff Engineer specialising in Frontend at Vercel, as well as being a co-founder of Acme and the content management system Sanity. Prior to this, he was a Senior Engineer at Apple.',
-  },
-  {
-    id: 4,
-    avatar: avatarOne,
-    name: 'Barry Allen',
-    position: 'Software Engineer',
-    content:
-      'Jericho is a Staff Engineer specialising in Frontend at Vercel, as well as being a co-founder of Acme and the content management system Sanity. Prior to this, he was a Senior Engineer at Apple.',
+      'Jericho is a highly motivated and dedicated developer who has shown an outstanding level of commitment to every project he works on. His attention to detail and thoroughness in the development process ensures that every aspect of a project is well thought out and executed to perfection. I have had the pleasure of working with Jericho on several occasions, and I can confidently say that he is a valuable asset to any development team. His in-depth knowledge of PHP, Laravel, and JavaScript has allowed him to consistently produce high-quality code that is both efficient and effective. What sets Jericho apart from other developers is his ability to think outside the box and come up with innovative solutions to complex problems. His creativity and passion for coding are evident in his work, and he is always willing to go the extra mile to ensure that his projects are completed to the highest standard. Overall, I highly recommend Jericho as a junior developer for anyone looking for a reliable, skilled, and hardworking individual to join their development team. He is an excellent communicator, a team player, and a true professional in every sense of the word.',
   },
 ];
