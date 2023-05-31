@@ -1,7 +1,8 @@
 import Head from 'next/head';
-import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../styles/Global';
 import { theme } from '../styles/theme';
+import { Footer } from './footer';
 import Navbar from './navbar';
 
 export interface ILayoutProps {
@@ -17,16 +18,11 @@ const Layout: React.FunctionComponent<ILayoutProps> = ({ children }) => {
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Navbar />
-        <Main>{children}</Main>
+        <main>{children}</main>
+        <Footer />
       </ThemeProvider>
     </>
   );
 };
-
-const Main = styled.main`
-  width: 90%;
-  margin: 0 auto;
-  overflow-x: hidden;
-`;
 
 export default Layout;

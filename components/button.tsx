@@ -3,13 +3,16 @@ import styled from 'styled-components';
 
 export interface IButtonProps {
   children?: React.ReactNode | undefined;
+  href: string;
 }
 
-export const Button: React.FunctionComponent<IButtonProps> = ({ children }) => {
-  return <StyledButton>{children}</StyledButton>;
+export const Button: React.FunctionComponent<IButtonProps> = ({
+  children,
+  href,
+}) => {
+  return <StyledButton href={href}>{children}</StyledButton>;
 };
-
-const StyledButton = styled.button`
+const StyledButton = styled.a`
   --min: 0.8em;
   --val: 2.5vw;
   --max: 1.1em;
