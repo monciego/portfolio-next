@@ -8,6 +8,7 @@ type ProjectType = {
   coverImage: string;
   transitionImage: string;
   content: string;
+  disabled: boolean;
 };
 
 export default ProjectType;

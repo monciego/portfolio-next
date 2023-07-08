@@ -40,3 +40,16 @@
   line-height: 0.1em;
   margin-right: 0.25em;
 }
+
+.content img {
+  height: 15rem;
+  width: 100%;
+  object-fit: center;
+  margin: 0.5rem 0;
+}
+
+@media all and (min-width: 48rem) {
+  .content img {
+    height: 28rem;
+  }
+}

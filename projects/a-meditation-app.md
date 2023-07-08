@@ -6,6 +6,7 @@ livePreview: 'https://umatter.netlify.app/'
 date: '2023-06-16T05:35:07.322Z'
 coverImage: '/images/projects/project-1-laptop.jpg'
 transitionImage: '/images/projects/project-1-mobile.jpg'
+disabled: false
 ---
 
 In today's complicated and chaotic world, our time is constantly taken by a variety of things. We fail to make time for ourselves to connect with our life experiences and existence. We have come to a point where we've normalized major issues like ADHD, depression, and anxiety. And most of us suffer from it, still, in silence.

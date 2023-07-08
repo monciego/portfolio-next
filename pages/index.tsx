@@ -42,6 +42,7 @@ export async function getStaticProps() {
     'coverImage',
     'transitionImage',
     'subTitle',
+    'disabled',
   ]);
 
   return {
