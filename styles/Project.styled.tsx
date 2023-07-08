@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 interface ProjectStyledProps {
   readonly templateColumns?: string;
+  readonly disabled?: boolean;
 }
 
 export const ProjectContainer = styled.section``;
@@ -104,7 +105,7 @@ export const ProjectStyledContainer = styled.div`
   }
 `;
 
-export const ProjectLinksContainer = styled.div`
+export const ProjectLinksContainer = styled.div<ProjectStyledProps>`
   font-size: clamp(var(--min), var(--val), var(--max));
   --min: 0.95em;
   --val: 2.5vw;
@@ -113,11 +114,13 @@ export const ProjectLinksContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'default')};
 `;
 
-export const ProjectLink = styled.a`
+export const ProjectLink = styled.a<ProjectStyledProps>`
   position: relative;
   z-index: 50;
+  pointer-events: ${(props) => (props.disabled ? 'none' : 'all')};
 
   &::after {
     content: '';
@@ -128,6 +131,20 @@ export const ProjectLink = styled.a`
     bottom: 0;
     left: 0;
     background-color: #af00ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: translate(0, 50%);
+    height: 2px;
+    bottom: 50%;
+    display: ${(props) => (props.disabled ? 'block' : 'none')};
+    left: 0;
+    background-color: #ddd;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
