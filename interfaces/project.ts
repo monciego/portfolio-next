@@ -8,7 +8,8 @@ type ProjectType = {
   coverImage: string;
   transitionImage: string;
   content: string;
-  disabled: boolean;
+  disabledLive: boolean;
+  disabledGithub: boolean;
 };
 
 export default ProjectType;

@@ -25,7 +25,8 @@ export interface IProjectListProps {
   transitionImage: string | StaticImageData;
   slug: string;
   preloadImage: boolean;
-  disabled: boolean;
+  disabledLive: boolean;
+  disabledGithub: boolean;
 }
 
 const ProjectList: React.FunctionComponent<IProjectListProps> = ({
@@ -37,7 +38,8 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
   transitionImage,
   slug,
   preloadImage,
-  disabled,
+  disabledLive,
+  disabledGithub,
 }) => {
   return (
     <ProjectStyledContainer>
@@ -71,10 +73,11 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
           </a>
         </Link>
       </ProjectTitleContainer>
-      <ProjectLinksContainer disabled={disabled}>
+      <ProjectLinksContainer disabled={disabledGithub || disabledLive}>
         <GoMarkGithub />
         <ProjectLink
-          disabled={disabled}
+          // disabled={disabled}
+          disabled={disabledGithub}
           href={githubCode}
           target="_blank"
           rel="noopener noreferrer"
@@ -84,7 +87,8 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
         <Dot>&bull;</Dot>
         <BiLinkExternal />
         <ProjectLink
-          disabled={disabled}
+          // disabled={disabled}
+          disabled={disabledLive}
           href={livePreview}
           target="_blank"
           rel="noopener noreferrer"
