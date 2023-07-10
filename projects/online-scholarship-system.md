@@ -1,10 +1,11 @@
 ---
 title: 'Online Scholarship System at Pangasinan State University Alaminos City Campus'
 subTitle: 'capstone project'
-date: '2023-06-16T05:35:07.322Z'
+date: '2022-06-16T05:35:07.322Z'
 coverImage: '/images/projects/project-7.1.jpg'
 transitionImage: '/images/projects/project-7.2.jpg'
-disabled: true
+disabledLive: true
+disabledGithub: true
 ---
 
 **Role: Developer, Designer, Proponent**
