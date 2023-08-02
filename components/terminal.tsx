@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   BlueText,
   Command,
@@ -62,6 +62,10 @@ export const Terminal: React.FunctionComponent<ITerminalProps> = () => {
   const [viewCommands, setViewCommands] = useState(false);
   const [commandOutput, setCommandOutput] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    inputRef.current?.focus({ preventScroll: true });
+  }, []);
 
   return (
     <StyledTerminal onClick={() => inputRef.current?.focus()}>
