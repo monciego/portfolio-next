@@ -50,7 +50,7 @@ export const About: React.FunctionComponent<IAboutProps> = () => {
       </AboutDescriptionContainer>
       <ResumeLinkContainer>
         <ResumeLink
-          href="/documents/resume.pdf"
+          href="/documents/resume-jericho-bantiquete.pdf"
           download="resume-jericho-bantiquete"
         >
           Download Resume
