@@ -26,21 +26,21 @@ a {
 }
 
 .change-text::before {
-  content: 'design';
+  content: 'create';
   animation: change infinite 5s;
 }
 
 @keyframes change {
   0% {
-    content: 'design';
+    content: 'create';
   }
   50% {
-    content: 'create';
+    content: 'destroy';
   }
 
   100% {
     transform: translateX(-50%);
-    content: 'design';
+    content: 'create';
   }
 }
 
