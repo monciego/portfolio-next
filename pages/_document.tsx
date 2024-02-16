@@ -42,13 +42,13 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#0C0E13" />
           <meta
             name="description"
-            content="Jericho Bantiquete is a front-end developer based in Philippines who specializes in building responsive websites."
+            content="Jericho Bantiquete is a software engineer based in Philippines who specializes in building responsive websites."
           />
           <meta name="author" content="Jericho P. Bantiquete" />
           <meta name="copyright" content="Jericho P. Bantiquete" />
           <meta
             name="keywords"
-            content="portfolio, front-end portfolio,  jericho, jericho bantiquete"
+            content="portfolio, front-end portfolio,  jericho, jericho bantiquete, software engineer portfolio"
           />
           <meta
             property="og:url"
@@ -58,11 +58,11 @@ class MyDocument extends Document {
           <meta property="og:title" content="Jericho Bantiquete" />
           <meta
             property="og:description"
-            content="Jericho Bantiquete is a front-end developer based in Philippines who specializes in building responsive websites."
+            content="Jericho Bantiquete is a software engineer based in Philippines who specializes in building responsive websites."
           />
           <meta
             property="og:image"
-            content="https://i.ibb.co/99QCjZz/jericho-bantiquete.png"
+            content="https://i.ibb.co/D7ZpgxX/jericho-bantiquete.png"
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:creator" content="@monciego" />
@@ -77,7 +77,7 @@ class MyDocument extends Document {
           />
           <meta
             name="twitter:image"
-            content="https://i.ibb.co/99QCjZz/jericho-bantiquete.png"
+            content="https://i.ibb.co/D7ZpgxX/jericho-bantiquete.png"
           />
         </Head>
         <body>
