@@ -14,20 +14,16 @@ export const Hero: React.FunctionComponent<IHeroProps> = () => {
     <HeroContainer>
       <HeroName>Jericho Bantiquete</HeroName>
       <HeroTitle>
-        frontend web <br /> developer
+        software dev <br /> engineer
       </HeroTitle>
       <HeroSubTitle>
         I <span className="change-text"></span>{' '}
-        <span className="responsive">r</span>
-        <span className="responsive">e</span>
-        <span className="responsive">s</span>
-        <span className="responsive">p</span>
-        <span className="responsive">o</span>
-        <span className="responsive">n</span>
-        <span className="responsive">s</span>
+        <span className="responsive">t</span>
+        <span className="responsive">h</span>
         <span className="responsive">i</span>
-        <span className="responsive">v</span>
-        <span className="responsive">e</span> websites.
+        <span className="responsive">n</span>
+        <span className="responsive">g</span>
+        <span className="responsive">s</span> with my keyboard
       </HeroSubTitle>
       <Button href="#projects">Explore Projects</Button>
     </HeroContainer>
