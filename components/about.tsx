@@ -22,30 +22,37 @@ export const About: React.FunctionComponent<IAboutProps> = () => {
       <AboutImage />
       <AboutDescriptionContainer>
         <AboutDescription>
-          My name is Jericho P. Bantiquete, A bachelorߴs degree holder with web
-          development experience and passion for responsive website design and a
-          firm believer in the mobile-first approach. I am a passionate
-          front-end developer based in Philippines.
+          Kumusta, My name is Jericho P. Bantiquete, a bachelorߴs degree holder
+          with experience in web development and a passion for software
+          development. I am currently based in the Philippines, where I enjoy
+          building and improving things. I also freelance.
         </AboutDescription>
         <AboutDescription>
-          I absolutely love crafting and bringing to life responsive websites
-          and web apps from scratch. For my personal and freelance projects, I
-          dive into an exciting toolbox that includes HTML5, CSS3, JavaScript,
-          React with TypeScript, TailwindCSS, shadcn/ui, Clerk, styled
-          components, Next.js with TypeScript, PHP Laravel, MySQL, Alpine.js,
-          Git, GitHub, Figma, and VS Code. Currently, Iߴm expanding my skills by
-          learning about vim, improving my understanding of Data Structures &
-          Algorithms, exploring Astro, looking into NEXT13 (app directory),
-          diving into the T3 Stack, and studying GO. In addition, I have a basic
-          grasp of programming languages like C, C++, Java, and Python, which I
-          learned during my time at university. I am also offering assistance in
-          developing systems for those in their bachelorߴs or masterߴs degree.
+          I have a passion for bringing ideas to life. In my personal and
+          freelance projects, I dive into an exciting toolbox that includes
+          HTML5, CSS3, Laravel, JavaScript, React with TypeScript, TailwindCSS,
+          shadcn/ui, Clerk, styled components, Next.js with TypeScript, Vue3,
+          Inertia, Livewire, Progressive Web App (PWA) MySQL, Alpine.js, Git,
+          GitHub, Figma, and VIM. Currently, I am expanding my skills by delving
+          into Vim/Neovim, enhancing my understanding of Data Structures &
+          Algorithms, exploring Golang, HTMX, Astro, and machine learning.
+          Additionally, I have a foundational grasp of programming languages
+          like C, C++, Java, and Python, which I learned during my time at
+          university. I am constantly learning about web development, and I am
+          slowly immersing myself in the wider realm of software development in
+          general. My next target to learn is Linux, cloud computing, CI/CD,
+          artificial intillegence, mobile, and desktop development. I am also
+          offering assistance in developing systems for those in their
+          bachelor’s or master’s degree and have experience in developing
+          government websites, ensuring user-friendly interfaces and robust
+          functionalities for seamless public interaction.
         </AboutDescription>
 
         <AboutDescription>
           I have eagerness to learn something new every day and I love to share
-          my knowledge to my fellow students and developers. And I am looking
-          forward to talk with you!
+          my knowledge to my fellow students and developers. I am passionate
+          about continuous growth and am always seeking opportunities to expand
+          my skills and expertise. And I am looking forward to talk with you!
         </AboutDescription>
       </AboutDescriptionContainer>
       <ResumeLinkContainer>
