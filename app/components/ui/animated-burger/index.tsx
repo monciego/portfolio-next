@@ -6,7 +6,7 @@ import {
   AnimatedBurgerSecondSpan,
   AnimatedBurgerThirdSpan,
   StyledAnimatedBurger,
-} from '../styles/Navbar.styled';
+} from './styles';
 
 export interface IAnimatedBurgerProps {
   readonly isOpen: boolean;

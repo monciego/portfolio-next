@@ -1,11 +1,11 @@
 import React from 'react';
+import { Button } from '../ui/button';
 import {
   HeroContainer,
   HeroName,
   HeroSubTitle,
   HeroTitle,
 } from './hero.styles';
-/* import { Button } from './button'; */
 
 export interface IHeroProps {}
 
@@ -25,7 +25,7 @@ export const Hero: React.FunctionComponent<IHeroProps> = () => {
         <span className="responsive">g</span>
         <span className="responsive">s</span> with my keyboard
       </HeroSubTitle>
-      {/*       <Button href="#projects">Explore Projects</Button> */}
+      <Button href="#projects">Explore Projects</Button>
     </HeroContainer>
   );
 };

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, Syncopate } from 'next/font/google';
+import Navbar from './components/navbar';
 import { ThemeProvider } from './providers/theme-provider';
 import { theme } from './styles/theme';
 
@@ -24,7 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${syncopate.variable}`}>
       <body>
-        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+        <ThemeProvider theme={theme}>
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

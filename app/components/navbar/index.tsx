@@ -1,29 +1,26 @@
+'use client';
+
 import Link from 'next/link';
-import Logo from 'public/images/logo.svg';
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { AnimatedBurger } from '../ui/animated-burger';
 import {
   NavigationLink,
   NavigationList,
   NavigationLists,
   NavigationOverlay,
   NavigationQuote,
-  NavigationSocial,
   NavigationSocials,
   StyledNavbar,
-} from '../styles/Navbar.styled';
-import { AnimatedBurger } from './animated-burger';
+} from './navbar.styles';
 
-export interface INavbarProps {}
-
-const Navbar: React.FunctionComponent<INavbarProps> = () => {
+const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <StyledNavbar>
       <Link href="/" passHref>
-
-        <Logo style={{ cursor: 'pointer' }} />
-
+        {/*         <Logo style={{ cursor: 'pointer' }} /> */}
+        Logo
       </Link>
       <AnimatedBurger isOpen={open} setOpen={setOpen} />
       <NavigationOverlay isOpen={open}>
@@ -51,27 +48,27 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
         </NavigationLists>
         <NavigationQuote>travaille pour ça</NavigationQuote>
         <NavigationSocials>
-          <NavigationSocial
+          <a
             href="mailto:jerichobantiquete@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             Gm
-          </NavigationSocial>
-          <NavigationSocial
+          </a>
+          <a
             href="https://github.com/monciego"
             target="_blank"
             rel="noopener noreferrer"
           >
             Gh
-          </NavigationSocial>
-          <NavigationSocial
+          </a>
+          <a
             href="https://www.linkedin.com/in/jericho-bantiquete-450541179/"
             target="_blank"
             rel="noopener noreferrer"
           >
             ln
-          </NavigationSocial>
+          </a>
         </NavigationSocials>
       </NavigationOverlay>
     </StyledNavbar>

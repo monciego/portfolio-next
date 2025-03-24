@@ -7,7 +7,6 @@ export const theme = {
     poppins: 'var(--font-poppins), sans-serif',
     firaCode: 'var(--font-fira-code), monospace',
     playfairDisplay: 'var(--font-playfair), serif',
-    cardo: 'var(--font-cardo), serif',
   },
   colors: {
     white: '#ffffff',
