@@ -21,9 +21,9 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
   return (
     <StyledNavbar>
       <Link href="/" passHref>
-        <a>
-          <Logo style={{ cursor: 'pointer' }} />
-        </a>
+
+        <Logo style={{ cursor: 'pointer' }} />
+
       </Link>
       <AnimatedBurger isOpen={open} setOpen={setOpen} />
       <NavigationOverlay isOpen={open}>

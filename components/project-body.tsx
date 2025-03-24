@@ -18,7 +18,7 @@ const ProjectBody = ({ content }: Props) => {
       />
       <LinkContainer>
         <Link href="/">
-          <a>← View more projects</a>
+          ← View more projects
         </Link>
       </LinkContainer>
     </ContentContainer>

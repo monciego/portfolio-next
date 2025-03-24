@@ -44,33 +44,33 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
   return (
     <ProjectStyledContainer>
       <Link href={`/project/${slug}`}>
-        <a>
-          <ProjectImageContainer>
-            <StyledProjectImage
-              src={coverImage}
-              alt={subTitle}
-              sizes="80vw"
-              layout="fill"
-              objectFit="cover"
-              priority={preloadImage ? true : false}
-            />
-            <ProjectTransitionImage
-              src={transitionImage}
-              alt={subTitle}
-              sizes="80vw"
-              layout="fill"
-              objectFit="cover"
-              priority={preloadImage ? true : false}
-            />
-          </ProjectImageContainer>
-        </a>
+
+        <ProjectImageContainer>
+          <StyledProjectImage
+            src={coverImage}
+            alt={subTitle}
+            sizes="80vw"
+            layout="fill"
+            objectFit="cover"
+            priority={preloadImage ? true : false}
+          />
+          <ProjectTransitionImage
+            src={transitionImage}
+            alt={subTitle}
+            sizes="80vw"
+            layout="fill"
+            objectFit="cover"
+            priority={preloadImage ? true : false}
+          />
+        </ProjectImageContainer>
+
       </Link>
       <CategoryLabel>{subTitle}</CategoryLabel>
       <ProjectTitleContainer>
         <Link href={`/project/${slug}`}>
-          <a>
-            <ProjectTitle>{title}</ProjectTitle>
-          </a>
+
+          <ProjectTitle>{title}</ProjectTitle>
+
         </Link>
       </ProjectTitleContainer>
       <ProjectLinksContainer disabled={disabledGithub || disabledLive}>
