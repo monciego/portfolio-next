@@ -1,4 +1,4 @@
-import { StaticImageData } from 'next/image';
+import { StaticImageData } from "next/legacy/image";
 import Link from 'next/link';
 import React from 'react';
 import { BiLinkExternal } from 'react-icons/bi';
