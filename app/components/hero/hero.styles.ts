@@ -37,7 +37,6 @@ export const HeroName = styled.h2`
   --min: 1em;
   --val: 2.5vw;
   --max: 1.5em;
-  font-family: ${({ theme }) => theme.fonts.poppins};
   font-weight: 400;
   color: ${({ theme }) => theme.colors.lightViolet};
 `;
@@ -55,5 +54,4 @@ export const HeroSubTitle = styled.p`
   --min: 0.85em;
   --val: 2.5vw;
   --max: 1.5em;
-  font-family: ${({ theme }) => theme.fonts.inter};
 `;

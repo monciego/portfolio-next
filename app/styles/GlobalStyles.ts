@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import { MyProps } from './theme';
 
-export const GlobalStyles = createGlobalStyle<MyProps>`
+export const GlobalStyles = createGlobalStyle`
     * {
         margin: 0;
         padding: 0;
@@ -11,12 +10,12 @@ export const GlobalStyles = createGlobalStyle<MyProps>`
     html {
         overflow-x: hidden;
         scroll-behavior: smooth;
+        font-family: ${({ theme }) => theme.fonts.inter};
     }
 
     body {
-        font-family: ${({ theme }) => theme.fonts.poppins};
-        background-color: ${({ theme }) => theme.colors.backgroundColor};
-        color: ${({ theme }) => theme.colors.white}
+        background-color: ${({ theme }) => theme.colors.backgroundColor}; 
+        color: ${({ theme }) => theme.colors.white};
     }
 
     .container {
@@ -39,8 +38,8 @@ export const GlobalStyles = createGlobalStyle<MyProps>`
     }
     
     section,
-    footer{
-        padding: 6.32875rem  0 2.6125rem 0;
+    footer {
+        padding: 6.32875rem 0 2.6125rem 0;
     }
 
     section {
@@ -53,9 +52,11 @@ export const GlobalStyles = createGlobalStyle<MyProps>`
         padding: 4.32875rem 5% 7.6125rem 5%;
     }
 
-    
     @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-        padding: 6.32875rem 0 7.6125rem 0;
+        section, 
+        footer {
+            padding: 6.32875rem 0 7.6125rem 0;
+        }
     }
 
     h1,
@@ -88,27 +89,25 @@ export const GlobalStyles = createGlobalStyle<MyProps>`
         font-family: ${({ theme }) => theme.fonts.firaCode};
     }
 
-    /* terminal text */
+    /* Terminal Styles */
     .terminal-output h2,
     .terminal-output h3,
     .terminal-output h4,
     .terminal-output h5,
     .terminal-output a {
-          font-size: clamp(var(--min), var(--val), var(--max));
+        font-size: clamp(var(--min), var(--val), var(--max));
         --min: 0.85em;
         --val: 2.5vw;
         --max: 1em;
         font-weight: 400;
     }
 
-    /* input text */
     .terminal-output h2 {
         color: #35a35b;
         font-weight: 600;
         margin-bottom: 0.25rem;
     }
 
-    /* output text */
     .terminal-output h3,
     .terminal-output h4,
     .terminal-output h5 {
@@ -116,25 +115,68 @@ export const GlobalStyles = createGlobalStyle<MyProps>`
         margin-bottom: 0.85rem;
     }
 
-    /* socials */
     .terminal-output h4 {
         display: flex;
         align-items: center;
     }
 
-    /* terminal error */
     .terminal-output h5 {
         color: #F78F85;
     }
 
-    /* terminal link */
     .terminal-output a {
         padding-left: .5rem;
     }
 
-    /* terminal arrow */
     .terminal-output span {
         color: #5ad786;
         font-weight: 400;
+    }
+    
+    .change-text::before {
+        content: 'create';
+        animation: change infinite 5s;
+    }
+
+    @keyframes change {
+        0% {
+            content: 'create';
+        }
+        50% {
+            content: 'destroy';
+        }
+        100% {
+            content: 'create';
+        }
+    }
+
+    /* Glitch Effect */
+    .responsive {
+        display: inline-block;
+        animation: stretch 5s cubic-bezier(0.4, 1.4, 0.75, 0.9) infinite;
+        transform-origin: center;
+    }
+
+    .responsive:nth-of-type(1) { animation-delay: 3s; }
+    .responsive:nth-of-type(2) { animation-delay: 0.8s; }
+    .responsive:nth-of-type(3) { animation-delay: 4.8s; }
+    .responsive:nth-of-type(4) { animation-delay: 2s; }
+    .responsive:nth-of-type(5) { animation-delay: 1.2s; }
+    .responsive:nth-of-type(6) { animation-delay: 3.6s; }
+    .responsive:nth-of-type(7) { animation-delay: 2.4s; }
+    .responsive:nth-of-type(8) { animation-delay: 3.2s; }
+    p span:nth-of-type(9) { animation-delay: 4s; }
+    p span:nth-of-type(10) { animation-delay: 1.6s; }
+
+    @keyframes stretch {
+        5% {
+            transform: scaleX(10);
+            opacity: 0.1;
+        }
+
+        15% {
+            transform: scaleX(1);
+            opacity: 1;
+        }
     }
 `;
