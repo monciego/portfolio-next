@@ -5,6 +5,7 @@ import {
   HeroName,
   HeroSubTitle,
   HeroTitle,
+  RadialGradient,
 } from './hero.styles';
 
 export interface IHeroProps {}
@@ -12,6 +13,7 @@ export interface IHeroProps {}
 export const Hero: React.FunctionComponent<IHeroProps> = () => {
   return (
     <HeroContainer>
+      <RadialGradient />
       <HeroName>Jericho Bantiquete</HeroName>
       <HeroTitle>
         software dev <br /> engineer
