@@ -171,6 +171,7 @@ export const ContactLink = styled.a`
 
 export const FooterSocials = styled.span`
   display: flex;
+  align-items: center;
   gap: 0.85rem;
 `;
 
@@ -200,7 +201,7 @@ export const ArrowToTop = styled.div`
   cursor: pointer;
 
   &:hover {
-    background: #7b3cc4;
+    background: #621496;
     background-image: url('/images/icon-arrow-up.svg');
     background-repeat: no-repeat;
     background-position: center center;

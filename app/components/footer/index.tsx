@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 import {
@@ -16,7 +18,7 @@ import {
   FooterTitle,
   FooterTitleContainer,
   Small,
-} from '../styles/Footer.styled';
+} from './footer.styles';
 
 const toTop = () => {
   scroll.scrollToTop({ delay: 0, duration: 0 });
@@ -62,6 +64,13 @@ export const Footer: React.FunctionComponent<IFooterProps> = () => {
               rel="noopener noreferrer"
             >
               LinkedIn
+            </ContactLink>
+            <ContactLink
+              href="https://twitter.com/monciego"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              𝕏 (formerly twitter)
             </ContactLink>
           </FooterSocials>
         </FooterContact>
