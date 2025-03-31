@@ -13,15 +13,15 @@ export const Button: React.FunctionComponent<IButtonProps> = ({
   return <StyledButton href={href}>{children}</StyledButton>;
 };
 const StyledButton = styled.a`
-  --min: 0.8em;
-  --val: 2.5vw;
-  --max: 1.1em;
+  --min: 1em;
+  --val: 3vw;
+  --max: 1.5em;
   margin: 0.85rem;
-  padding: 0.5rem 5.5rem;
+  padding: 0.8rem 5.5rem;
   border: none;
   outline: none;
   cursor: pointer;
-  font-family: ${({ theme }) => theme.fonts.poppins};
+  font-family: ${({ theme }) => theme.fonts.inter};
   color: rgba(255, 255, 255, 0.9);
   background: linear-gradient(
     93.48deg,

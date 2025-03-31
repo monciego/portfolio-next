@@ -4,7 +4,6 @@ export const theme = {
   fonts: {
     inter: 'var(--font-inter), sans-serif',
     syncopate: 'var(--font-syncopate), sans-serif',
-    poppins: 'var(--font-poppins), sans-serif',
     firaCode: 'var(--font-fira-code), monospace',
     playfairDisplay: 'var(--font-playfair), serif',
   },

@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
-import { GlobalStyles } from '../styles/Global';
-import { theme } from '../styles/theme';
+import Navbar from '../app/components/navbar';
+import { GlobalStyles } from '../app/styles/GlobalStyles';
+import { theme } from '../app/styles/theme';
 import { Footer } from './footer';
-import Navbar from './navbar';
 
 export interface ILayoutProps {
   children?: React.ReactNode | undefined;

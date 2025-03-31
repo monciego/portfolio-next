@@ -1,8 +1,6 @@
-import { StaticImageData } from "next/legacy/image";
+import { StaticImageData } from 'next/legacy/image';
 import Link from 'next/link';
 import React from 'react';
-import { BiLinkExternal } from 'react-icons/bi';
-import { GoMarkGithub } from 'react-icons/go';
 import {
   CategoryLabel,
   Dot,
@@ -44,7 +42,6 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
   return (
     <ProjectStyledContainer>
       <Link href={`/project/${slug}`}>
-
         <ProjectImageContainer>
           <StyledProjectImage
             src={coverImage}
@@ -63,18 +60,15 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
             priority={preloadImage ? true : false}
           />
         </ProjectImageContainer>
-
       </Link>
       <CategoryLabel>{subTitle}</CategoryLabel>
       <ProjectTitleContainer>
         <Link href={`/project/${slug}`}>
-
           <ProjectTitle>{title}</ProjectTitle>
-
         </Link>
       </ProjectTitleContainer>
       <ProjectLinksContainer disabled={disabledGithub || disabledLive}>
-        <GoMarkGithub />
+        {/*         <GoMarkGithub /> */}
         <ProjectLink
           // disabled={disabled}
           disabled={disabledGithub}
@@ -85,7 +79,7 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
           Github Code
         </ProjectLink>
         <Dot>&bull;</Dot>
-        <BiLinkExternal />
+        {/*         <BiLinkExternal /> */}
         <ProjectLink
           // disabled={disabled}
           disabled={disabledLive}
