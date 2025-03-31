@@ -1,9 +1,9 @@
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import React from 'react';
-import imageOne from '../public/images/about/about-image-1.jpg';
-import imageTwo from '../public/images/about/about-image-2.jpg';
-import imageThree from '../public/images/about/about-image-3.jpg';
-import { AboutImageContainer, ImageWrapper } from '../styles/About.styled';
+import imageOne from '../../public/images/about/about-image-1.jpg';
+import imageTwo from '../../public/images/about/about-image-2.jpg';
+import imageThree from '../../public/images/about/about-image-3.jpg';
+import { AboutImageContainer, ImageWrapper } from './about.styles';
 
 export interface IAboutImageProps {}
 

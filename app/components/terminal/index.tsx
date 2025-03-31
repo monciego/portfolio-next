@@ -153,6 +153,8 @@ export const Terminal: React.FunctionComponent<ITerminalProps> = () => {
                     Throughout my career, I have worked with a variety of technologies, including JavaScript, TypeScript, React, NextJs, Angular, RxJS, Akita, Vue, Laravel, Livewire, Inertia.js, Tailwind CSS, MySQL, Figma, Git, GitHub, and more. While some of these are not my primary areas of expertise, I have gained valuable experience using them in both freelance projects and industry roles. My current tech stack, where I find the most productivity and which I primarily use for my projects, includes Laravel with React and TypeScript, utilizing Inertia.js, shadcn and Tailwind CSS for styling. For the database, I typically use MySQL or SQLite. Overall, my stack revolves around the Laravel ecosystem. 
                     <br/>
                     Currently, I am continuously learning about data structures and algorithms. Additionally, I am exploring and expanding my knowledge in various technologies such as Golang, Astro, Remix, Python, and Java. As I continue to enhance my skills, I am particularly interested in learning more about machine learning and artificial intelligence. 
+                    <br/>
+                    I use vim, btw.
                     </h3>`;
                   break;
                 case 'cd about':

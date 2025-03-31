@@ -10,7 +10,7 @@ export const theme = {
   colors: {
     white: '#ffffff',
     black: '#000000',
-    backgroundColor: '#0C0E13',
+    backgroundColor: '#09090b',
     lightViolet: '#9892E3',
   },
   breakpoints: {

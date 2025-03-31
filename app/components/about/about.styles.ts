@@ -1,4 +1,5 @@
-import { ImDownload3 } from 'react-icons/im';
+import { Download } from 'lucide-react';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 interface ImageProps {
@@ -31,10 +32,9 @@ export const ImageWrapper = styled.div<ImageProps>`
 
 export const AboutDescriptionContainer = styled.div`
   margin: 6rem auto 0 auto;
-  text-align: center;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-    width: 80%;
+    width: 85%;
   }
 `;
 
@@ -43,15 +43,41 @@ export const AboutDescription = styled.p`
   --val: 2.5vw;
   --max: 1.125em;
   margin-bottom: 1rem;
+  line-height: 1.5;
   color: #d1d5db;
 `;
 
 export const ResumeLinkContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.5rem;
-  margin-top: 1.5rem;
+  margin: 1.5rem auto 0 auto;
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    width: 85%;
+  }
+`;
+
+export const StyledLink = styled.a`
+  color: #6366f1;
+  text-decoration: underline;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: none;
+    color: #4f46e5;
+  }
+`;
+
+export const StyledNextLink = styled(Link)`
+  color: #6366f1;
+  text-decoration: underline;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: none;
+    color: #4f46e5;
+  }
 `;
 
 export const ResumeLink = styled.a`
@@ -61,7 +87,6 @@ export const ResumeLink = styled.a`
   --max: 1.125em;
   padding-bottom: 0.5rem;
   font-weight: 600;
-  letter-spacing: 1.25px;
   position: relative;
   background: linear-gradient(to right, #d4e3e3, #c8d7d7),
     linear-gradient(to right, #21a0b6, #9892e3, #8798a9);
@@ -75,7 +100,7 @@ export const ResumeLink = styled.a`
   }
 `;
 
-export const DownloadIcon = styled(ImDownload3)`
+export const DownloadIcon = styled(Download)`
   padding-bottom: 0.5rem;
   height: 2rem;
 `;
