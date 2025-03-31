@@ -97,6 +97,11 @@ export const TerminalHeaderTitle = styled.div`
 
 export const TerminalHeaderLink = styled.a``;
 
+export const TerminalInput = styled.input`
+  color: #ffffff;
+  font-family: inherit;
+`;
+
 export const TerminalContent = styled.div`
   z-index: 1;
   padding: 1rem;

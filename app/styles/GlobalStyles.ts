@@ -52,13 +52,6 @@ export const GlobalStyles = createGlobalStyle`
         padding: 4.32875rem 5% 7.6125rem 5%;
     }
 
-    @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-        section, 
-        footer {
-            padding: 6.32875rem 0 7.6125rem 0;
-        }
-    }
-
     h1,
     h2,
     h3,
@@ -106,6 +99,11 @@ export const GlobalStyles = createGlobalStyle`
         color: #35a35b;
         font-weight: 600;
         margin-bottom: 0.25rem;
+    }
+
+
+    .terminal-output br {
+        display: block;
     }
 
     .terminal-output h3,

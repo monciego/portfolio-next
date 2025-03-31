@@ -13,11 +13,12 @@ import {
   TerminalHeader,
   TerminalHeaderLink,
   TerminalHeaderTitle,
+  TerminalInput,
   TextContainer,
   VioletText,
   YellowTerminalButton,
   YellowText,
-} from '../styles/Terminal.styled';
+} from './terminal.styles';
 
 /* ugly code need to refactor */
 
@@ -111,9 +112,7 @@ export const Terminal: React.FunctionComponent<ITerminalProps> = () => {
         ></div>
         <div>
           <GreenText>{'>'}</GreenText>{' '}
-          <input
-            className="input"
-            type="text"
+          <TerminalInput
             ref={inputRef}
             value={commandInput}
             onChange={(e) => setCommandInput(e.target.value)}
@@ -149,34 +148,11 @@ export const Terminal: React.FunctionComponent<ITerminalProps> = () => {
                   break;
                 case 'about':
                   newOutput += `<h3>
-                    Kumusta, My name is Jericho P. Bantiquete, a bachelorߴs degree holder
-                    with experience in web development and a passion for software
-                    development. I am currently based in the Philippines, where I enjoy
-                    building and improving things. I also freelance.
+                    Kumusta! My name is Jericho P. Bantiquete. I am a developer, freelancer, and aspiring entrepreneur. I graduated with a Bachelor's degree in Information Technology from Pangasinan State University. I am currently based in the Philippines, where I am building a product as a partner in a startup and also taking on freelance work. 
                     <br/>   
-                    I have a passion for bringing ideas to life. In my personal and
-                    freelance projects, I dive into an exciting toolbox that includes
-                    HTML5, CSS3, Laravel, JavaScript, React with TypeScript, TailwindCSS,
-                    shadcn/ui, Clerk, styled components, Next.js with TypeScript, Vue3,
-                    Inertia, Livewire, Progressive Web App (PWA) MySQL, Alpine.js, Git,
-                    GitHub, Figma, and VIM. Currently, I am expanding my skills by delving
-                    into Vim/Neovim, enhancing my understanding of Data Structures &
-                    Algorithms, exploring Golang, HTMX, Astro, and machine learning.
-                    Additionally, I have a foundational grasp of programming languages
-                    like C, C++, Java, and Python, which I learned during my time at
-                    university. I am constantly learning about web development, and I am
-                    slowly immersing myself in the wider realm of software development in
-                    general. My next target to learn is Linux, cloud computing, CI/CD,
-                    artificial intillegence, mobile, and desktop development. I am also
-                    offering assistance in developing systems for those in their
-                    bachelor’s or master’s degree and have experience in developing
-                    government websites, ensuring user-friendly interfaces and robust
-                    functionalities for seamless public interaction.
+                    Throughout my career, I have worked with a variety of technologies, including JavaScript, TypeScript, React, NextJs, Angular, RxJS, Akita, Vue, Laravel, Livewire, Inertia.js, Tailwind CSS, MySQL, Figma, Git, GitHub, and more. While some of these are not my primary areas of expertise, I have gained valuable experience using them in both freelance projects and industry roles. My current tech stack, where I find the most productivity and which I primarily use for my projects, includes Laravel with React and TypeScript, utilizing Inertia.js, shadcn and Tailwind CSS for styling. For the database, I typically use MySQL or SQLite. Overall, my stack revolves around the Laravel ecosystem. 
                     <br/>
-                    I have eagerness to learn something new every day and I love to share
-                    my knowledge to my fellow students and developers. I am passionate
-                    about continuous growth and am always seeking opportunities to expand
-                    my skills and expertise. And I am looking forward to talk with you!
+                    Currently, I am continuously learning about data structures and algorithms. Additionally, I am exploring and expanding my knowledge in various technologies such as Golang, Astro, Remix, Python, and Java. As I continue to enhance my skills, I am particularly interested in learning more about machine learning and artificial intelligence. 
                     </h3>`;
                   break;
                 case 'cd about':
@@ -185,7 +161,10 @@ export const Terminal: React.FunctionComponent<ITerminalProps> = () => {
                   newOutput += `<h3>Redirected to about section</h3>`;
                   break;
                 case 'testimonials':
-                  newOutput += `<h3>Testimonials</h3>`;
+                  newOutput += `<h3>
+                      Jericho is a highly motivated and dedicated developer who has shown an outstanding level of commitment to every project he works on. His attention to detail and thoroughness in the development process ensures that every aspect of a project is well thought out and executed to perfection. I have had the pleasure of working with Jericho on several occasions, and I can confidently say that he is a valuable asset to any development team. His in-depth knowledge of PHP, Laravel, and JavaScript has allowed him to consistently produce high-quality code that is both efficient and effective. What sets Jericho apart from other developers is his ability to think outside the box and come up with innovative solutions to complex problems. His creativity and passion for coding are evident in his work, and he is always willing to go the extra mile to ensure that his projects are completed to the highest standard. Overall, I highly recommend Jericho as a junior developer for anyone looking for a reliable, skilled, and hardworking individual to join their development team. He is an excellent communicator, a team player, and a true professional in every sense of the word.
+                    <h4>- Kurt Philip Danlog, MIT</h4>
+                    </h3>`;
                   break;
                 case 'cd testimonials':
                   window.location.replace(`${currentURL}#testimonials`);
