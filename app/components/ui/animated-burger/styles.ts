@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface isOpenProps {
-  readonly isOpen: boolean;
+  readonly $isOpen: boolean;
 }
 export const StyledAnimatedBurger = styled.div`
   display: relative;
@@ -44,8 +44,8 @@ export const AnimatedBurgerFirstSpan = styled.span<isOpenProps>`
   width: 1.25rem;
   height: 0.125rem;
   transform: translateY(-0.375rem);
-  transform: ${({ isOpen }) =>
-    isOpen ? 'rotate(45deg)' : 'translateY(-0.375rem)'};
+  transform: ${({ $isOpen }) =>
+    $isOpen ? 'rotate(45deg)' : 'translateY(-0.375rem)'};
 `;
 
 export const AnimatedBurgerSecondSpan = styled.span<isOpenProps>`
@@ -58,7 +58,7 @@ export const AnimatedBurgerSecondSpan = styled.span<isOpenProps>`
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   width: 1.25rem;
   height: 0.125rem;
-  opacity: ${({ isOpen }) => (isOpen ? '0' : '1')};
+  opacity: ${({ $isOpen }) => ($isOpen ? '0' : '1')};
 `;
 
 export const AnimatedBurgerThirdSpan = styled.span<isOpenProps>`
@@ -72,6 +72,6 @@ export const AnimatedBurgerThirdSpan = styled.span<isOpenProps>`
   width: 1.25rem;
   height: 0.125rem;
   transform: translateY(0.375rem);
-  transform: ${({ isOpen }) =>
-    isOpen ? 'rotate(-45deg)' : 'translateY(0.375rem)'};
+  transform: ${({ $isOpen }) =>
+    $isOpen ? 'rotate(-45deg)' : 'translateY(0.375rem)'};
 `;

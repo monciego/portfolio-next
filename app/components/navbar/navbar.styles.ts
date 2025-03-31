@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface isOpenProps {
-  readonly isOpen: boolean;
+  readonly $isOpen: boolean;
 }
 
 export const StyledNavbar = styled.nav`
@@ -22,7 +22,7 @@ export const NavigationOverlay = styled.nav<isOpenProps>`
   position: fixed;
   background: #0c0e13;
   z-index: -2;
-  top: ${({ isOpen }) => (isOpen ? '0' : '-120%')};
+  top: ${({ $isOpen }) => ($isOpen ? '0' : '-120%')};
   left: 0;
   width: 100%;
   height: 100vh;

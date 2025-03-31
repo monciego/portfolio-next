@@ -23,7 +23,7 @@ const Navbar = () => {
         Logo
       </Link>
       <AnimatedBurger isOpen={open} setOpen={setOpen} />
-      <NavigationOverlay isOpen={open}>
+      <NavigationOverlay $isOpen={open}>
         <NavigationLists>
           <NavigationList>
             <NavigationLink onClick={() => setOpen(!open)} href="#">

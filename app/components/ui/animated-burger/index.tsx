@@ -22,9 +22,9 @@ export const AnimatedBurger: React.FunctionComponent<IAnimatedBurgerProps> = ({
       <nav>
         <AnimatedBurgerButton onClick={() => setOpen(!isOpen)}>
           <AnimatedBurgerDiv>
-            <AnimatedBurgerFirstSpan isOpen={isOpen} />
-            <AnimatedBurgerSecondSpan isOpen={isOpen} />
-            <AnimatedBurgerThirdSpan isOpen={isOpen} />
+            <AnimatedBurgerFirstSpan $isOpen={isOpen} />
+            <AnimatedBurgerSecondSpan $isOpen={isOpen} />
+            <AnimatedBurgerThirdSpan $isOpen={isOpen} />
           </AnimatedBurgerDiv>
         </AnimatedBurgerButton>
       </nav>
