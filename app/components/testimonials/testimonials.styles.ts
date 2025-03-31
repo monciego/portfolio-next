@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import styled from 'styled-components';
 
 export const TestimonialsContainer = styled.section``;
@@ -17,9 +17,9 @@ export const TestimonialCardsContainer = styled.div`
 
 export const TestimonialStyledCard = styled.figure`
   position: relative;
-  padding: 1.5rem;
+  padding: 2rem;
   border-radius: 0.5rem;
-  background: #1e293b;
+  background: #19181a;
   line-height: 1.25rem;
 `;
 
@@ -31,6 +31,8 @@ export const AvatarContainer = styled.div`
   flex-shrink: 0;
   width: 3rem;
   height: 3rem;
+  border-radius: 9999px;
+  border: 1px solid #858585;
 `;
 
 export const TestimonialHeader = styled.div`
@@ -49,7 +51,7 @@ export const TestimonialName = styled.span`
   --min: 0.9em;
   --val: 2.5vw;
   --max: 1.05rem;
-  line-height: 1rem;
+  line-height: 1.25rem;
   font-weight: 500;
 `;
 
@@ -61,9 +63,10 @@ export const TestimonialPosition = styled.p`
 `;
 
 export const TestimonialContent = styled.p`
-  --min: 0.75em;
+  --min: 1em;
   --val: 2.5vw;
-  --max: 0.95em;
+  --max: 1em;
   margin-top: 1rem;
+  line-height: 1.5;
   color: #d1d5db;
 `;

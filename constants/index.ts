@@ -5,7 +5,7 @@ export const testimonials = [
     id: 1,
     avatar: avatarOne,
     name: 'Kurt Philip Danlog, MIT',
-    position: 'University Web Admin',
+    position: 'Entrepreneur, Former University Web Admin & Instructor',
     content:
       'Jericho is a highly motivated and dedicated developer who has shown an outstanding level of commitment to every project he works on. His attention to detail and thoroughness in the development process ensures that every aspect of a project is well thought out and executed to perfection. I have had the pleasure of working with Jericho on several occasions, and I can confidently say that he is a valuable asset to any development team. His in-depth knowledge of PHP, Laravel, and JavaScript has allowed him to consistently produce high-quality code that is both efficient and effective. What sets Jericho apart from other developers is his ability to think outside the box and come up with innovative solutions to complex problems. His creativity and passion for coding are evident in his work, and he is always willing to go the extra mile to ensure that his projects are completed to the highest standard. Overall, I highly recommend Jericho as a junior developer for anyone looking for a reliable, skilled, and hardworking individual to join their development team. He is an excellent communicator, a team player, and a true professional in every sense of the word.',
   },

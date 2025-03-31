@@ -1,11 +1,11 @@
 import React from 'react';
-import { testimonials } from '../constants';
+import { SectionHeading } from '../../../components/section-heading';
+import { testimonials } from '../../../constants';
+import { TestimonialCard } from './testimonial-card';
 import {
   TestimonialCardsContainer,
   TestimonialsContainer,
-} from '../styles/Testimonials.styled';
-import { SectionHeading } from './section-heading';
-import { TestimonialCard } from './testimonial-card';
+} from './testimonials.styles';
 
 export interface ITestimonialsProps {}
 

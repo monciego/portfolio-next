@@ -1,4 +1,4 @@
-import { StaticImageData } from "next/legacy/image";
+import { StaticImageData } from 'next/legacy/image';
 import React from 'react';
 import {
   AvatarContainer,
@@ -10,7 +10,7 @@ import {
   TestimonialName,
   TestimonialPosition,
   TestimonialStyledCard,
-} from '../styles/Testimonials.styled';
+} from './testimonials.styles';
 
 export interface ITestimonialCardProps {
   readonly avatar: StaticImageData;
