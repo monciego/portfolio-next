@@ -1,6 +1,6 @@
 import React from 'react';
 import { Parallax } from 'react-parallax';
-import { MantraContainer, MantraText } from '../styles/Mantra.styled';
+import { MantraContainer, MantraText } from './mantra.styles';
 
 export interface IMantraProps {}
 
