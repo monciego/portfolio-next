@@ -1,6 +1,6 @@
 import React from 'react';
-import { SectionHeading } from '../../../components/section-heading';
 import { testimonials } from '../../../constants';
+import { SectionHeading } from '../ui/section-heading';
 import { TestimonialCard } from './testimonial-card';
 import {
   TestimonialCardsContainer,

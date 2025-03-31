@@ -115,8 +115,10 @@ export const Terminal: React.FunctionComponent<ITerminalProps> = () => {
           <TerminalInput
             ref={inputRef}
             value={commandInput}
-            onChange={(e) => setCommandInput(e.target.value)}
-            onKeyDown={(e) => {
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setCommandInput(e.target.value)
+            }
+            onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
               let newOutput: string = '';
               let currentURL = window.location.href;
               newOutput = `${commandOutput} <h2><span>> </span>${commandInput}<h2> `;

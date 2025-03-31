@@ -1,5 +1,3 @@
-import Head from 'next/head';
-import Layout from '../../components/layout';
 import ProjectBody from '../../components/project-body';
 import ProjectType from '../../interfaces/project';
 import { getAllProjects, getProjectBySlug } from '../../lib/api';
@@ -17,24 +15,19 @@ export interface IProjectProps {
 
 const Project: React.FunctionComponent<IProjectProps> = ({ project }) => {
   return (
-    <Layout>
-      <Head>
-        <title>{project.subTitle}</title>
-      </Head>
-      <ProjectDetailsContainer>
-        <ProjectSubtitle>{project.subTitle}</ProjectSubtitle>
-        <ProjectDetailsTitle>{project.title}</ProjectDetailsTitle>
-        <div>
-          <ProjectDetailImage
-            src={project.coverImage}
-            alt={`Cover Image for ${project.title}`}
-            width={1300}
-            height={530}
-          />
-        </div>
-        <ProjectBody content={project.content} />
-      </ProjectDetailsContainer>
-    </Layout>
+    <ProjectDetailsContainer>
+      <ProjectSubtitle>{project.subTitle}</ProjectSubtitle>
+      <ProjectDetailsTitle>{project.title}</ProjectDetailsTitle>
+      <div>
+        <ProjectDetailImage
+          src={project.coverImage}
+          alt={`Cover Image for ${project.title}`}
+          width={1300}
+          height={530}
+        />
+      </div>
+      <ProjectBody content={project.content} />
+    </ProjectDetailsContainer>
   );
 };
 

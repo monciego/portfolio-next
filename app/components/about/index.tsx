@@ -1,4 +1,4 @@
-import { SectionHeading } from '../../../components/section-heading';
+import { SectionHeading } from '../ui/section-heading';
 import { AboutImage } from './about-images';
 import {
   AboutContainer,

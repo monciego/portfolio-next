@@ -1,11 +1,11 @@
 import React from 'react';
+import { SectionHeading } from '../app/components/ui/section-heading';
 import Project from '../interfaces/project';
 import {
   ProjectContainer,
   ProjectListContainer,
 } from '../styles/Project.styled';
 import ProjectList from './project-list';
-import { SectionHeading } from './section-heading';
 
 export interface IProjectsProps {
   allProjects: Project[];

@@ -3,7 +3,7 @@ import {
   SectionHeadingLink,
   SectionStyledHeading,
   SectionTitle,
-} from '../styles/SectionHeading.styled';
+} from './section-heading.styles';
 
 export interface ISectionHeadingProps {
   titleNumber: string;
