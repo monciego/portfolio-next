@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { AnimatedBurger } from '../ui/animated-burger';
+import Logo from '../ui/logo';
 import {
   NavigationLink,
   NavigationList,
@@ -19,8 +20,7 @@ const Navbar = () => {
   return (
     <StyledNavbar>
       <Link href="/" passHref>
-        {/*         <Logo style={{ cursor: 'pointer' }} /> */}
-        Logo
+        <Logo />
       </Link>
       <AnimatedBurger isOpen={open} setOpen={setOpen} />
       <NavigationOverlay $isOpen={open}>
