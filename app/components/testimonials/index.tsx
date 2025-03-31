@@ -11,7 +11,7 @@ export interface ITestimonialsProps {}
 
 export const Testimonials: React.FunctionComponent<ITestimonialsProps> = () => {
   return (
-    <TestimonialsContainer id="testimonials">
+    <TestimonialsContainer id="testimonials" className="container">
       <SectionHeading
         titleNumber="03"
         sectionTitle="testimonials"

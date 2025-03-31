@@ -69,7 +69,10 @@ export const Terminal: React.FunctionComponent<ITerminalProps> = () => {
   }, []);
 
   return (
-    <StyledTerminal onClick={() => inputRef.current?.focus()}>
+    <StyledTerminal
+      onClick={() => inputRef.current?.focus()}
+      className="container"
+    >
       <TerminalHeader>
         <TerminalButtons>
           <RedTerminalButton />

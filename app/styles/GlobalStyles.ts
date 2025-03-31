@@ -22,7 +22,13 @@ export const GlobalStyles = createGlobalStyle`
         max-width: 90%;
         width: 100%;
         margin: 0 auto;
+
+
+        @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+            width: 85%;
+        }
     }
+
 
     li {
         list-style: none;
@@ -43,13 +49,16 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     section {
-        width: 90%;
         margin: 0 auto;
         overflow-x: hidden;
     }
 
     footer {
         padding: 4.32875rem 5% 7.6125rem 5%;
+
+        @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+        padding: 4.32875rem 7.5% 7.6125rem 7.5%;
+        }
     }
 
     h1,

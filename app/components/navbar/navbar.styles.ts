@@ -12,7 +12,6 @@ export const StyledNavbar = styled.nav`
   height: 13vh;
   display: flex;
   align-items: center;
-  width: 90%;
   margin: 0 auto;
   justify-content: space-between;
   z-index: 999;
@@ -61,6 +60,10 @@ export const NavigationQuote = styled.span`
   position: absolute;
   bottom: 2rem;
   left: 5%;
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    left: 7.5%;
+  }
 `;
 
 export const NavigationSocials = styled.div`
@@ -69,4 +72,8 @@ export const NavigationSocials = styled.div`
   right: 5%;
   display: flex;
   gap: 1.5rem;
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    right: 7.5%;
+  }
 `;

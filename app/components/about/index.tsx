@@ -15,7 +15,7 @@ export interface IAboutProps {}
 
 export const About: React.FunctionComponent<IAboutProps> = () => {
   return (
-    <AboutContainer id="about">
+    <AboutContainer id="about" className="container">
       <SectionHeading
         titleNumber="02"
         sectionTitle="about"

@@ -18,7 +18,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <StyledNavbar>
+    <StyledNavbar className="container">
       <Link href="/" passHref>
         <Logo />
       </Link>
