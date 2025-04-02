@@ -1,3 +1,4 @@
+import { ExternalLink, Github } from 'lucide-react';
 import { StaticImageData } from 'next/legacy/image';
 import Link from 'next/link';
 import React from 'react';
@@ -12,36 +13,36 @@ import {
   ProjectTitleContainer,
   ProjectTransitionImage,
   StyledProjectImage,
-} from '../styles/Project.styled';
+} from './projects.styles';
 
 export interface IProjectListProps {
   subTitle: string;
   title: string;
-  githubCode: string;
-  livePreview: string;
+  githubLink: string;
+  liveLink: string;
   coverImage: string | StaticImageData;
   transitionImage: string | StaticImageData;
   slug: string;
   preloadImage: boolean;
-  disabledLive: boolean;
-  disabledGithub: boolean;
+  isLiveDisabled?: boolean;
+  isGithubDisabled?: boolean;
 }
 
 const ProjectList: React.FunctionComponent<IProjectListProps> = ({
   subTitle,
   title,
-  githubCode,
-  livePreview,
+  githubLink,
+  liveLink,
   coverImage,
   transitionImage,
   slug,
   preloadImage,
-  disabledLive,
-  disabledGithub,
+  isLiveDisabled,
+  isGithubDisabled,
 }) => {
   return (
     <ProjectStyledContainer>
-      <Link href={`/project/${slug}`}>
+      <Link href={`${slug}`}>
         <ProjectImageContainer>
           <StyledProjectImage
             src={coverImage}
@@ -67,23 +68,21 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
           <ProjectTitle>{title}</ProjectTitle>
         </Link>
       </ProjectTitleContainer>
-      <ProjectLinksContainer disabled={disabledGithub || disabledLive}>
-        {/*         <GoMarkGithub /> */}
+      <ProjectLinksContainer disabled={isGithubDisabled || isLiveDisabled}>
+        <Github />
         <ProjectLink
-          // disabled={disabled}
-          disabled={disabledGithub}
-          href={githubCode}
+          disabled={isGithubDisabled}
+          href={githubLink}
           target="_blank"
           rel="noopener noreferrer"
         >
           Github Code
         </ProjectLink>
         <Dot>&bull;</Dot>
-        {/*         <BiLinkExternal /> */}
+        <ExternalLink />
         <ProjectLink
-          // disabled={disabled}
-          disabled={disabledLive}
-          href={livePreview}
+          disabled={isLiveDisabled}
+          href={liveLink}
           target="_blank"
           rel="noopener noreferrer"
         >

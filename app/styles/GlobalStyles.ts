@@ -145,6 +145,74 @@ export const GlobalStyles = createGlobalStyle`
         animation: change infinite 5s;
     }
 
+    .mdx-blockquote p {
+        all: unset;  /* Resets all styles */
+        display: block;
+        margin: 0;
+    }
+
+    /* rehype pretty code */
+    [data-rehype-pretty-code-figure] pre {
+        padding: 1rem 0;
+        border-radius: 10px;
+    }
+
+    [data-rehype-pretty-code-figure] code {
+        font-size: 0.875rem; /* text-sm */
+        line-height: 1.75; /* leading-loose, assuming 1.75 based on tailwind's default */
+        font-size: 1rem; /* md:text-base, override for medium screens */
+        border: 0;
+        padding: 0;
+    }
+
+    [data-rehype-pretty-code-figure] code[data-line-numbers] {
+        counter-reset: line;
+        }
+
+        [data-rehype-pretty-code-figure] code[data-line-numbers] > [data-line]::before {
+        counter-increment: line;
+        content: counter(line);
+        margin-right: 1rem; /* mr-4 */
+        display: inline-block;
+        width: 1rem; /* w-4, assuming 1rem is close enough */
+        text-align: right;
+        color: rgb(156, 163, 175); /* text-gray-500 */
+        }
+
+        [data-rehype-pretty-code-figure] [data-line] {
+        border-left-width: 0.5rem; /* border-l-2 */
+        border-left-style: solid;
+        border-left-color: transparent;
+        padding-left: 0.75rem; /* px-3 */
+        padding-right: 0.75rem; /* px-3 */
+    }
+
+    [data-rehype-pretty-code-figure] [data-highlighted-line] {
+        background-color: rgba(200, 200, 255, 0.1);
+        border-left-color: rgb(96, 165, 250); /* border-l-blue-400 */
+    }
+
+    [data-rehype-pretty-code-figure] [data-highlighted-chars] {
+        border-radius: 0.25rem; /* rounded */
+        background-color: rgba(82, 82, 91, 0.5); /* bg-zinc-600/50 */
+        box-shadow: 0 0 0 4px rgba(82, 82, 91, 0.5);
+    }
+
+    [data-rehype-pretty-code-figure] [data-chars-id] {
+        border-bottom-width: 0.5rem; /* border-b-2 */
+        border-bottom-style: solid;
+        padding: 0.25rem; /* p-1 */
+        box-shadow: none;
+    }
+
+
+    /* media query for md:text-base */
+    @media (min-width: 768px) {
+    [data-rehype-pretty-code-figure] code {
+        font-size: 1rem;
+    }
+    }
+
     @keyframes change {
         0% {
             content: 'create';

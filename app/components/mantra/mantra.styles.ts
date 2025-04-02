@@ -15,9 +15,10 @@ export const MantraContainer = styled.div`
 
 export const MantraText = styled.h3`
   font-size: clamp(var(--min), var(--val), var(--max));
-  --min: 1.25em;
+  --min: 1.55em;
   --val: 3vw;
-  --max: 2.5em;
+  --max: 2.8em;
+  padding: 0 1rem;
   position: absolute;
   top: 50%;
   left: 50%;

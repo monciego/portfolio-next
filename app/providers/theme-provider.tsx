@@ -1,5 +1,6 @@
 'use client';
 
+import StyledComponentsRegistry from '@/lib/registry';
 import * as React from 'react';
 import {
   DefaultTheme,
@@ -14,9 +15,11 @@ interface ThemeProviderProps {
 
 export function ThemeProvider({ children, theme }: ThemeProviderProps) {
   return (
-    <StyledThemeProvider theme={theme}>
-      <GlobalStyles />
-      {children}
-    </StyledThemeProvider>
+    <StyledComponentsRegistry>
+      <StyledThemeProvider theme={theme}>
+        <GlobalStyles />
+        {children}
+      </StyledThemeProvider>
+    </StyledComponentsRegistry>
   );
 }
