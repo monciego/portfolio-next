@@ -19,30 +19,31 @@ export const ProjectListContainer = styled.div<ProjectStyledProps>`
 `;
 
 export const CategoryLabel = styled.p`
-  --min: 0.85em;
+  --min: 0.75rem;
   --val: 2.5vw;
-  --max: 1em;
+  --max: 0.85em;
   display: inline-block;
   margin-top: 1.25rem;
   line-height: 1rem;
   font-weight: 400;
   letter-spacing: 0.05em;
-  text-transform: lowercase;
+  text-transform: uppercase;
   color: violet;
   font-family: ${({ theme }) => theme.fonts.inter};
 `;
 
 export const ProjectTitleContainer = styled.div`
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
 `;
 
 export const ProjectTitle = styled.span`
   font-size: clamp(var(--min), var(--val), var(--max));
   --min: 1em;
   --val: 2.5vw;
-  --max: 1.125em;
+  --max: 1.2em;
   letter-spacing: 0;
-  font-weight: 500;
+  line-height: 1.375;
+  font-weight: 600;
   background: linear-gradient(
       to right,
       rgba(100, 200, 200, 0),
@@ -106,18 +107,24 @@ export const ProjectStyledContainer = styled.div`
 `;
 
 export const ProjectLinksContainer = styled.div<ProjectStyledProps>`
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+`;
+
+export const ProjectLinkContainer = styled.div<ProjectStyledProps>`
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'cursor')};
+`;
+
+export const ProjectLink = styled.a<ProjectStyledProps>`
   font-size: clamp(var(--min), var(--val), var(--max));
   --min: 0.95em;
   --val: 2.5vw;
   --max: 1em;
-  margin-top: 0.75rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'default')};
-`;
-
-export const ProjectLink = styled.a<ProjectStyledProps>`
   position: relative;
   z-index: 50;
   pointer-events: ${(props) => (props.disabled ? 'none' : 'all')};

@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from 'lucide-react';
+import { CodeXml, SquareArrowOutUpRight } from 'lucide-react';
 import { StaticImageData } from 'next/legacy/image';
 import Link from 'next/link';
 import React from 'react';
@@ -7,6 +7,7 @@ import {
   Dot,
   ProjectImageContainer,
   ProjectLink,
+  ProjectLinkContainer,
   ProjectLinksContainer,
   ProjectStyledContainer,
   ProjectTitle,
@@ -69,25 +70,29 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
         </Link>
       </ProjectTitleContainer>
       <ProjectLinksContainer disabled={isGithubDisabled || isLiveDisabled}>
-        <Github />
-        <ProjectLink
-          disabled={isGithubDisabled}
-          href={githubLink}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Github Code
-        </ProjectLink>
+        <ProjectLinkContainer>
+          <CodeXml size={20} />
+          <ProjectLink
+            disabled={isGithubDisabled}
+            href={githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Source Code
+          </ProjectLink>
+        </ProjectLinkContainer>
         <Dot>&bull;</Dot>
-        <ExternalLink />
-        <ProjectLink
-          disabled={isLiveDisabled}
-          href={liveLink}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Live Preview
-        </ProjectLink>
+        <ProjectLinkContainer>
+          <SquareArrowOutUpRight size={20} />
+          <ProjectLink
+            disabled={isLiveDisabled}
+            href={liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Live Site
+          </ProjectLink>
+        </ProjectLinkContainer>
       </ProjectLinksContainer>
     </ProjectStyledContainer>
   );

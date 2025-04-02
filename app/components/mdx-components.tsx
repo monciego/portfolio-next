@@ -184,12 +184,11 @@ const components = {
   p: ({ children, ...props }: { children: ReactNode }) => (
     <p
       style={{
-        fontSize: '1rem',
+        fontSize: '1.085rem',
         lineHeight: '1.75', // leading-7
         marginTop: '1.25rem', // Slightly reduced from 1.5rem
         marginBottom: '1.25rem', // Added bottom margin
         color: 'var(--text-tertiary)',
-        maxWidth: '65ch', // Limit line length for readability
       }}
       {...props}
     >
@@ -248,7 +247,7 @@ const components = {
         marginTop: '1.5rem', // mt-6
         marginBottom: '1.5rem', // mb-6
         borderLeft: '5px solid #374151', // Adaptive border
-        padding: '0.65rem 0 0.65rem 1em ', // More padding for better readability
+        padding: '0 .65rem 0 1rem',
         fontStyle: 'italic', // italic
         color: 'var(--text-primary)',
         fontWeight: '500',

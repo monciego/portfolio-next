@@ -7,6 +7,7 @@ import {
   ContentContainer,
   LinkContainer,
   ProjectDetailImage,
+  ProjectDetailImageContainer,
   ProjectDetailsContainer,
   ProjectDetailsTitle,
   ProjectSubtitle,
@@ -19,17 +20,17 @@ interface ProjectProps {
 const Project = ({ project }: ProjectProps) => {
   return (
     <>
-      <ProjectDetailsContainer>
+      <ProjectDetailsContainer className="container">
         <ProjectSubtitle>{project.subTitle}</ProjectSubtitle>
         <ProjectDetailsTitle>{project.title}</ProjectDetailsTitle>
-        <div>
+        <ProjectDetailImageContainer>
           <ProjectDetailImage
             src={project.coverImage}
             alt={`Cover Image for ${project.title}`}
-            width={1300}
+            width={1150}
             height={530}
           />
-        </div>
+        </ProjectDetailImageContainer>
         <ContentContainer>
           <MDXContent code={project.content} />
           <LinkContainer>
