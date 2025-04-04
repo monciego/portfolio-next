@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface sectionHeadingProps {
-  readonly number: string;
+  readonly $number: string;
 }
 
 export const SectionStyledHeading = styled.div`
@@ -29,7 +29,7 @@ export const SectionTitle = styled.h2<sectionHeadingProps>`
 
   &::after {
     position: absolute;
-    content: '${(props) => props.number}';
+    content: '${(props) => props.$number}';
     left: 5%;
     top: 0;
     transform: translate(-50%, -50%);

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 interface ImageProps {
-  readonly down?: boolean;
+  readonly $down?: boolean;
 }
 
 export const AboutContainer = styled.section`
@@ -27,7 +27,7 @@ export const ImageWrapper = styled.div<ImageProps>`
   overflow: hidden;
   border-radius: 0.375rem;
   aspect-ratio: 1 / 1;
-  transform: ${(props) => (props.down ? 'translateY(3rem)' : 'translateY(0)')};
+  transform: ${(props) => (props.$down ? 'translateY(3rem)' : 'translateY(0)')};
 `;
 
 export const AboutDescriptionContainer = styled.div`

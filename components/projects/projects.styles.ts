@@ -2,7 +2,7 @@ import Image from 'next/legacy/image';
 import styled from 'styled-components';
 
 interface ProjectStyledProps {
-  readonly templateColumns?: string;
+  readonly $templateColumns?: string;
   readonly disabled?: boolean;
 }
 
@@ -14,7 +14,7 @@ export const ProjectListContainer = styled.div<ProjectStyledProps>`
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     grid-template-columns: ${(props) =>
-      props.templateColumns || 'repeat(2, minmax(0, 1fr))'};
+      props.$templateColumns || 'repeat(2, minmax(0, 1fr))'};
   }
 `;
 

@@ -41,7 +41,7 @@ const Projects: React.FunctionComponent = () => {
       </ProjectListContainer>
       <ProjectListContainer
         style={{ marginTop: '1rem' }}
-        templateColumns="repeat(3, minmax(0, 1fr))"
+        $templateColumns="repeat(3, minmax(0, 1fr))"
       >
         {allProjects.slice(2).map((project) => {
           return (

@@ -22,7 +22,7 @@ export const SectionHeading: React.FunctionComponent<ISectionHeadingProps> = ({
 }) => {
   return (
     <SectionStyledHeading>
-      <SectionTitle number={titleNumber}>{sectionTitle}</SectionTitle>
+      <SectionTitle $number={titleNumber}>{sectionTitle}</SectionTitle>
       <SectionDetails>
         {sectionDetails}{' '}
         <SectionHeadingLink href={sectionHeadingLink}>

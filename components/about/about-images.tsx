@@ -10,7 +10,7 @@ export interface IAboutImageProps {}
 export const AboutImage: React.FunctionComponent<IAboutImageProps> = () => {
   return (
     <AboutImageContainer>
-      <ImageWrapper down>
+      <ImageWrapper $down>
         <Image
           src={imageTwo}
           alt="Jericho Bantiquete"
@@ -30,7 +30,7 @@ export const AboutImage: React.FunctionComponent<IAboutImageProps> = () => {
           priority={false}
         />{' '}
       </ImageWrapper>
-      <ImageWrapper down>
+      <ImageWrapper $down>
         <Image
           src={imageThree}
           alt="Jericho Bantiquete"
