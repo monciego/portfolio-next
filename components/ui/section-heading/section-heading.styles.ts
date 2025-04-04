@@ -53,7 +53,7 @@ export const SectionDetails = styled.p`
   --min: 1em;
   --val: 2.5vw;
   --max: 1.25em;
-  font-family: ${({ theme }) => theme.fonts.poppins};
+  font-family: ${({ theme }) => theme.fonts.inter};
   color: #eee6e6;
 
   @media all and (max-width: ${({ theme }) => theme.breakpoints.sm}) {

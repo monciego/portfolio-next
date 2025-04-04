@@ -6,7 +6,7 @@
   "private": true,
   "license": "MIT",
   "engines": {
-    "node": ">=20.0.0",
+    "node": "^20.0.0",
     "yarn": ">=1.22.0",
     "npm": "please-use-yarn"
   },
@@ -24,16 +24,16 @@
     "gsap": "^3.11.4",
     "lucide-react": "^0.485.0",
     "next": "14",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
-    "react-parallax": "^3.5.1",
+    "react-is": "^16.8.0",
+    "react-parallax": "^3.5.2",
     "react-scroll": "^1.8.9",
     "remark": "^14.0.2",
     "remark-html": "^15.0.2",
-    "sharp": "^0.33.5",
     "shiki": "^3.2.1",
-    "styled-components": "^6.1.16"
+    "styled-components": "^6.1.17"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",

@@ -1,6 +1,8 @@
 // my-theme.ts
 
-export const theme = {
+import { DefaultTheme } from 'styled-components';
+
+export const theme: DefaultTheme = {
   fonts: {
     inter: 'var(--font-inter), sans-serif',
     syncopate: 'var(--font-syncopate), sans-serif',
