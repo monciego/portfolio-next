@@ -1,10 +1,10 @@
 import { StaticImageData } from 'next/legacy/image';
 import React from 'react';
+import { MDXContent } from '../mdx-components';
 import {
   AvatarContainer,
   TestimonialAvatar,
   TestimonialContainer,
-  TestimonialContent,
   TestimonialHeader,
   TestimonialInformation,
   TestimonialName,
@@ -15,13 +15,13 @@ import {
 export interface ITestimonialCardProps {
   readonly avatar: StaticImageData;
   readonly name: string;
-  readonly position: string;
+  readonly title: string;
   readonly content: string;
 }
 
 export const TestimonialCard: React.FunctionComponent<
   ITestimonialCardProps
-> = ({ avatar, name, position, content }) => {
+> = ({ avatar, name, title, content }) => {
   return (
     <TestimonialStyledCard>
       <TestimonialContainer>
@@ -37,10 +37,10 @@ export const TestimonialCard: React.FunctionComponent<
           </AvatarContainer>
           <TestimonialInformation>
             <TestimonialName>{name}</TestimonialName>
-            <TestimonialPosition>{position}</TestimonialPosition>
+            <TestimonialPosition>{title}</TestimonialPosition>
           </TestimonialInformation>
         </TestimonialHeader>
-        <TestimonialContent>{content}</TestimonialContent>
+        <MDXContent code={content} />
       </TestimonialContainer>
     </TestimonialStyledCard>
   );

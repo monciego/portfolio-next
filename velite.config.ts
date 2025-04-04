@@ -29,6 +29,18 @@ const projects = defineCollection({
     })),
 });
 
+const testimonials = defineCollection({
+  name: 'Testimonial',
+  pattern: 'testimonials/**/*.mdx',
+  schema: s.object({
+    name: s.string().max(99),
+    title: s.string().max(99),
+    date: s.isodate(),
+    avatar: s.image(),
+    content: s.mdx(),
+  }),
+});
+
 export default defineConfig({
   root: 'content',
   output: {
@@ -38,7 +50,7 @@ export default defineConfig({
     name: '[name]-[hash:6].[ext]',
     clean: true,
   },
-  collections: { projects },
+  collections: { projects, testimonials },
   mdx: {
     rehypePlugins: [[rehypePrettyCode, { theme: 'tokyo-night' }]],
     remarkPlugins: [],

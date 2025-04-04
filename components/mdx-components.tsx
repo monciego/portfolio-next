@@ -184,7 +184,7 @@ const components = {
   p: ({ children, ...props }: { children: ReactNode }) => (
     <p
       style={{
-        fontSize: '1.075rem',
+        fontSize: 'clamp(1em, 2.5vw, 1.125rem)', // Responsive font size
         lineHeight: '1.75', // leading-7
         marginTop: '1.25rem', // Slightly reduced from 1.5rem
         marginBottom: '1.25rem', // Added bottom margin

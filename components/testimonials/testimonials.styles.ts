@@ -17,7 +17,7 @@ export const TestimonialCardsContainer = styled.div`
 
 export const TestimonialStyledCard = styled.figure`
   position: relative;
-  padding: 2rem;
+  padding: 1.8rem;
   border-radius: 0.5rem;
   background: #19181a;
   line-height: 1.25rem;
@@ -29,8 +29,8 @@ export const AvatarContainer = styled.div`
   position: relative;
   margin-top: 0.25rem;
   flex-shrink: 0;
-  width: 3rem;
-  height: 3rem;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 9999px;
   border: 1px solid #858585;
 `;
@@ -47,10 +47,10 @@ export const TestimonialAvatar = styled(Image)`
 
 export const TestimonialInformation = styled.div``;
 
-export const TestimonialName = styled.span`
-  --min: 0.9em;
+export const TestimonialName = styled.p`
+  --min: 1em;
   --val: 2.5vw;
-  --max: 1.05rem;
+  --max: 1.2em;
   line-height: 1.25rem;
   font-weight: 500;
 `;
@@ -58,15 +58,7 @@ export const TestimonialName = styled.span`
 export const TestimonialPosition = styled.p`
   --min: 0.8em;
   --val: 2.5vw;
-  --max: 0.95em;
-  color: #d9dde1;
-`;
-
-export const TestimonialContent = styled.p`
-  --min: 1em;
-  --val: 2.5vw;
   --max: 1em;
-  margin-top: 1rem;
-  line-height: 1.5;
-  color: #d1d5db;
+  color: #d9dde1;
+  margin-top: 0.15rem;
 `;
