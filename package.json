@@ -16,7 +16,7 @@
     "dev:next": "next dev",
     "build:next": "next build",
     "dev": "run-p dev:*",
-    "build": "velite --clean && next build",
+    "build": "run-s build:*",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
