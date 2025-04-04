@@ -16,7 +16,7 @@
     "dev:next": "next dev",
     "build:next": "next build",
     "dev": "run-p dev:*",
-    "build": "run-s build:*",
+    "build": "velite --clean && next build",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
@@ -36,6 +36,7 @@
     "react-scroll": "^1.8.9",
     "remark": "^14.0.2",
     "remark-html": "^15.0.2",
+    "sharp": "^0.33.5",
     "shiki": "^3.2.1",
     "styled-components": "^6.1.17"
   },
