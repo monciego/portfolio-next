@@ -27,14 +27,14 @@ const Projects: React.FunctionComponent = () => {
               key={project.slug}
               subTitle={project.subTitle}
               title={project.title}
-              githubLink={project.githubLink}
+              sourceCodeLink={project.sourceCodeLink}
               liveLink={project.liveLink}
               coverImage={project.coverImage}
               transitionImage={project.transitionImage}
               slug={project.slug}
               preloadImage={false}
-              isLiveDisabled={project.isLiveDisabled}
-              isGithubDisabled={project.isGithubDisabled}
+              isLiveLinkDisabled={project.isLiveLinkDisabled}
+              isSourceCodeLinkDisabled={project.isSourceCodeLinkDisabled}
             />
           );
         })}
@@ -49,14 +49,14 @@ const Projects: React.FunctionComponent = () => {
               key={project.slug}
               subTitle={project.subTitle}
               title={project.title}
-              githubLink={project.githubLink}
+              sourceCodeLink={project.sourceCodeLink}
               liveLink={project.liveLink}
               coverImage={project.coverImage}
               transitionImage={project.transitionImage}
               slug={project.slug}
               preloadImage={false}
-              isLiveDisabled={project.isLiveDisabled}
-              isGithubDisabled={project.isGithubDisabled}
+              isLiveLinkDisabled={project.isLiveLinkDisabled}
+              isSourceCodeLinkDisabled={project.isSourceCodeLinkDisabled}
             />
           );
         })}

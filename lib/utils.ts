@@ -11,8 +11,9 @@ export function formatDate(input: string | number): string {
 
 export function sortProjects(projects: Array<Project>) {
   return projects.sort((a, b) => {
-    if (a.date > b.date) return -1;
-    if (a.date < b.date) return 1;
+    /* ascending */
+    if (a.date < b.date) return -1;
+    if (a.date > b.date) return 1;
     return 0;
   });
 }

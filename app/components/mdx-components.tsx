@@ -22,7 +22,7 @@ const createDarkStyles = () => {
       --bg-code: rgba(30, 41, 59, 0.7);
       --text-primary: #ffffff;
       --text-secondary: #f3f4f6;
-      --text-tertiary: #e5e7eb;
+      --text-tertiary: #d1d5db;
       --text-muted: #9ca3af;
       --text-code: #f87171;
       --border-primary: #374151;
@@ -184,7 +184,7 @@ const components = {
   p: ({ children, ...props }: { children: ReactNode }) => (
     <p
       style={{
-        fontSize: '1.085rem',
+        fontSize: '1.075rem',
         lineHeight: '1.75', // leading-7
         marginTop: '1.25rem', // Slightly reduced from 1.5rem
         marginBottom: '1.25rem', // Added bottom margin
@@ -500,6 +500,18 @@ const components = {
     >
       {children}
     </sub>
+  ),
+  // Strong Element
+  strong: ({ children, ...props }: { children: ReactNode }) => (
+    <strong
+      style={{
+        fontWeight: '700', // Bold
+        color: 'var(--text-primary)', // Adaptive text color
+      }}
+      {...props}
+    >
+      {children}
+    </strong>
   ),
 };
 

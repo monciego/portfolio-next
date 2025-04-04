@@ -19,27 +19,27 @@ import {
 export interface IProjectListProps {
   subTitle: string;
   title: string;
-  githubLink: string;
-  liveLink: string;
+  sourceCodeLink?: string;
+  liveLink?: string;
   coverImage: string | StaticImageData;
   transitionImage: string | StaticImageData;
   slug: string;
   preloadImage: boolean;
-  isLiveDisabled?: boolean;
-  isGithubDisabled?: boolean;
+  isLiveLinkDisabled?: boolean;
+  isSourceCodeLinkDisabled?: boolean;
 }
 
 const ProjectList: React.FunctionComponent<IProjectListProps> = ({
   subTitle,
   title,
-  githubLink,
+  sourceCodeLink,
   liveLink,
   coverImage,
   transitionImage,
   slug,
   preloadImage,
-  isLiveDisabled,
-  isGithubDisabled,
+  isLiveLinkDisabled,
+  isSourceCodeLinkDisabled,
 }) => {
   return (
     <ProjectStyledContainer>
@@ -69,27 +69,31 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
           <ProjectTitle>{title}</ProjectTitle>
         </Link>
       </ProjectTitleContainer>
-      <ProjectLinksContainer disabled={isGithubDisabled || isLiveDisabled}>
-        <ProjectLinkContainer>
-          <CodeXml size={20} />
+      <ProjectLinksContainer>
+        <ProjectLinkContainer
+          disabled={isSourceCodeLinkDisabled || isLiveLinkDisabled}
+        >
           <ProjectLink
-            disabled={isGithubDisabled}
-            href={githubLink}
+            disabled={isSourceCodeLinkDisabled}
+            href={sourceCodeLink}
             target="_blank"
             rel="noopener noreferrer"
           >
+            <CodeXml size={20} />
             Source Code
           </ProjectLink>
         </ProjectLinkContainer>
         <Dot>&bull;</Dot>
-        <ProjectLinkContainer>
-          <SquareArrowOutUpRight size={20} />
+        <ProjectLinkContainer
+          disabled={isSourceCodeLinkDisabled || isLiveLinkDisabled}
+        >
           <ProjectLink
-            disabled={isLiveDisabled}
+            disabled={isLiveLinkDisabled}
             href={liveLink}
             target="_blank"
             rel="noopener noreferrer"
           >
+            <SquareArrowOutUpRight size={20} />
             Live Site
           </ProjectLink>
         </ProjectLinkContainer>

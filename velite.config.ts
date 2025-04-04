@@ -16,10 +16,10 @@ const projects = defineCollection({
       date: s.isodate(), // input Date-like string, output ISO Date string.
       coverImage: s.image(), // input image relative path, output image object with blurImage.
       transitionImage: s.image(), // input image relative path, output image object with blurImage.
-      githubLink: s.string().max(99),
-      liveLink: s.string().max(99),
-      isLiveDisabled: s.boolean().default(false).optional(),
-      isGithubDisabled: s.boolean().default(false).optional(),
+      sourceCodeLink: s.string().max(99).optional(),
+      liveLink: s.string().max(99).optional(),
+      isLiveLinkDisabled: s.boolean().default(false).optional(),
+      isSourceCodeLinkDisabled: s.boolean().default(false).optional(),
       content: s.mdx(), // transform markdown to html
     })
     // more additional fields (computed fields)

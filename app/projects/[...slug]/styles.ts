@@ -27,7 +27,7 @@ export const ProjectDetailsTitle = styled.h2`
   }
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    width: 65%;
+    width: 60%;
   }
 `;
 
@@ -44,7 +44,7 @@ export const ProjectDetailImage = styled(Image)`
 `;
 
 export const ContentContainer = styled.div`
-  width: 90%;
+  width: 100%;
   margin: 2rem auto;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -53,7 +53,7 @@ export const ContentContainer = styled.div`
 `;
 
 export const LinkContainer = styled.div`
-  margin: 3rem 0;
+  margin: 5rem 0;
   display: flex;
   align-items: center;
   justify-content: center;

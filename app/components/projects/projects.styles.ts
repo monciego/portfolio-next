@@ -114,9 +114,6 @@ export const ProjectLinksContainer = styled.div<ProjectStyledProps>`
 `;
 
 export const ProjectLinkContainer = styled.div<ProjectStyledProps>`
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
   cursor: ${(props) => (props.disabled ? 'not-allowed' : 'cursor')};
 `;
 
@@ -125,8 +122,14 @@ export const ProjectLink = styled.a<ProjectStyledProps>`
   --min: 0.95em;
   --val: 2.5vw;
   --max: 1em;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
   position: relative;
   z-index: 50;
+
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'cursor')};
+  opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
   pointer-events: ${(props) => (props.disabled ? 'none' : 'all')};
 
   &::after {
