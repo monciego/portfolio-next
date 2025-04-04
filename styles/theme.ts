@@ -2,17 +2,15 @@
 
 export const theme = {
   fonts: {
-    inter: "'Inter', sans-serif;",
-    syncopate: "'Syncopate', sans-serif;",
-    poppins: "'Poppins', sans-serif;",
-    firaCode: "'Fira Code', monospace;",
-    playfairDisplay: "'Playfair Display', serif;",
-    cardo: "'Cardo', serif;",
+    inter: 'var(--font-inter), sans-serif',
+    syncopate: 'var(--font-syncopate), sans-serif',
+    firaCode: 'var(--font-fira-code), monospace',
+    playfairDisplay: 'var(--font-playfair), serif',
   },
   colors: {
     white: '#ffffff',
     black: '#000000',
-    backgroundColor: '#0C0E13',
+    backgroundColor: '#09090b',
     lightViolet: '#9892E3',
   },
   breakpoints: {
