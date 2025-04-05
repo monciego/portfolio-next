@@ -2,7 +2,7 @@ import { Footer } from '@/components/footer';
 import Navbar from '@/components/navbar';
 import { ThemeProvider } from '@/providers/theme-provider';
 import { theme } from '@/styles/theme';
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
 import localFont from 'next/font/local';
 
 const syncopate = localFont({
@@ -58,6 +58,58 @@ export const metadata: Metadata = {
   title: 'Jericho Bantiquete Portfolio',
   description:
     'Jericho Bantiquete is a developer based in Philippines who specializes in building responsive websites.',
+  metadataBase: new URL('https://jerichobantiquete.vercel.app'),
+  authors: [{ name: 'Jericho P. Bantiquete' }],
+  creator: 'Jericho P. Bantiquete',
+  publisher: 'Jericho P. Bantiquete',
+  keywords: [
+    'portfolio',
+    'front-end portfolio',
+    'jericho',
+    'jericho bantiquete',
+    'software engineer portfolio',
+    'web developer portfolio',
+    'monciego',
+  ],
+  openGraph: {
+    title: 'Jericho Bantiquete Portfolio',
+    description:
+      'Jericho Bantiquete is a software engineer based in Philippines who specializes in building responsive websites.',
+    url: 'https://jerichobantiquete.vercel.app/',
+    siteName: 'Jericho Bantiquete Portfolio',
+    images: [
+      {
+        url: 'https://i.ibb.co/D7ZpgxX/jericho-bantiquete.png',
+        width: 1200,
+        height: 630,
+        alt: 'Jericho Bantiquete Portfolio',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Jericho Bantiquete | Software Engineer',
+    description:
+      'Jericho Bantiquete is a front-end developer based in Philippines who specializes in building responsive websites.',
+    creator: '@monciego',
+    images: ['https://i.ibb.co/D7ZpgxX/jericho-bantiquete.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://jerichobantiquete.vercel.app',
+  },
 };
 
 export default function RootLayout({
