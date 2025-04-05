@@ -8,7 +8,9 @@ const nextConfig = {
     styledComponents: true,
   },
   webpack: (config) => {
-    config.plugins.push(new VeliteWebpackPlugin());
+    if (config.mode === 'development') {
+      config.plugins.push(new VeliteWebpackPlugin());
+    }
     return config;
   },
 };
