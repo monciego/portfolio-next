@@ -41,6 +41,11 @@ const Navbar = () => {
             </NavigationLink>
           </NavigationList>
           <NavigationList>
+            <NavigationLink onClick={() => setOpen(!open)} href="#experience">
+              Experience
+            </NavigationLink>
+          </NavigationList>
+          <NavigationList>
             <NavigationLink onClick={() => setOpen(!open)} href="#testimonials">
               Testimonials
             </NavigationLink>

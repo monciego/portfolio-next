@@ -17,7 +17,7 @@ export const Testimonials: React.FunctionComponent<ITestimonialsProps> = () => {
   return (
     <TestimonialsContainer id="testimonials" className="container">
       <SectionHeading
-        titleNumber="03"
+        titleNumber="04"
         sectionTitle="testimonials"
         sectionDetails="See what people says about me."
       />
