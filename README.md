@@ -1,5 +1,73 @@
-![Portfolio](https://i.ibb.co/D7ZpgxX/jericho-bantiquete.png)
+# [Jericho P. Bantiquete Portfolio](https://jerichobantiquete.vercel.app/)
 
-My name is [Jericho P. Bantiquete](https://jerichobantiquete.vercel.app/), A bachelorߴs degree holder with web development experience and passion for software development. Currently based in the Philippines, i love to build things.
+A personal portfolio website built with modern web technologies to showcase my skills, projects, and professional background.
 
-I absolutely love crafting and bringing to life responsive websites and web apps from scratch. For my personal and freelance projects, I dive into an exciting toolbox that includes HTML5, CSS3, JavaScript, React with TypeScript, TailwindCSS, shadcn/ui, Clerk, styled components, Next.js with TypeScript, PHP Laravel, MySQL, Alpine.js, Git, GitHub, Figma, and VS Code. Currently, Iߴm expanding my skills by learning about vim, improving my understanding of Data Structures & Algorithms, exploring Astro, looking into NEXT13 (app directory), diving into the T3 Stack, and studying GO. In addition, I have a basic grasp of programming languages like C, C++, Java, and Python, which I learned during my time at university. I am also offering assistance in developing systems for those in their bachelorߴs or masterߴs degree.
+## 🚀 Tech Stack
+
+This portfolio is built using:
+
+- **Next.js** - React framework for server-rendered applications
+- **Styled Components** - CSS-in-JS library for component styling
+- **MDX** - Markdown with JSX for content creation
+- **Velite** - Content transformation tool
+
+## 📝 About Me
+
+Kumusta! My name is Jericho P. Bantiquete. I am a developer, freelancer, and aspiring entrepreneur. I graduated with a Bachelor's Degree in Information Technology from Pangasinan State University. I am currently based in the Philippines, where I am building a product as a partner in a startup and also taking on freelance work.
+
+### 💻 Technologies
+
+Throughout my career, I have worked with a variety of technologies, including:
+
+- JavaScript & TypeScript
+- React, NextJs, Angular, RxJS, Akita, Vue
+- Laravel, Livewire, Inertia.js
+- Tailwind CSS, shadcn
+- MySQL, SQLite
+- Figma, Git, GitHub
+
+My primary tech stack revolves around the Laravel ecosystem with React and TypeScript, utilizing Inertia.js, shadcn and Tailwind CSS for styling.
+
+### 📚 Currently Learning
+
+- Data structures and algorithms
+- Golang
+- Astro
+- Remix
+- Python
+- Java
+- Machine learning and artificial intelligence
+
+## 🎯 Interests
+
+Outside of programming, I enjoy:
+
+- Playing chess
+- Learning music, especially guitar
+- Reading [books](https://jerichobantiquete.vercel.app/book-list)
+- Listening to podcasts
+- Curating [Spotify playlists](https://open.spotify.com/user/bwbn9zmf30zbwy254iksud8lc/playlists)
+
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/monciego/portfolio-next.git
+
+# Navigate to the project directory
+cd portfolio-next
+
+# Install dependencies
+yarn install
+
+# Run the development server
+yarn dev
+```
+
+## 📞 Contact
+
+Feel free to reach out if you'd like to connect or collaborate!
+
+- [GitHub](https://github.com/monciego)
+- [LinkedIn](https://www.linkedin.com/in/jericho-bantiquete-450541179/)
+- [𝕏 (formerly twitter)](https://x.com/monciego)
