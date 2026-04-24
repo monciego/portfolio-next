@@ -1,5 +1,5 @@
 import { CodeXml, SquareArrowOutUpRight } from 'lucide-react';
-import { StaticImageData } from 'next/legacy/image';
+import type { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import {
@@ -49,23 +49,23 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
             src={coverImage}
             alt={subTitle}
             sizes="80vw"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: 'cover' }}
             priority={preloadImage ? true : false}
           />
           <ProjectTransitionImage
             src={transitionImage}
             alt={subTitle}
             sizes="80vw"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: 'cover' }}
             priority={preloadImage ? true : false}
           />
         </ProjectImageContainer>
       </Link>
       <CategoryLabel>{subTitle}</CategoryLabel>
       <ProjectTitleContainer>
-        <Link href={`/project/${slug}`}>
+        <Link href={`${slug}`}>
           <ProjectTitle>{title}</ProjectTitle>
         </Link>
       </ProjectTitleContainer>

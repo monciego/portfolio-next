@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { AnimatedBurger } from '../ui/animated-burger';
 import Logo from '../ui/logo';
 import {
@@ -14,8 +14,20 @@ import {
   StyledNavbar,
 } from './navbar.styles';
 
+const NAV_LINKS = [
+  { label: 'Home', href: '#' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'About', href: '#about' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Testimonials', href: '#testimonials' },
+] as const;
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+  // Stable reference — does not change between renders.
+  // Always closes the nav (nav links should never toggle, only close).
+  const closeNav = useCallback(() => setOpen(false), []);
 
   return (
     <StyledNavbar className="container">
@@ -25,31 +37,13 @@ const Navbar = () => {
       <AnimatedBurger isOpen={open} setOpen={setOpen} />
       <NavigationOverlay $isOpen={open}>
         <NavigationLists>
-          <NavigationList>
-            <NavigationLink onClick={() => setOpen(!open)} href="#">
-              Home
-            </NavigationLink>
-          </NavigationList>
-          <NavigationList>
-            <NavigationLink onClick={() => setOpen(!open)} href="#projects">
-              Projects
-            </NavigationLink>
-          </NavigationList>
-          <NavigationList>
-            <NavigationLink onClick={() => setOpen(!open)} href="#about">
-              About
-            </NavigationLink>
-          </NavigationList>
-          <NavigationList>
-            <NavigationLink onClick={() => setOpen(!open)} href="#experience">
-              Experience
-            </NavigationLink>
-          </NavigationList>
-          <NavigationList>
-            <NavigationLink onClick={() => setOpen(!open)} href="#testimonials">
-              Testimonials
-            </NavigationLink>
-          </NavigationList>
+          {NAV_LINKS.map(({ label, href }) => (
+            <NavigationList key={label}>
+              <NavigationLink onClick={closeNav} href={href}>
+                {label}
+              </NavigationLink>
+            </NavigationList>
+          ))}
         </NavigationLists>
         <NavigationQuote>travaille pour ça</NavigationQuote>
         <NavigationSocials>

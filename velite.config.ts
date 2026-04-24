@@ -37,6 +37,7 @@ const testimonials = defineCollection({
     title: s.string().max(99),
     date: s.isodate(),
     avatar: s.image(),
+    rawBody: s.raw(),
     content: s.mdx(),
   }),
 });
@@ -57,7 +58,7 @@ export default defineConfig({
   },
 });
 
-/* 
+/*
 test the output
     .transform((data) => ({ ...data, permalink: `/${data.slug}` })),
 */

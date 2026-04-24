@@ -1,3 +1,4 @@
+import { ABOUT_PARAGRAPHS } from '@/lib/portfolio-data';
 import { SectionHeading } from '../ui/section-heading';
 import { AboutImage } from './about-images';
 import {
@@ -23,53 +24,37 @@ export const About: React.FunctionComponent<IAboutProps> = () => {
       />
       <AboutImage />
       <AboutDescriptionContainer>
-        <AboutDescription>
-          Kumusta! My name is Jericho P. Bantiquete. I am a developer,
-          freelancer, and aspiring entrepreneur. I graduated with a Bachelor’s
-          degree in Information Technology from Pangasinan State University. I
-          am currently based in the Philippines, where I am building a product
-          as a partner in a startup and also taking on freelance work.
-        </AboutDescription>
-        <AboutDescription>
-          Throughout my career, I have worked with a variety of technologies,
-          including JavaScript, TypeScript, React, NextJs, Angular, RxJS, Akita,
-          Vue, Laravel, Livewire, Inertia.js, Tailwind CSS, MySQL, Figma, Git,
-          GitHub, and more. While some of these are not my primary areas of
-          expertise, I have gained valuable experience using them in both
-          freelance projects and industry roles. My current tech stack, where I
-          find the most productivity and which I primarily use for my projects,
-          includes Laravel with React and TypeScript, utilizing Inertia.js,
-          shadcn and Tailwind CSS for styling. For the database, I typically use
-          MySQL or SQLite. Overall, my stack revolves around the Laravel
-          ecosystem.
-        </AboutDescription>
+        {/* Paragraphs 0–2 and 4 come directly from the shared data file.
+            Edit lib/portfolio-data.ts — this section and the terminal
+            "about" command both update automatically. */}
+        <AboutDescription>{ABOUT_PARAGRAPHS[0]}</AboutDescription>
+        <AboutDescription>{ABOUT_PARAGRAPHS[1]}</AboutDescription>
+        <AboutDescription>{ABOUT_PARAGRAPHS[2]}</AboutDescription>
 
-        <AboutDescription>
-          Currently, I am continuously learning about data structures and
-          algorithms. Additionally, I am exploring and expanding my knowledge in
-          various technologies such as Golang, Astro, Remix, Python, and Java.
-          As I continue to enhance my skills, I am particularly interested in
-          learning more about machine learning and artificial intelligence.
-        </AboutDescription>
+        {/* Paragraph 3 — same content as ABOUT_PARAGRAPHS[3] but rendered
+            with inline Next.js <Link> components around specific words.
+            When you update the text in portfolio-data.ts, mirror the change
+            here so the linked version stays consistent. */}
         <AboutDescription>
           Outside of programming, I enjoy playing chess, learning
           music—especially guitar, reading books, and listening to podcasts.
-          I’ve created a list of books I’ve read and those I plan to read in the
-          future, which you can check out{' '}
+          I&apos;ve created a list of books I&apos;ve read and those I plan to
+          read in the future, which you can check out{' '}
           <StyledNextLink href="/book-list">here</StyledNextLink>. I also love
           curating{' '}
           <StyledLink
             href="https://open.spotify.com/user/bwbn9zmf30zbwy254iksud8lc/playlists"
-            target="__blank"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Spotify Playlists
           </StyledLink>
           . Additionally, I have set up a{' '}
-          <StyledNextLink href={`/gallery`}>gallery</StyledNextLink> with some
-          photos, in case you’re curious to see a bit more about me.
+          <StyledNextLink href="/gallery">gallery</StyledNextLink> with some
+          photos, in case you&apos;re curious to see a bit more about me.
         </AboutDescription>
 
-        <AboutDescription>I use vim, btw.</AboutDescription>
+        <AboutDescription>{ABOUT_PARAGRAPHS[4]}</AboutDescription>
       </AboutDescriptionContainer>
       <ResumeLinkContainer>
         <ResumeLink

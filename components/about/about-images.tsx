@@ -1,7 +1,9 @@
+'use client';
+
 import imageOne from '@/public/images/about/about-image-1.jpg';
 import imageTwo from '@/public/images/about/about-image-2.jpg';
 import imageThree from '@/public/images/about/about-image-3.jpg';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import React from 'react';
 import { AboutImageContainer, ImageWrapper } from './about.styles';
 
@@ -15,30 +17,30 @@ export const AboutImage: React.FunctionComponent<IAboutImageProps> = () => {
           src={imageTwo}
           alt="Jericho Bantiquete"
           sizes="80vw"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: 'cover' }}
           priority={false}
-        />{' '}
+        />
       </ImageWrapper>
       <ImageWrapper>
         <Image
           src={imageOne}
           alt="Jericho Bantiquete"
           sizes="80vw"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: 'cover' }}
           priority={false}
-        />{' '}
+        />
       </ImageWrapper>
       <ImageWrapper $down>
         <Image
           src={imageThree}
           alt="Jericho Bantiquete"
           sizes="80vw"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: 'cover' }}
           priority={false}
-        />{' '}
+        />
       </ImageWrapper>
     </AboutImageContainer>
   );

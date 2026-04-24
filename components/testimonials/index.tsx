@@ -1,6 +1,6 @@
 import { testimonials } from '@/.velite';
 import { sortTestimonials } from '@/lib/utils';
-import React from 'react';
+import React, { useMemo } from 'react';
 import { SectionHeading } from '../ui/section-heading';
 import { TestimonialCard } from './testimonial-card';
 import {
@@ -8,11 +8,8 @@ import {
   TestimonialsContainer,
 } from './testimonials.styles';
 
-export interface ITestimonialsProps {}
-
-export const Testimonials: React.FunctionComponent<ITestimonialsProps> = () => {
-  const sortedTestimonials = sortTestimonials(testimonials);
-  const allTestimonials = sortedTestimonials;
+export const Testimonials: React.FunctionComponent = () => {
+  const sortedTestimonials = useMemo(() => sortTestimonials(testimonials), []);
 
   return (
     <TestimonialsContainer id="testimonials" className="container">
@@ -23,9 +20,9 @@ export const Testimonials: React.FunctionComponent<ITestimonialsProps> = () => {
       />
 
       <TestimonialCardsContainer>
-        {allTestimonials.map((testimonial) => {
-          return <TestimonialCard key={testimonial.date} {...testimonial} />;
-        })}
+        {sortedTestimonials.map((testimonial) => (
+          <TestimonialCard key={testimonial.date} {...testimonial} />
+        ))}
       </TestimonialCardsContainer>
     </TestimonialsContainer>
   );

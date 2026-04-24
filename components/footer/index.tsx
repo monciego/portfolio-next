@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { animateScroll as scroll } from 'react-scroll';
 import {
   ArrowToTop,
   ContactHeader,
@@ -20,14 +19,13 @@ import {
   Small,
 } from './footer.styles';
 
-const toTop = () => {
-  scroll.scrollToTop({ delay: 0, duration: 0 });
-};
+const CURRENT_YEAR = new Date().getFullYear();
+
+const toTop = () => window.scrollTo({ top: 0 });
 
 export interface IFooterProps {}
 
 export const Footer: React.FunctionComponent<IFooterProps> = () => {
-  const year = new Date().getFullYear();
   return (
     <FooterStyled>
       <FooterSubTitleContainer>
@@ -89,7 +87,7 @@ export const Footer: React.FunctionComponent<IFooterProps> = () => {
 
       <Copyright>
         <small>
-          &copy; Copyright {year},{' '}
+          &copy; Copyright {CURRENT_YEAR},{' '}
           <Small
             href="https://github.com/monciego"
             target="_blank"

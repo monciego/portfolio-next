@@ -16,7 +16,7 @@ export function formatDate(input: string | number | Date): string {
  * Generic sort function for arrays with a date property
  */
 function sortByDate<T extends { date: string | number }>(items: T[]): T[] {
-  return items.sort(
+  return [...items].sort(
     (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
   );
 }

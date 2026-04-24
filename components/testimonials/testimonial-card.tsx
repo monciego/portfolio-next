@@ -1,4 +1,6 @@
-import { StaticImageData } from 'next/legacy/image';
+'use client';
+
+import type { StaticImageData } from 'next/image';
 import React from 'react';
 import { MDXContent } from '../mdx-components';
 import {
@@ -30,8 +32,8 @@ export const TestimonialCard: React.FunctionComponent<
             <TestimonialAvatar
               src={avatar}
               alt={name}
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: 'cover' }}
               priority={false}
             />
           </AvatarContainer>
