@@ -42,10 +42,11 @@ export const HeroName = styled.h2`
 `;
 
 export const HeroTitle = styled.h1`
-  --min: 1.75em;
+  --min: 2.5em;
   --val: 6vw;
-  --max: 5em;
-  font-family: ${({ theme }) => theme.fonts.syncopate};
+  --max: 6em;
+  line-height: 0.9;
+  font-family: ${({ theme }) => theme.fonts.bunch};
   text-transform: uppercase;
   text-align: center;
 `;

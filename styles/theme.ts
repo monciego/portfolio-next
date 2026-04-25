@@ -8,6 +8,7 @@ export const theme: DefaultTheme = {
     syncopate: 'var(--font-syncopate), sans-serif',
     firaCode: 'var(--font-fira-code), monospace',
     playfairDisplay: 'var(--font-playfair), serif',
+    bunch: 'var(--font-bunch), serif',
   },
   colors: {
     white: '#ffffff',

@@ -25,7 +25,7 @@ export const SectionTitle = styled.h2<sectionHeadingProps>`
   z-index: 1;
   color: #f2f2f2;
   display: inline-block;
-  font-family: ${({ theme }) => theme.fonts.syncopate};
+  font-family: ${({ theme }) => theme.fonts.bunch};
 
   &::after {
     position: absolute;

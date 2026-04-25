@@ -5,6 +5,22 @@ import { theme } from '@/styles/theme';
 import { Metadata } from 'next';
 import localFont from 'next/font/local';
 
+const bunch = localFont({
+  src: [
+    {
+      path: '../fonts/Bunch-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/Bunch-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-bunch',
+});
+
 const syncopate = localFont({
   src: '../fonts/Syncopate-Bold.woff',
   variable: '--font-syncopate',
@@ -120,7 +136,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${syncopate.variable} ${playfairDisplay.variable} ${fira_code.variable}`}
+      className={`${inter.variable} ${syncopate.variable} ${bunch.variable} ${playfairDisplay.variable} ${fira_code.variable}`}
     >
       <body>
         <ThemeProvider theme={theme}>

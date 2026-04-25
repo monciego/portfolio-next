@@ -8,6 +8,7 @@ declare module 'styled-components' {
       syncopate: string;
       firaCode: string;
       playfairDisplay: string;
+      bunch: string;
     };
     colors: {
       white: string;

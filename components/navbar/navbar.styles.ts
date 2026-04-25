@@ -50,9 +50,10 @@ export const NavigationLink = styled.a`
   font-size: clamp(var(--min), var(--val), var(--max));
   --min: 1.75em;
   --val: 2.5vw;
-  --max: 2em;
+  --max: 3em;
   text-transform: uppercase;
   font-weight: 600;
+  font-family: ${({ theme }) => theme.fonts.bunch};
 `;
 
 export const NavigationQuote = styled.span`

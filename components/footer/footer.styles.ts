@@ -46,27 +46,30 @@ export const FooterTitle = styled.a`
   font-size: clamp(var(--min), var(--val), var(--max));
   --min: 2em;
   --val: 4vw;
-  --max: 3.5em;
+  --max: 5em;
   font-weight: 800;
   position: relative;
   width: 100%;
   letter-spacing: 1px;
   color: white;
-  font-family: ${({ theme }) => theme.fonts.syncopate};
+  font-family: ${({ theme }) => theme.fonts.bunch};
   text-transform: uppercase;
-  background: linear-gradient(
-      to right,
-      rgba(100, 200, 200, 0),
-      rgba(100, 200, 200, 0)
-    ),
+  background:
+    linear-gradient(to right, rgba(100, 200, 200, 0), rgba(100, 200, 200, 0)),
     linear-gradient(to right, #f0f0f0, #f0f0f0, #f0f0f0);
-  background-size: 100% 0.1em, 0 0.1em;
-  background-position: 100% 100%, 0 100%;
+  background-size:
+    100% 0.1em,
+    0 0.1em;
+  background-position:
+    100% 100%,
+    0 100%;
   background-repeat: no-repeat;
   transition: background-size 400ms;
 
   &:hover {
-    background-size: 0 0.1em, 100% 0.1em;
+    background-size:
+      0 0.1em,
+      100% 0.1em;
   }
 
   @media all and (max-width: ${({ theme }) => theme.breakpoints.lg}) {
