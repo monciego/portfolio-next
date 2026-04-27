@@ -14,7 +14,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        background-color: ${({ theme }) => theme.colors.backgroundColor}; 
+        background-color: ${({ theme }) => theme.colors.backgroundColor};
         color: ${({ theme }) => theme.colors.white};
     }
 
@@ -25,7 +25,7 @@ export const GlobalStyles = createGlobalStyle`
 
 
         @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-            width: 85%;
+            width: 80%;
         }
     }
 
@@ -42,7 +42,7 @@ export const GlobalStyles = createGlobalStyle`
     button {
         font-family: inherit;
     }
-    
+
     section,
     footer {
         padding: 6.32875rem 0 2.6125rem 0;
@@ -139,7 +139,7 @@ export const GlobalStyles = createGlobalStyle`
         color: #5ad786;
         font-weight: 400;
     }
-    
+
     .change-text::before {
         content: 'create';
         animation: change infinite 5s;

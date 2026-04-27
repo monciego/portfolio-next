@@ -1,3 +1,6 @@
+'use client';
+
+import { saveHomeScroll } from '@/lib/use-scroll-restoration';
 import { CodeXml, SquareArrowOutUpRight } from 'lucide-react';
 import type { StaticImageData } from 'next/image';
 import Link from 'next/link';
@@ -43,7 +46,7 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
 }) => {
   return (
     <ProjectStyledContainer>
-      <Link href={`${slug}`}>
+      <Link href={`${slug}`} onClick={saveHomeScroll}>
         <ProjectImageContainer>
           <StyledProjectImage
             src={coverImage}
@@ -65,7 +68,7 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
       </Link>
       <CategoryLabel>{subTitle}</CategoryLabel>
       <ProjectTitleContainer>
-        <Link href={`${slug}`}>
+        <Link href={`${slug}`} onClick={saveHomeScroll}>
           <ProjectTitle>{title}</ProjectTitle>
         </Link>
       </ProjectTitleContainer>

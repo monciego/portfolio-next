@@ -34,7 +34,9 @@ const Project = ({ project }: ProjectProps) => {
         <ContentContainer>
           <MDXContent code={project.content} />
           <LinkContainer>
-            <Link href="/">← View more projects</Link>
+            <Link href="/" scroll={false}>
+              ← View more projects
+            </Link>
           </LinkContainer>
         </ContentContainer>
       </ProjectDetailsContainer>{' '}
