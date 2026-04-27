@@ -156,30 +156,51 @@ const components = {
   ),
   // Enhanced link with hover effect for adaptive theme
   /* all a element have this style */
-  a: ({ children, ...props }: { children: ReactNode }) => (
-    <a
-      style={{
-        fontWeight: '500', // font-medium
-        color: 'var(--accent-blue)',
-        textDecoration: 'underline', // underline
-        textDecorationColor: 'rgba(var(--accent-blue), 0.4)', // Subtle underline
-        textUnderlineOffset: '0.2em', // underline-offset
-        ...linkTransition,
-      }}
-      onMouseOver={(e) => {
-        e.currentTarget.style.color = 'var(--accent-blue-hover)';
-        e.currentTarget.style.textDecorationColor = 'var(--accent-blue-hover)';
-      }}
-      onMouseOut={(e) => {
-        e.currentTarget.style.color = 'var(--accent-blue)';
-        e.currentTarget.style.textDecorationColor =
-          'rgba(var(--accent-blue), 0.4)';
-      }}
-      {...props}
-    >
-      {children}
-    </a>
-  ),
+  a: ({
+    children,
+    style: styleProp,
+    className,
+    ...props
+  }: {
+    children: ReactNode;
+    style?: React.CSSProperties;
+    className?: string;
+  }) => {
+    const hasCustomColor = !!styleProp?.color;
+    const mergedStyle: React.CSSProperties = {
+      fontWeight: '500', // font-medium
+      color: 'var(--accent-blue)',
+      textDecoration: 'underline', // underline
+      textDecorationColor: 'rgba(var(--accent-blue), 0.4)', // Subtle underline
+      textUnderlineOffset: '0.2em', // underline-offset
+      ...linkTransition,
+      ...styleProp, // merge user styles on top — custom color wins
+    };
+
+    return (
+      <a
+        className={className}
+        style={mergedStyle}
+        onMouseOver={(e) => {
+          if (!hasCustomColor) {
+            e.currentTarget.style.color = 'var(--accent-blue-hover)';
+            e.currentTarget.style.textDecorationColor =
+              'var(--accent-blue-hover)';
+          }
+        }}
+        onMouseOut={(e) => {
+          if (!hasCustomColor) {
+            e.currentTarget.style.color = 'var(--accent-blue)';
+            e.currentTarget.style.textDecorationColor =
+              'rgba(var(--accent-blue), 0.4)';
+          }
+        }}
+        {...props}
+      >
+        {children}
+      </a>
+    );
+  },
   // Enhanced paragraph with better readability
   p: ({ children, ...props }: { children: ReactNode }) => (
     <p
