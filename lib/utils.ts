@@ -31,3 +31,16 @@ export const sortProjects = (projects: Project[]) => sortByDate(projects);
  */
 export const sortTestimonials = (testimonials: Testimonial[]) =>
   sortByDate(testimonials);
+
+/**
+ * Escape HTML special characters to prevent XSS when inserting
+ * user-controlled strings into dangerouslySetInnerHTML content.
+ */
+export function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}

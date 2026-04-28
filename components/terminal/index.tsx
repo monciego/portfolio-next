@@ -2,7 +2,7 @@
 
 import { projects, testimonials } from '#velite';
 import { ABOUT_PARAGRAPHS } from '@/lib/portfolio-data';
-import { sortProjects, sortTestimonials } from '@/lib/utils';
+import { escapeHtml, sortProjects, sortTestimonials } from '@/lib/utils';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import {
   BlueText,
@@ -76,8 +76,8 @@ const PROJECTS_OUTPUT = (() => {
       !project.isLiveLinkDisabled && project.liveLink
         ? project.liveLink
         : !project.isSourceCodeLinkDisabled && project.sourceCodeLink
-        ? project.sourceCodeLink
-        : null;
+          ? project.sourceCodeLink
+          : null;
 
     html += url
       ? `<h4><a target="_blank" rel="noopener noreferrer" href="${url}">• ${project.subTitle}</a></h4>`
@@ -171,7 +171,7 @@ export const Terminal: React.FunctionComponent = () => {
           ?.scrollIntoView({ behavior: 'smooth' });
         setCommandOutput(
           (prev) =>
-            `${prev}<h2><span>> </span>${rawInput}</h2><h3>Redirected to ${sectionId} section.</h3>`
+            `${prev}<h2><span>> </span>${escapeHtml(rawInput)}</h2><h3>Redirected to ${sectionId} section.</h3>`
         );
         return;
       }
@@ -198,11 +198,12 @@ export const Terminal: React.FunctionComponent = () => {
           break;
 
         default:
-          content = `<h5>${trimmed}: command not found</h5>`;
+          content = `<h5>${escapeHtml(trimmed)}: command not found</h5>`;
       }
 
       setCommandOutput(
-        (prev) => `${prev}<h2><span>> </span>${rawInput}</h2>${content}`
+        (prev) =>
+          `${prev}<h2><span>> </span>${escapeHtml(rawInput)}</h2>${content}`
       );
     },
     [commandInput]
