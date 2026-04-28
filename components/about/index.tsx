@@ -30,31 +30,34 @@ export const About: React.FunctionComponent<IAboutProps> = () => {
         <AboutDescription>{ABOUT_PARAGRAPHS[0]}</AboutDescription>
         <AboutDescription>{ABOUT_PARAGRAPHS[1]}</AboutDescription>
         <AboutDescription>{ABOUT_PARAGRAPHS[2]}</AboutDescription>
+        <AboutDescription>{ABOUT_PARAGRAPHS[3]}</AboutDescription>
 
-        {/* Paragraph 3 — same content as ABOUT_PARAGRAPHS[3] but rendered
+        {/* Paragraph 4 — same content as ABOUT_PARAGRAPHS[4] but rendered
             with inline Next.js <Link> components around specific words.
             When you update the text in portfolio-data.ts, mirror the change
             here so the linked version stays consistent. */}
         <AboutDescription>
           Outside of programming, I enjoy playing chess, learning
-          music—especially guitar, reading books, and listening to podcasts.
-          I&apos;ve created a list of books I&apos;ve read and those I plan to
-          read in the future, which you can check out{' '}
-          <StyledNextLink href="/book-list">here</StyledNextLink>. I also love
-          curating{' '}
+          music—especially guitar, reading books, and listening to podcasts. I
+          also curate{' '}
           <StyledLink
             href="https://open.spotify.com/user/bwbn9zmf30zbwy254iksud8lc/playlists"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Spotify Playlists
-          </StyledLink>
-          . Additionally, I have set up a{' '}
+            Spotify playlists
+          </StyledLink>{' '}
+          and keep a list of books I&apos;ve read and plan to read, which you
+          can check out <StyledNextLink href="/book-list">here</StyledNextLink>.
+          I&apos;ve also started writing short reflections and realizations
+          about learning, growth, and technology, which you can explore{' '}
+          <StyledNextLink href="/writings">here</StyledNextLink>. Additionally,
+          I&apos;ve set up a{' '}
           <StyledNextLink href="/gallery">gallery</StyledNextLink> with some
           photos, in case you&apos;re curious to see a bit more about me.
         </AboutDescription>
 
-        <AboutDescription>{ABOUT_PARAGRAPHS[4]}</AboutDescription>
+        <AboutDescription>{ABOUT_PARAGRAPHS[5]}</AboutDescription>
       </AboutDescriptionContainer>
       <ResumeLinkContainer>
         <ResumeLink

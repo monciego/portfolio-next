@@ -5,31 +5,35 @@
  * `components/terminal/index.tsx` (the "about" terminal command) import
  * from here. Edit once — both places update automatically.
  *
- * Note on paragraph index 3:
+ * Note on paragraph index 4:
  *   The terminal uses the plain-text version stored here.
  *   The About component renders its own JSX version of that same paragraph
  *   because it wraps certain words in styled Next.js <Link> components.
- *   When you update paragraph 3 here, also update the matching JSX block
+ *   When you update paragraph 4 here, also update the matching JSX block
  *   in components/about/index.tsx so both stay consistent.
  */
 export const ABOUT_PARAGRAPHS = [
   // 0 — Introduction
-  "Kumusta! My name is Jericho P. Bantiquete. I am a developer, freelancer, and aspiring entrepreneur. I graduated with a Bachelor's degree in Information Technology from Pangasinan State University. I am currently based in the Philippines, where I am building a product as a partner in a startup and also taking on freelance work.",
+  "Kumusta! My name is Jericho P. Bantiquete. I am an indie developer, freelancer, and aspiring entrepreneur. I graduated with a Bachelor's degree in Information Technology from Pangasinan State University. I'm currently based in the Philippines, where I'm building a product as a partner in a startup, developing my own projects, and taking on freelance work.",
 
   // 1 — Tech stack
-  "Throughout my career, I have worked with a variety of technologies, including JavaScript, TypeScript, React, NextJs, Angular, RxJS, Akita, Vue, Laravel, Livewire, Inertia.js, Tailwind CSS, MySQL, Figma, Git, GitHub, and more. While some of these are not my primary areas of expertise, I have gained valuable experience using them in both freelance projects and industry roles. My current tech stack, where I find the most productivity and which I primarily use for my projects, includes Laravel with React and TypeScript, utilizing Inertia.js, shadcn and Tailwind CSS for styling. For the database, I typically use MySQL or SQLite. Overall, my stack revolves around the Laravel ecosystem.",
+  "Throughout my career, I've worked with a variety of technologies, including JavaScript, TypeScript, React, React Native, Next.js, Angular, RxJS, Akita, Vue, Laravel, Livewire, Inertia.js, Tailwind CSS, MySQL, Figma, Git, and GitHub. While not all of these are my primary tools, I've used them across freelance projects and industry work. My current stack focuses on Laravel with React and TypeScript, using Inertia.js, shadcn, and Tailwind CSS for building modern applications. For databases, I typically use MySQL or SQLite. Overall, my work is centered around the Laravel ecosystem, where I'm most productive.",
 
   // 2 — Currently learning
-  "Currently, I am continuously learning about data structures and algorithms. Additionally, I am exploring and expanding my knowledge in various technologies such as Golang, Astro, Remix, Python, and Java. As I continue to enhance my skills, I am particularly interested in learning more about machine learning and artificial intelligence.",
+  "I'm currently improving my fundamentals in data structures and algorithms, while also exploring technologies like Golang, Astro, Remix, Python, and Java. I'm especially interested in going deeper into machine learning and artificial intelligence.",
 
-  // 3 — Hobbies / outside programming
+  // 3 — Virtual Assistant experience
+  "I've also worked as a Virtual Assistant, which gave me real-world experience in business operations, communication, and working with international clients.",
+
+  // 4 — Hobbies / outside programming
   //   Terminal uses this plain-text version.
   //   The About component renders its own JSX version with inline <Link>
-  //   components around "here", "Spotify Playlists", and "gallery".
-  "Outside of programming, I enjoy playing chess, learning music—especially guitar, reading books, and listening to podcasts. I've created a list of books I've read and those I plan to read in the future. I also love curating Spotify Playlists. Additionally, I have set up a gallery with some photos, in case you're curious to see a bit more about me.",
+  //   components around "here" (book list), "here" (writing), "Spotify playlists", and "gallery".
+  //   When you update the text here, mirror the change in components/about/index.tsx.
+  "Outside of programming, I enjoy playing chess, learning music—especially guitar, reading books, and listening to podcasts. I also curate Spotify playlists and keep a list of books I've read and plan to read, which you can check out here. I've also started writing short reflections and realizations about learning, growth, and technology, which you can explore here. Additionally, I've set up a gallery with some photos, in case you're curious to see a bit more about me.",
 
-  // 4 — Closing
-  "I use vim, btw.",
+  // 5 — Closing
+  'I use vim and zed, btw.',
 ] as const;
 
 export type AboutParagraph = (typeof ABOUT_PARAGRAPHS)[number];
