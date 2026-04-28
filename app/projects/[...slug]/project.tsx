@@ -1,6 +1,6 @@
 'use client';
 
-import { Project as IProject } from '@/.velite';
+import type { Project as IProject } from '@/.velite';
 import { MDXContent } from '@/components/mdx-components';
 import Link from 'next/link';
 import {

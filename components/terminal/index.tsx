@@ -1,6 +1,6 @@
 'use client';
 
-import { projects, testimonials } from '#velite';
+import { projects, testimonials } from '@/lib/velite';
 import { ABOUT_PARAGRAPHS } from '@/lib/portfolio-data';
 import { escapeHtml, sortProjects, sortTestimonials } from '@/lib/utils';
 import React, { useCallback, useEffect, useRef, useState } from 'react';

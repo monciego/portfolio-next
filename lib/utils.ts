@@ -1,4 +1,4 @@
-import { Project, Testimonial } from '@/.velite';
+import type { Project, Testimonial } from '@/.velite';
 
 /**
  * Format date in "Month Day, Year" format

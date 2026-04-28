@@ -1,4 +1,4 @@
-import { projects } from '#velite';
+import { projects } from '@/lib/velite';
 import { sortProjects } from '@/lib/utils';
 import React, { useMemo } from 'react';
 import { SectionHeading } from '../ui/section-heading';

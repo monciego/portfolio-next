@@ -1,4 +1,4 @@
-import { projects } from '@/.velite';
+import { projects } from '@/lib/velite';
 import { notFound } from 'next/navigation';
 import Project from './project';
 

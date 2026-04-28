@@ -1,4 +1,4 @@
-import { testimonials } from '@/.velite';
+import { testimonials } from '@/lib/velite';
 import { sortTestimonials } from '@/lib/utils';
 import React, { useMemo } from 'react';
 import { SectionHeading } from '../ui/section-heading';
