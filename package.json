@@ -15,7 +15,7 @@
     "build:content": "velite --clean",
     "dev:next": "next dev",
     "build:next": "next build",
-    "dev": "run-p dev:*",
+    "dev": "next dev",
     "build": "run-s build:*",
     "start": "next start",
     "lint": "next lint",

@@ -61,6 +61,29 @@ const experiences: TExperience[] = [
     isContentRight: false,
   },
   {
+    company: 'LA Follies',
+    title: 'Virtual Assistant',
+    startDate: 'Nov 2025',
+    endDate: 'Apr 2026',
+    isPresent: false,
+    location: 'Remote (Los Angeles, USA)',
+    skills: [
+      'Canva',
+      'CapCut',
+      'Google Calendar',
+      'Email Management',
+      'Scheduling & Coordination',
+      'Social Media Research',
+      'Content Support',
+    ],
+    jobDescriptions: [
+      'Supported daily operations by managing schedules, emails, and coordination tasks for a US-based entertainment company.',
+      'Created and organized call sheets, scheduled rehearsals, and maintained calendar workflows using Google Calendar.',
+      'Assisted in content creation including basic video editing, poster design, and social media preparation using Canva and CapCut.',
+    ],
+    isContentRight: true,
+  },
+  {
     company: 'Freelance Web Developer',
     title: 'Fullstack Developer',
     startDate: 'Feb 2022',
@@ -85,7 +108,7 @@ const experiences: TExperience[] = [
       "Giving assistance in system development for those in their bachelor's or master's degree.",
       'Developed government websites, ensuring user-friendly interfaces and robust functionalities for seamless public interaction.',
     ],
-    isContentRight: true,
+    isContentRight: false,
   },
   {
     company: 'Massive Integrated Tech Solutions Inc.',
@@ -98,7 +121,7 @@ const experiences: TExperience[] = [
     jobDescriptions: [
       'Developed web applications and software solutions, ensuring high performance, responsiveness, and user-friendly design. (NDA signed)',
     ],
-    isContentRight: false,
+    isContentRight: true,
   },
   {
     company: 'FFUF Manila Inc.',
@@ -121,7 +144,7 @@ const experiences: TExperience[] = [
       'Implement front-end features in line with best practices.',
       'Experienced Scrum professionals drive sprint planning, daily standups, and backlog refinement for efficient and effective project execution.',
     ],
-    isContentRight: true,
+    isContentRight: false,
   },
 ];
 
