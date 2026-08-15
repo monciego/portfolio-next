@@ -1,7 +1,14 @@
+import { FolderClosedIcon, User2Icon } from 'lucide-react';
 import React from 'react';
-import { Button } from '../ui/button';
+import {
+  ActionButton,
+  ActionButtonChip,
+  ActionButtonContainer,
+} from '../ui/button';
 import {
   HeroContainer,
+  HeroLinks,
+  HeroLinksContainer,
   HeroName,
   HeroSubTitle,
   HeroTitle,
@@ -27,7 +34,22 @@ export const Hero: React.FunctionComponent<IHeroProps> = () => {
         <span className="responsive">g</span>
         <span className="responsive">s</span> with my keyboard
       </HeroSubTitle>
-      <Button href="#projects">Explore Projects</Button>
+      <ActionButtonContainer>
+        <ActionButton href="#projects">
+          <FolderClosedIcon style={{ height: '1rem' }} />
+          Explore Projects
+          <ActionButtonChip>↵</ActionButtonChip>
+        </ActionButton>
+        <ActionButton href="#about" variant="secondary">
+          <User2Icon style={{ height: '1rem' }} />
+          Learn About Me
+          <ActionButtonChip>→</ActionButtonChip>
+        </ActionButton>
+      </ActionButtonContainer>
+      <HeroLinksContainer>
+        <HeroLinks href="/writings">my writings </HeroLinks>·
+        <HeroLinks href="/book-list">book list </HeroLinks>
+      </HeroLinksContainer>
     </HeroContainer>
   );
 };

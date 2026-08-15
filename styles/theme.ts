@@ -9,6 +9,7 @@ export const theme: DefaultTheme = {
     firaCode: 'var(--font-fira-code), monospace',
     playfairDisplay: 'var(--font-playfair), serif',
     bunch: 'var(--font-bunch), serif',
+    mono: 'var(--font-mono), monospace',
   },
   colors: {
     white: '#ffffff',

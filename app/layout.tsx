@@ -53,6 +53,28 @@ const inter = localFont({
   variable: '--font-inter',
 });
 
+const mono = localFont({
+  src: [
+    {
+      path: '../fonts/GeistMono-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/GeistMono-Medium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/GeistMono-SemiBold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+  ],
+  display: 'swap',
+  variable: '--font-mono',
+});
+
 const fira_code = localFont({
   src: [
     {
@@ -136,7 +158,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${syncopate.variable} ${bunch.variable} ${playfairDisplay.variable} ${fira_code.variable}`}
+      className={`${inter.variable} ${mono.variable} ${syncopate.variable} ${bunch.variable} ${playfairDisplay.variable} ${fira_code.variable}`}
     >
       <body>
         <ThemeProvider theme={theme}>

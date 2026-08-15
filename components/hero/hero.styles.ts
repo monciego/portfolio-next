@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Link from 'next/link';
 
 export const HeroContainer = styled.section`
   display: flex;
@@ -55,4 +56,18 @@ export const HeroSubTitle = styled.p`
   --min: 0.85em;
   --val: 2.5vw;
   --max: 1.5em;
+`;
+
+export const HeroLinksContainer = styled.div`
+  display: flex;
+  gap: 0.5rem;
+`;
+
+export const HeroLinks = styled(Link)`
+  font-size: 14px;
+  font-family: ${({ theme }) => theme.fonts.mono};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.lightViolet};
+  }
 `;

@@ -9,6 +9,7 @@ declare module 'styled-components' {
       firaCode: string;
       playfairDisplay: string;
       bunch: string;
+      mono: string;
     };
     colors: {
       white: string;
