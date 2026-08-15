@@ -1,20 +1,30 @@
+import Link from 'next/link';
 import styled from 'styled-components';
+
+interface NavbarProps {
+  readonly $hidden: boolean;
+}
 
 interface isOpenProps {
   readonly $isOpen: boolean;
 }
 
-export const StyledNavbar = styled.nav`
+interface activeLinkProps {
+  readonly $active: boolean;
+}
+
+export const StyledNavbar = styled.nav<NavbarProps>`
   position: fixed;
-  top: 0;
+  top: ${({ $hidden }) => ($hidden ? '-14vh' : '0')};
   right: 0;
   left: 0;
-  height: 13vh;
+  height: 8vh;
   display: flex;
   align-items: center;
   margin: 0 auto;
   justify-content: space-between;
   z-index: 999;
+  transition: top 0.35s ease;
 `;
 
 export const NavigationOverlay = styled.nav<isOpenProps>`
@@ -27,7 +37,7 @@ export const NavigationOverlay = styled.nav<isOpenProps>`
   height: 100vh;
   overflow: hidden;
   padding: 4em;
-  transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: top 0.85s cubic-bezier(0.16, 1, 0.3, 1);
 `;
 
 export const NavigationLists = styled.ul`
@@ -46,7 +56,7 @@ export const NavigationLists = styled.ul`
 
 export const NavigationList = styled.li``;
 
-export const NavigationLink = styled.a`
+export const NavigationLink = styled(Link)<activeLinkProps>`
   font-size: clamp(var(--min), var(--val), var(--max));
   --min: 1.75em;
   --val: 2.5vw;
@@ -54,6 +64,30 @@ export const NavigationLink = styled.a`
   text-transform: uppercase;
   font-weight: 600;
   font-family: ${({ theme }) => theme.fonts.bunch};
+  color: ${({ $active }) => ($active ? 'violet' : 'inherit')};
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: violet;
+  }
+`;
+
+export const NavigationSecondaryList = styled.li`
+  display: flex;
+  gap: 1.75rem;
+`;
+
+export const NavigationSecondaryLink = styled(Link)`
+  font-size: clamp(0.85em, 1.8vw, 1.1em);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: ${({ theme }) => theme.fonts.bunch};
+  color: #6b7280;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #ffffff;
+  }
 `;
 
 export const NavigationQuote = styled.span`
@@ -76,5 +110,15 @@ export const NavigationSocials = styled.div`
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     right: 7.5%;
+  }
+
+  a {
+    color: #6b7280;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #ffffff;
+    }
   }
 `;

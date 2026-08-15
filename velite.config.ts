@@ -1,32 +1,87 @@
 import rehypePrettyCode from 'rehype-pretty-code';
 import { defineCollection, defineConfig, s } from 'velite';
 
-// `s` is extended from Zod with some custom schemas,
-// you can also import re-exported `z` from `velite` if you don't need these extension schemas.
-
 const projects = defineCollection({
-  name: 'Project', // collection type name
-  pattern: 'projects/**/*.mdx', // content files glob pattern
+  name: 'Project',
+  pattern: 'projects/**/*.mdx',
   schema: s
     .object({
-      title: s.string().max(99), // Zod primitive type
-      subTitle: s.string().max(99), // Zod primitive type
-      slug: s.path(), // validate format, unique in posts collection
-      // slug: s.path(), // auto generate slug from file path
-      date: s.isodate(), // input Date-like string, output ISO Date string.
-      coverImage: s.image(), // input image relative path, output image object with blurImage.
-      transitionImage: s.image(), // input image relative path, output image object with blurImage.
+      title: s.string().max(99),
+      subTitle: s.string().max(99),
+      slug: s.path(),
+      date: s.isodate(),
+      coverImage: s.image(),
+      transitionImage: s.image(),
       sourceCodeLink: s.string().max(99).optional(),
       liveLink: s.string().max(99).optional(),
       isLiveLinkDisabled: s.boolean().default(false).optional(),
       isSourceCodeLinkDisabled: s.boolean().default(false).optional(),
-      content: s.mdx(), // transform markdown to html
+      content: s.mdx(),
     })
-    // more additional fields (computed fields)
     .transform((data) => ({
       ...data,
       slugAsParams: data.slug.split('/').slice(1).join('/'),
     })),
+});
+
+const blogs = defineCollection({
+  name: 'Blog',
+  pattern: 'writings/blogs/**/*.mdx',
+  schema: s.object({
+    title: s.string().max(99),
+    slug: s.path(),
+    date: s.isodate(),
+    excerpt: s.string().max(300).optional(),
+    content: s.mdx(),
+  }),
+});
+
+const reflections = defineCollection({
+  name: 'Reflection',
+  pattern: 'writings/reflections/**/*.mdx',
+  schema: s.object({
+    title: s.string().max(99),
+    slug: s.path(),
+    date: s.isodate(),
+    excerpt: s.string().max(300).optional(),
+    content: s.mdx(),
+  }),
+});
+
+const notes = defineCollection({
+  name: 'Note',
+  pattern: 'writings/notes/**/*.mdx',
+  schema: s.object({
+    title: s.string().max(99),
+    slug: s.path(),
+    date: s.isodate(),
+    excerpt: s.string().max(300).optional(),
+    content: s.mdx(),
+  }),
+});
+
+const poems = defineCollection({
+  name: 'Poem',
+  pattern: 'writings/poems/**/*.mdx',
+  schema: s.object({
+    title: s.string().max(99),
+    slug: s.path(),
+    date: s.isodate(),
+    excerpt: s.string().max(300).optional(),
+    content: s.mdx(),
+  }),
+});
+
+const journal = defineCollection({
+  name: 'Journal',
+  pattern: 'writings/journal/**/*.mdx',
+  schema: s.object({
+    title: s.string().max(99),
+    slug: s.path(),
+    date: s.isodate(),
+    excerpt: s.string().max(300).optional(),
+    content: s.mdx(),
+  }),
 });
 
 const testimonials = defineCollection({
@@ -51,14 +106,17 @@ export default defineConfig({
     name: '[name]-[hash:6].[ext]',
     clean: true,
   },
-  collections: { projects, testimonials },
+  collections: {
+    projects,
+    testimonials,
+    blogs,
+    reflections,
+    notes,
+    poems,
+    journal,
+  },
   mdx: {
     rehypePlugins: [[rehypePrettyCode, { theme: 'tokyo-night' }]],
     remarkPlugins: [],
   },
 });
-
-/*
-test the output
-    .transform((data) => ({ ...data, permalink: `/${data.slug}` })),
-*/
