@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 
 export const FooterStyled = styled.footer`
@@ -269,5 +270,46 @@ export const Small = styled.a`
   &:hover {
     color: white;
     transition: all 0.5s;
+  }
+`;
+
+export const FooterPageLinks = styled.span`
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+`;
+
+export const FooterPageLink = styled(Link)`
+  font-size: clamp(var(--min), var(--val), var(--max));
+  --min: 0.85em;
+  --val: 2.5vw;
+  --max: 1em;
+  letter-spacing: 1px;
+  color: #8c8c8c;
+  transition: 0.3s ease;
+  position: relative;
+
+  &:hover {
+    color: white;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    border-radius: 5px;
+    background: white;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 `;

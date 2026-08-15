@@ -16,6 +16,8 @@ import {
   FooterSubTitleContainer,
   FooterTitle,
   FooterTitleContainer,
+  FooterPageLinks,
+  FooterPageLink,
   Small,
 } from './footer.styles';
 
@@ -77,6 +79,14 @@ export const Footer: React.FunctionComponent<IFooterProps> = () => {
           <ContactLink href="tel:+639951076206">
             jerichobantiquete@gmail.com
           </ContactLink>
+        </FooterContact>
+        <FooterContact>
+          <ContactHeader>Explore</ContactHeader>
+          <FooterPageLinks>
+            <FooterPageLink href="/writings">Writings</FooterPageLink>
+            <FooterPageLink href="/gallery">Gallery</FooterPageLink>
+            <FooterPageLink href="/book-list">Book List</FooterPageLink>
+          </FooterPageLinks>
         </FooterContact>
       </FooterContacts>
 
