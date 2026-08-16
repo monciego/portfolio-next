@@ -19,14 +19,11 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     .container {
-        max-width: 90%;
+        max-width: 64rem;
         width: 100%;
         margin: 0 auto;
-
-
-        @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-            width: 80%;
-        }
+        padding-left:  1.25rem;
+        padding-right: 1.25rem;
     }
 
 

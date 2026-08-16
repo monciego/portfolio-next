@@ -15,12 +15,12 @@ export const SectionStyledHeading = styled.div`
 `;
 
 export const SectionTitle = styled.h2<sectionHeadingProps>`
-  --min: 2em;
+  --min: 2.5em;
   --val: 4.5vw;
-  --max: 7em;
-  margin-bottom: 1.5rem;
+  --max: 4.5em;
   position: relative;
-  font-weight: 800;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
   text-transform: uppercase;
   z-index: 1;
   color: #f2f2f2;
@@ -38,26 +38,18 @@ export const SectionTitle = styled.h2<sectionHeadingProps>`
     font-family: ${({ theme }) => theme.fonts.playfairDisplay};
     font-size: 9.5rem;
     font-weight: 700;
-
-    @media all and (max-width: ${({ theme }) => theme.breakpoints.md}) {
-      font-size: 7rem;
-    }
-
-    @media all and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-      font-size: 6rem;
-    }
   }
 `;
 
 export const SectionDetails = styled.p`
-  --min: 1em;
+  --min: 0.85em;
   --val: 2.5vw;
-  --max: 1.25em;
-  font-family: ${({ theme }) => theme.fonts.inter};
+  --max: 1em;
+  font-family: ${({ theme }) => theme.fonts.mono};
   color: #eee6e6;
 
   @media all and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    width: 90%;
+    width: 80%;
   }
 `;
 

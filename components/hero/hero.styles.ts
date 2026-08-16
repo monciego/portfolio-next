@@ -43,9 +43,9 @@ export const HeroName = styled.h2`
 `;
 
 export const HeroTitle = styled.h1`
-  --min: 2.5em;
+  --min: 3em;
   --val: 6vw;
-  --max: 6em;
+  --max: 5.5em;
   line-height: 0.9;
   font-family: ${({ theme }) => theme.fonts.bunch};
   text-transform: uppercase;
@@ -55,7 +55,7 @@ export const HeroTitle = styled.h1`
 export const HeroSubTitle = styled.p`
   --min: 0.85em;
   --val: 2.5vw;
-  --max: 1.5em;
+  --max: 1.35em;
 `;
 
 export const HeroLinksContainer = styled.div`

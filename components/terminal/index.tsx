@@ -14,6 +14,7 @@ import {
   RedTerminalButton,
   StyledTerminal,
   TerminalButtons,
+  TerminalContainer,
   TerminalContent,
   TerminalHeader,
   TerminalHeaderLink,
@@ -210,65 +211,64 @@ export const Terminal: React.FunctionComponent = () => {
   );
 
   return (
-    <StyledTerminal
-      onClick={() => inputRef.current?.focus()}
-      className="container"
-    >
-      <TerminalHeader>
-        <TerminalButtons>
-          <RedTerminalButton />
-          <YellowTerminalButton />
-          <GreenTerminalButton />
-        </TerminalButtons>
-        <TerminalHeaderTitle>
-          <TerminalHeaderLink
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/monciego"
-          >
-            github.com/monciego
-          </TerminalHeaderLink>
-        </TerminalHeaderTitle>
-      </TerminalHeader>
+    <TerminalContainer className="container">
+      <StyledTerminal onClick={() => inputRef.current?.focus()}>
+        <TerminalHeader>
+          <TerminalButtons>
+            <RedTerminalButton />
+            <YellowTerminalButton />
+            <GreenTerminalButton />
+          </TerminalButtons>
+          <TerminalHeaderTitle>
+            <TerminalHeaderLink
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/monciego"
+            >
+              github.com/monciego
+            </TerminalHeaderLink>
+          </TerminalHeaderTitle>
+        </TerminalHeader>
 
-      <TerminalContent>
-        <TextContainer>
-          <YellowText># user </YellowText>
-          <VioletText>in </VioletText>
-          <BlueText>~/monciego</BlueText>
-        </TextContainer>
+        <TerminalContent>
+          <TextContainer>
+            <YellowText># user </YellowText>
+            <VioletText>in </VioletText>
+            <BlueText>~/monciego</BlueText>
+          </TextContainer>
 
-        <TextContainer>
-          <GreenText>
-            {showCommands
-              ? `> Type "hide" to hide all commands.`
-              : `> Type "help" for all available commands.`}
-          </GreenText>
-        </TextContainer>
+          <TextContainer>
+            <GreenText>
+              {showCommands
+                ? `> Type "hide" to hide all commands.`
+                : `> Type "help" for all available commands.`}
+            </GreenText>
+          </TextContainer>
 
-        {showCommands &&
-          COMMANDS.map((command) => (
-            <Command key={command.id}>
-              <CommandTitle>{command.title}</CommandTitle>
-              <CommandDescription>{command.description}</CommandDescription>
-            </Command>
-          ))}
+          {showCommands &&
+            COMMANDS.map((command) => (
+              <Command key={command.id}>
+                <CommandTitle>{command.title}</CommandTitle>
+                <CommandDescription>{command.description}</CommandDescription>
+              </Command>
+            ))}
 
-        <div
-          className="terminal-output"
-          dangerouslySetInnerHTML={{ __html: commandOutput }}
-        />
-
-        <div>
-          <GreenText>{'>'}</GreenText>{' '}
-          <TerminalInput
-            ref={inputRef}
-            value={commandInput}
-            onChange={(e) => setCommandInput(e.target.value)}
-            onKeyDown={handleKeyDown}
+          <div
+            className="terminal-output"
+            dangerouslySetInnerHTML={{ __html: commandOutput }}
           />
-        </div>
-      </TerminalContent>
-    </StyledTerminal>
+
+          <div>
+            <GreenText>{'>'}</GreenText>{' '}
+            <TerminalInput
+              ref={inputRef}
+              value={commandInput}
+              onChange={(e) => setCommandInput(e.target.value)}
+              onKeyDown={handleKeyDown}
+            />
+          </div>
+        </TerminalContent>
+      </StyledTerminal>
+    </TerminalContainer>
   );
 };

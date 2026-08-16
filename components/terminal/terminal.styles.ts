@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+export const TerminalContainer = styled.div``;
+
 export const StyledTerminal = styled.div`
   background: linear-gradient(
     180.68deg,
@@ -12,7 +14,6 @@ export const StyledTerminal = styled.div`
   );
   border-radius: 5px;
   font-family: ${({ theme }) => theme.fonts.firaCode};
-  margin: 0 auto;
   height: 25rem;
   overflow-y: auto;
 

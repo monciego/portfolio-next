@@ -25,6 +25,10 @@ import {
   WritingListItem,
   WritingMeta,
 } from './writings.styles';
+import {
+  SectionDetails,
+  SectionTitle,
+} from '@/components/ui/section-heading/section-heading.styles';
 
 // Type for the filtered writings (WRITINGS doesn't have content)
 type WritingSummary = {
@@ -64,10 +68,10 @@ export default function WritingsPage() {
       <BackLink href="/">← Back Home</BackLink>
 
       <Header>
-        <PageTitle>writings</PageTitle>
-        <Subtitle>
+        <SectionTitle $number={''}>writings</SectionTitle>
+        <SectionDetails>
           A collection of reflections, blogs, journals, notes, and poems.
-        </Subtitle>
+        </SectionDetails>
       </Header>
 
       {/* Category Tabs */}
