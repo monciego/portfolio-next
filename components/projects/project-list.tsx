@@ -1,7 +1,7 @@
 'use client';
 
 import { saveHomeScroll } from '@/lib/use-scroll-restoration';
-import { CodeXml, FolderClosedIcon, SquareArrowOutUpRight } from 'lucide-react';
+import { CodeXml, SquareArrowOutUpRight } from 'lucide-react';
 import type { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -18,7 +18,6 @@ import {
   ProjectTransitionImage,
   StyledProjectImage,
 } from './projects.styles';
-import { ActionButton, ActionButtonChip } from '../ui/button';
 
 export interface IProjectListProps {
   subTitle: string;
