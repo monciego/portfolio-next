@@ -85,7 +85,6 @@ export const MDXArticle = styled.article`
   a {
     color: ${({ theme }) => theme.colors.accentBlue};
     font-weight: 500;
-    font-size: 0.95rem;
     text-decoration: underline;
     text-decoration-color: rgba(96, 165, 250, 0.4);
     text-decoration-thickness: 1px;
@@ -189,7 +188,7 @@ export const MDXArticle = styled.article`
 
   code {
     font-family: ${({ theme }) => theme.fonts.mono};
-    font-size: 1em;
+    font-size: 0.965em;
   }
 
   :not(pre) > code {

@@ -19,17 +19,17 @@ export const ProjectListContainer = styled.div<ProjectStyledProps>`
 `;
 
 export const CategoryLabel = styled.p`
-  --min: 0.75rem;
+  --min: 0.7rem;
   --val: 2.5vw;
-  --max: 0.85em;
+  --max: 0.75em;
   display: inline-block;
   margin-top: 1.25rem;
   line-height: 1rem;
   font-weight: 400;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
+  text-transform: lowercase;
   color: violet;
-  font-family: ${({ theme }) => theme.fonts.inter};
+  font-family: ${({ theme }) => theme.fonts.mono};
 `;
 
 export const ProjectTitleContainer = styled.div`
@@ -44,19 +44,20 @@ export const ProjectTitle = styled.span`
   letter-spacing: 0;
   line-height: 1.375;
   font-weight: 600;
-  background: linear-gradient(
-      to right,
-      rgba(100, 200, 200, 0),
-      rgba(100, 200, 200, 0)
-    ),
+  background:
+    linear-gradient(to right, rgba(100, 200, 200, 0), rgba(100, 200, 200, 0)),
     linear-gradient(
       to right,
       rgba(91, 33, 182, 1),
       rgba(76, 29, 149, 1),
       rgba(0, 100, 200, 1)
     );
-  background-size: 100% 0.4em, 0 0.4em;
-  background-position: 100% 100%, 0 100%;
+  background-size:
+    100% 0.4em,
+    0 0.4em;
+  background-position:
+    100% 100%,
+    0 100%;
   background-repeat: no-repeat;
   transition: background-size 400ms;
 `;
@@ -94,7 +95,9 @@ export const ProjectStyledContainer = styled.div`
   margin-bottom: 1.5rem;
 
   &:hover ${ProjectTitle} {
-    background-size: 0 0.4em, 100% 0.4em;
+    background-size:
+      0 0.4em,
+      100% 0.4em;
   }
 
   &:hover ${ProjectTransitionImage} {

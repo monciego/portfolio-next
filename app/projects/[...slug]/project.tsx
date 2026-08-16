@@ -1,7 +1,7 @@
 'use client';
 
 import type { Project as IProject } from '@/.velite';
-import { MDXContent } from '@/components/mdx-components';
+import { MDXContent } from '@/components/mdx-component/mdx-components';
 import Link from 'next/link';
 import {
   ContentContainer,
@@ -29,17 +29,19 @@ const Project = ({ project }: ProjectProps) => {
             alt={`Cover Image for ${project.title}`}
             width={1150}
             height={530}
+            priority
           />
         </ProjectDetailImageContainer>
         <ContentContainer>
           <MDXContent code={project.content} />
+
           <LinkContainer>
             <Link href="/" scroll={false}>
               ← View more projects
             </Link>
           </LinkContainer>
         </ContentContainer>
-      </ProjectDetailsContainer>{' '}
+      </ProjectDetailsContainer>
     </>
   );
 };

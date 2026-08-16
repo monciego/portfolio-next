@@ -158,6 +158,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${inter.variable} ${mono.variable} ${syncopate.variable} ${bunch.variable} ${playfairDisplay.variable} ${fira_code.variable}`}
     >
       <body>

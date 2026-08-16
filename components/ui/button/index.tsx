@@ -12,6 +12,7 @@ export const Button: React.FunctionComponent<IButtonProps> = ({
 }) => {
   return <StyledButton href={href}>{children}</StyledButton>;
 };
+
 const StyledButton = styled.a`
   --min: 1em;
   --val: 3vw;

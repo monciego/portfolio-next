@@ -5,7 +5,7 @@ export const ProjectDetailsContainer = styled.section``;
 
 export const ProjectSubtitle = styled.span`
   text-transform: uppercase;
-  font-family: ${({ theme }) => theme.fonts.bunch};
+  font-family: ${({ theme }) => theme.fonts.mono};
   font-size: clamp(0.8rem, 2vw, 0.95rem);
   display: flex;
   justify-content: center;
@@ -15,11 +15,11 @@ export const ProjectSubtitle = styled.span`
 `;
 
 export const ProjectDetailsTitle = styled.h2`
-  --min: 1.2em;
+  --min: 1.3em;
   --val: 4.5vw;
   --max: 2rem;
   font-family: ${({ theme }) => theme.fonts.inter};
-  letter-spacing: -0.025em;
+  letter-spacing: -0.035em;
   margin: 0.75rem auto 1.5rem auto;
   font-weight: 600;
   text-align: center;
@@ -28,10 +28,6 @@ export const ProjectDetailsTitle = styled.h2`
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     width: 80%;
   }
-
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    width: 50%;
-  }
 `;
 
 export const ProjectDetailImageContainer = styled.div`
@@ -39,9 +35,6 @@ export const ProjectDetailImageContainer = styled.div`
   width: 100%;
   margin: 1rem auto 0;
 
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    width: 70%;
-  }
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.07);
@@ -77,7 +70,7 @@ export const ContentContainer = styled.div`
   margin: 2rem auto;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-    width: 60%;
+    max-width: 48rem;
   }
 `;
 

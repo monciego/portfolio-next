@@ -1,0 +1,227 @@
+---
+title: 'Centralized Management Platform for Entertainment and Talent Agencies'
+subTitle: 'entertainment management platform'
+sourceCodeLink: ''
+liveLink: 'https://nexxus-docs.vercel.app/'
+date: '2020-06-15T05:35:07.322Z'
+coverImage: 'images/project-nexxus-1.png'
+transitionImage: 'images/project-nexxus-2.png'
+isLiveLinkDisabled: false
+isSourceCodeLinkDisabled: true
+---
+
+**A centralized management platform for entertainment and talent agencies.**
+
+Nexxus brings talent, clients, events, call sheets, scheduling, communication, and production workflows together so agencies can manage a production from one place.
+
+ <a href="https://nexxus-docs.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ color: '#60a5fa', textDecoration: 'underline' }}>View Documentation</a>
+
+
+### The idea
+
+Entertainment productions involve a lot of moving pieces.
+
+A single production might involve a client, dozens of talents, rehearsals, schedules, production tasks, call sheets, documents, and constant communication.
+
+When those pieces live across different tools, information becomes fragmented.
+
+I designed Nexxus around a simple idea:
+
+> **The production should be the center of the workflow.**
+
+Instead of building isolated modules, I connected the system around the event lifecycle.
+
+**Client → Event → Talent → Rehearsal → Checklist → Call Sheet → Communication**
+
+
+### What I built
+
+Nexxus is a full management platform with several interconnected areas:
+
+#### Event management
+
+Events act as the central workspace for productions.
+
+A production can have its client, assigned talent, rehearsals, checklists, call sheets, and related communication attached to it.
+
+This became one of the most important architectural decisions in the system: **the event isn't just another record — it connects the rest of the platform.**
+
+#### Talent management
+
+I built a structured onboarding workflow for talent, covering personal information, physical information, skills, wardrobe, portfolio, and performer needs.
+
+Talent profiles go through an approval workflow before they can be assigned to productions.
+
+#### Call sheet system
+
+Rather than treating call sheets as static documents, Nexxus has a template-based system.
+
+Agencies can create reusable templates, customize sections and fields, generate call sheets for specific events, preview them, publish them, and distribute them to the team.
+
+This was one of the more complex parts of the application because the call sheet structure itself needs to be configurable.
+
+#### Scheduling
+
+Events and rehearsals are connected to a centralized calendar, giving teams a view of both production dates and preparation activities.
+
+#### Role & permission system
+
+Nexxus has different roles for different responsibilities, including:
+
+**Superadmin · Admin · Moderator · Talent · User**
+
+Instead of simply hiding pages, permissions influence the actual application experience — including navigation, dashboard sections, actions, and management capabilities.
+
+
+### Designing around workflows
+
+One of the biggest challenges wasn't building individual features.
+
+It was figuring out **how the features should interact**.
+
+For example:
+
+<div style={{textAlign: 'center'}}>
+
+A client books a production.
+
+↓
+
+An event is created.
+
+↓
+
+Approved talent is assigned.
+
+↓
+
+Rehearsals are scheduled.
+
+↓
+
+Production tasks are tracked through the checklist.
+
+↓
+
+A call sheet is generated.
+
+↓
+
+The call sheet is published and shared with the team.
+
+↓
+
+Everyone works from the same production information.
+
+</div>
+
+This workflow became the foundation for how I approached the application's architecture and UX.
+
+
+### Building a flexible permission system
+
+One of the areas I spent significant time thinking about was authorization.
+
+Nexxus isn't designed around a single type of user. A Superadmin shouldn't see the same interface as a Talent.
+
+Instead of scattering role checks throughout the application, I structured access around permissions.
+
+For example:
+
+```javascript
+EVENTS_VIEW
+EVENTS_CREATE
+EVENTS_EDIT
+EVENTS_DELETE
+EVENTS_ASSIGN_TALENT
+```
+
+The same principle extends across clients, talents, call sheets, media, calendar, messages, and administration.
+
+This also affects the UI.
+
+If a user doesn't have permission for a particular capability, the corresponding action or dashboard section doesn't simply become a broken or inaccessible feature — the interface adapts to what that user is actually allowed to do.
+
+
+### A configurable call sheet system
+
+The call sheet system was particularly interesting because I didn't want to hardcode one document layout.
+
+Instead, I built the concept of **templates**.
+
+A template can define its own sections and fields, allowing an agency to create different types of call sheets depending on the production.
+
+For example:
+
+**Standard Event**
+
+**Full Production**
+
+**Minimal**
+
+The template becomes the foundation, while the actual call sheet contains the event-specific information.
+
+This separates the **structure of a call sheet** from the **data belonging to a particular production**.
+
+That distinction made the system considerably more flexible.
+
+
+### Technical implementation
+
+Nexxus is built with:
+
+* **Laravel**
+* **PHP**
+* **React**
+* **TypeScript**
+* **Inertia.js**
+* **MySQL**
+* **Tailwind CSS**
+* **shadcn/ui**
+* **Spatie Laravel Permission**
+* **Cloudfare R2 Storage**
+
+The application uses Laravel and Inertia to keep the backend and frontend closely integrated while still providing a modern React interface.
+
+The frontend is built around reusable components and permission-aware interfaces, while the backend handles business rules, validation, authentication, authorization, and data relationships.
+
+
+### What I learned
+
+Nexxus pushed me beyond simply implementing screens.
+
+I had to think about:
+
+* How different business entities relate to each other
+* How a production moves through its lifecycle
+* How permissions should affect both backend and frontend
+* How configurable systems should be modeled
+* How to avoid tightly coupling features
+* How complex workflows should be represented in the UI
+* How documentation should support the product
+
+The biggest lesson was that **building a product is very different from building a collection of features**.
+
+A good system isn't just a collection of pages.
+
+It's the relationships and workflows connecting those pages.
+
+
+### Explore the system
+
+The portfolio case study intentionally focuses on the **most important product and engineering decisions** rather than documenting every feature.
+
+For the complete breakdown, see the Nexxus documentation:
+
+<a href="https://nexxus-docs.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ color: '#60a5fa', textDecoration: 'underline' }}>Read the Documentation</a>
+
+There you can explore the complete workflows for:
+
+* Events
+* Clients
+* Talent
+* Call Sheets
+* Calendar
+* Messages
+* Administration
+* Roles & Access
