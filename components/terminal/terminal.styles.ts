@@ -13,8 +13,8 @@ export const StyledTerminal = styled.div`
     rgba(160, 27, 222, 0.86) 105.13%
   );
   border-radius: 5px;
-  font-family: ${({ theme }) => theme.fonts.firaCode};
-  height: 25rem;
+  font-family: ${({ theme }) => theme.fonts.mono};
+  height: 20rem;
   overflow-y: auto;
 
   &&::-webkit-scrollbar {
