@@ -1,6 +1,6 @@
 'use client';
 
-import { MDXContent } from '@/components/mdx-components';
+import { MDXContent } from '@/components/mdx-component/mdx-components';
 import {
   BackLink,
   Content,

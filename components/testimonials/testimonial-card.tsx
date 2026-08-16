@@ -2,7 +2,7 @@
 
 import type { StaticImageData } from 'next/image';
 import React from 'react';
-import { MDXContent } from '../mdx-components';
+import { MDXContent } from '../mdx-component/mdx-components';
 import {
   AvatarContainer,
   TestimonialAvatar,

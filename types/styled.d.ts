@@ -15,7 +15,20 @@ declare module 'styled-components' {
       white: string;
       black: string;
       backgroundColor: string;
+      backgroundSecondary: string;
+      backgroundCode: string;
+      backgroundHighlight: string;
+      textPrimary: string;
+      textSecondary: string;
+      textTertiary: string;
+      textMuted: string;
+      textCode: string;
+      borderPrimary: string;
+      borderSecondary: string;
+      accentBlue: string;
+      accentBlueHover: string;
       lightViolet: string;
+      shadow: string;
     };
     breakpoints: {
       lg: string;
