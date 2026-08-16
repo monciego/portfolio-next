@@ -1,6 +1,10 @@
 'use client';
 
 import {
+  SectionDetails,
+  SectionTitle,
+} from '@/components/ui/section-heading/section-heading.styles';
+import {
   WRITINGS,
   WRITING_CATEGORIES,
   type WritingCategory,
@@ -17,18 +21,12 @@ import {
   Excerpt,
   Header,
   Layout,
-  PageTitle,
   PageWrapper,
   ReadLink,
-  Subtitle,
   Title,
   WritingListItem,
   WritingMeta,
 } from './writings.styles';
-import {
-  SectionDetails,
-  SectionTitle,
-} from '@/components/ui/section-heading/section-heading.styles';
 
 // Type for the filtered writings (WRITINGS doesn't have content)
 type WritingSummary = {
