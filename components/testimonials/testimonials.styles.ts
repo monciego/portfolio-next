@@ -36,6 +36,7 @@ export const AvatarContainer = styled.div`
 `;
 
 export const TestimonialHeader = styled.div`
+  margin-bottom: 1.25rem;
   display: flex;
   align-items: center;
   gap: 1rem;
