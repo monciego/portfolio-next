@@ -47,7 +47,7 @@ export const GlobalStyles = createGlobalStyle`
     section {
         margin: 0 auto;
         padding: 1.95rem 0;
-        scroll-margin-top: 5rem;
+        scroll-margin-top: 1rem;
         overflow-x: hidden;
 
         @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
