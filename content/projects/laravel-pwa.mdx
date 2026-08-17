@@ -1,0 +1,113 @@
+---
+title: 'Progressive Web App Package for Laravel'
+subTitle: 'Laravel package'
+sourceCodeLink: 'https://github.com/monciego/laravel-pwa'
+liveLink: ''
+date: '2020-09-15T05:35:07.322Z'
+coverImage: 'images/project-pwa-1.jpeg'
+transitionImage: 'images/project-pwa-2.jpeg'
+isLiveLinkDisabled: true
+isSourceCodeLinkDisabled: false
+---
+
+A Laravel package that turns Laravel applications into Progressive Web Apps with offline support, installation prompts, service worker registration, and a fully configurable web app manifest.
+
+### Overview
+
+Laravel PWA is a package I built to simplify adding Progressive Web App capabilities to Laravel applications.
+
+Instead of manually configuring a service worker, manifest, installation UI, offline fallback, and browser-specific behavior for every project, the package provides these features through Laravel configuration, Blade directives, Artisan commands, and a small set of helper APIs.
+
+The goal was to make PWA functionality feel like a native part of a Laravel application rather than something developers have to assemble themselves.
+
+## What I Built
+
+The package provides several parts of the PWA experience:
+
+* **Install UI** — A modal shown when an application becomes installable, followed by a configurable installation banner.
+* **Offline support** — A pre-configured service worker and customizable offline page.
+* **Web app manifest** — A configuration-driven manifest generator supporting icons, splash screens, shortcuts, screenshots, and custom properties.
+* **iOS support** — Installation instructions for Safari on iOS, where the native installation prompt is unavailable.
+* **Browser detection** — Unsupported browsers are gracefully ignored without registering unnecessary listeners or storage operations.
+* **Livewire compatibility** — Support for Livewire applications through `data-navigate-once`.
+* **Artisan commands** — Commands for publishing assets and regenerating the manifest.
+* **Logo handling** — A utility for processing and validating application logos.
+
+## Installation Experience
+
+The package provides its own installation flow rather than relying entirely on the browser's native prompt.
+
+On the first eligible visit, the user sees an installation modal. If they choose **Maybe later**, the package switches to a persistent banner that can be positioned at either the top or bottom of the page.
+
+Users can dismiss the banner for a configurable amount of time, after which it can appear again.
+
+Once the application is installed, the installation UI is hidden.
+
+For iOS Safari, where the native installation prompt isn't available, the same interface provides instructions for adding the application to the home screen.
+
+## Developer Experience
+
+I wanted the package to require as little setup as possible.
+
+After installing the package, developers can publish the required PWA assets with a single command:
+
+```bash
+php artisan monciego:install-pwa
+```
+
+The package then provides Blade directives for registering the PWA functionality:
+
+```blade
+@PwaHead
+```
+
+and:
+
+```blade
+@RegisterServiceWorkerScript
+```
+
+PWA behavior can then be customized through `config/pwa.php` rather than requiring developers to modify the underlying implementation.
+
+## Configuration-Driven Manifest
+
+One of the main parts of the package is its manifest configuration.
+
+Developers can define application metadata, colors, icons, splash screens, shortcuts, screenshots, and custom manifest properties from Laravel configuration.
+
+The package then generates the standard `manifest.json` automatically:
+
+```bash
+php artisan monciego:update-manifest
+```
+
+This keeps the application's PWA configuration inside the Laravel project while still producing a browser-compatible manifest.
+
+## Technical Details
+
+The package is built for Laravel applications and integrates with Laravel's package ecosystem through service provider auto-discovery, Blade directives, configuration publishing, Artisan commands, helpers, and a facade.
+
+It supports:
+
+* PHP 8.0+
+* Laravel 8.x–13.x
+* Service workers
+* Web app manifests
+* Offline fallbacks
+* Installation prompts
+* iOS installation guidance
+* Livewire applications
+
+## Why I Built It
+
+Adding PWA functionality to a Laravel application can involve several separate pieces: a manifest, service worker, offline page, installation detection, browser-specific behavior, and installation UI.
+
+I wanted to package those pieces into a reusable Laravel abstraction so they could be installed and configured consistently across projects.
+
+Rather than building PWA functionality from scratch for every Laravel application, developers can install the package, publish the assets, configure the behavior, and let the package handle the rest.
+
+## Result
+
+Laravel PWA became a reusable package rather than a one-off implementation.
+
+It packages the underlying PWA infrastructure into a Laravel-friendly developer experience, allowing applications to gain installation and offline capabilities without requiring developers to manually implement each part of the PWA lifecycle.
