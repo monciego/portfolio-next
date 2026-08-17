@@ -37,7 +37,7 @@ type TExperience = {
 const experiences: TExperience[] = [
   {
     company: 'TechniqalGroup',
-    title: 'Software Developer',
+    title: 'Independent Software Developer',
     startDate: 'Feb 2024',
     endDate: '',
     isPresent: true,
@@ -57,6 +57,7 @@ const experiences: TExperience[] = [
     jobDescriptions: [
       'Assist in leading projects and oversee the design and development of product architecture and features.',
       'Supervise interns, providing guidance and mentorship to ensure their growth and contribution to the team.',
+      'Develop independent products and software experiments to explore new technologies and ideas.',
     ],
     isContentRight: false,
   },

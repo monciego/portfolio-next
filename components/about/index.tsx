@@ -61,7 +61,7 @@ export const About: React.FunctionComponent<IAboutProps> = () => {
           >
             Vim and Zed
           </StyledLink>{' '}
-          as my primary editors. I've also been gradually building and
+          as my primary editors. I&apos;ve also been gradually building and
           maintaining my own{' '}
           <StyledLink
             href="https://github.com/monciego/dotfiles"
