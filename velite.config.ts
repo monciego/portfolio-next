@@ -29,7 +29,7 @@ const blogs = defineCollection({
   pattern: 'writings/blogs/**/*.mdx',
   schema: s.object({
     title: s.string().max(99),
-    slug: s.path(),
+    slug: s.slug(),
     date: s.isodate(),
     excerpt: s.string().max(300).optional(),
     content: s.mdx(),
@@ -41,7 +41,7 @@ const reflections = defineCollection({
   pattern: 'writings/reflections/**/*.mdx',
   schema: s.object({
     title: s.string().max(99),
-    slug: s.path(),
+    slug: s.slug(),
     date: s.isodate(),
     excerpt: s.string().max(300).optional(),
     content: s.mdx(),
@@ -53,7 +53,7 @@ const notes = defineCollection({
   pattern: 'writings/notes/**/*.mdx',
   schema: s.object({
     title: s.string().max(99),
-    slug: s.path(),
+    slug: s.slug(),
     date: s.isodate(),
     excerpt: s.string().max(300).optional(),
     content: s.mdx(),
@@ -65,7 +65,7 @@ const poems = defineCollection({
   pattern: 'writings/poems/**/*.mdx',
   schema: s.object({
     title: s.string().max(99),
-    slug: s.path(),
+    slug: s.slug(),
     date: s.isodate(),
     excerpt: s.string().max(300).optional(),
     content: s.mdx(),
@@ -77,7 +77,7 @@ const journal = defineCollection({
   pattern: 'writings/journal/**/*.mdx',
   schema: s.object({
     title: s.string().max(99),
-    slug: s.path(),
+    slug: s.slug(),
     date: s.isodate(),
     excerpt: s.string().max(300).optional(),
     content: s.mdx(),
