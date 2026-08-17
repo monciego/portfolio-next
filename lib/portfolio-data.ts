@@ -5,7 +5,7 @@
  * `components/terminal/index.tsx` (the "about" terminal command) import
  * from here. Edit once — both places update automatically.
  *
- * Note on paragraph index 4:
+ * Note on paragraph 4:
  *   The terminal uses the plain-text version stored here.
  *   The About component renders its own JSX version of that same paragraph
  *   because it wraps certain words in styled Next.js <Link> components.
@@ -14,26 +14,22 @@
  */
 export const ABOUT_PARAGRAPHS = [
   // 0 — Introduction
-  "Kumusta! My name is Jericho P. Bantiquete. I am an indie developer, freelancer, and aspiring entrepreneur. I graduated with a Bachelor's degree in Information Technology from Pangasinan State University. I'm currently based in the Philippines, where I'm building a product as a partner in a startup, developing my own projects, and taking on freelance work.",
+  "Kumusta! My name is Jericho P. Bantiquete. I'm an indie software developer, freelancer, and aspiring entrepreneur from the Philippines. I graduated with a Bachelor's degree in Information Technology from Pangasinan State University. These days, I split my time between building products as a partner in a startup, working on my own projects, and taking on freelance work.",
 
-  // 1 — Tech stack
-  "Throughout my career, I've worked with a variety of technologies, including JavaScript, TypeScript, React, React Native, Next.js, Angular, RxJS, Akita, Vue, Laravel, Livewire, Inertia.js, Tailwind CSS, MySQL, Figma, Git, and GitHub. While not all of these are my primary tools, I've used them across freelance projects and industry work. My current stack focuses on Laravel with React and TypeScript, using Inertia.js, shadcn, and Tailwind CSS for building modern applications. For databases, I typically use MySQL or SQLite. Overall, my work is centered around the Laravel ecosystem, where I'm most productive.",
+  // 1 — Tech stack / primary focus
+  "My primary focus is web application development, particularly around the Laravel ecosystem. I currently work mostly with Laravel, React, and TypeScript, alongside Inertia.js, shadcn/ui, and Tailwind CSS. For databases, I typically use MySQL or SQLite. I've also worked with technologies such as Next.js, Vue, Livewire, Angular, RxJS, Akita, React Native, and Figma across different freelance and industry projects. I'm comfortable learning and working with different technologies, but I don't try to use everything at once. My goal is to build a strong foundation and use the tools that make sense for the problem I'm solving.",
 
-  // 2 — Currently learning
-  "I'm currently improving my fundamentals in data structures and algorithms, while also exploring technologies like Golang, Astro, Remix, Python, and Java. I'm especially interested in going deeper into machine learning and artificial intelligence.",
+  // 2 — Learning & experimenting
+  "Outside of my main stack, I enjoy recreational programming—building small things simply because I want to learn something or see what I can make with it. This gives me room to explore technologies that I don't necessarily use professionally. I've been experimenting with languages and tools such as Go and Rust, while continuing to improve my fundamentals in data structures and algorithms. I'm also interested in learning more about Python, machine learning, and artificial intelligence. I've recently become interested in game development as well. I want to explore what it's like to build games from the ground up and learn a completely different side of software development. Not every project I build has to become a product. Sometimes, I just want to build something because it's interesting.",
 
-  // 3 — Virtual Assistant experience
-  "I've also worked as a Virtual Assistant, which gave me real-world experience in business operations, communication, and working with international clients.",
+  // 3 — Writing, journaling & reading
+  "I enjoy journaling and writing down thoughts, realizations, and things I'm learning. It has become a way for me to reflect on my work, understand how I think, and keep track of things I might otherwise forget. I also enjoy reading books, particularly as a way of continuously learning outside of programming. I keep a list of books I've read and want to read, which you can find here. I've also started sharing some of my shorter reflections about learning, growth, technology, and building things, which you can explore in my writings.",
 
-  // 4 — Hobbies / outside programming
-  //   Terminal uses this plain-text version.
-  //   The About component renders its own JSX version with inline <Link>
-  //   components around "here" (book list), "here" (writing), "Spotify playlists", and "gallery".
-  //   When you update the text here, mirror the change in components/about/index.tsx.
-  "Outside of programming, I enjoy playing chess, learning music—especially guitar, reading books, and listening to podcasts. I also curate Spotify playlists and keep a list of books I've read and plan to read, which you can check out here. I've also started writing short reflections and realizations about learning, growth, and technology, which you can explore here. Additionally, I've set up a gallery with some photos, in case you're curious to see a bit more about me.",
+  // 4 — Tools & outside of code (terminal uses plain text; About component uses JSX with links)
+  "I use Vim and Zed as my primary editors. I've also been gradually building and maintaining my own dotfiles as I experiment with my development environment and make my tools feel more like my own. Outside of programming, I enjoy playing chess, learning guitar, reading books, listening to podcasts, and journaling. I also curate Spotify playlists and I've put together a gallery with some photos if you'd like to see a little more about my life outside of software.",
 
   // 5 — Closing
-  'I use vim and zed, btw.',
+  "I'm still figuring out what kind of developer I want to become, but for now, I enjoy building things, learning how things work, and experimenting with ideas that interest me.",
 ] as const;
 
 export type AboutParagraph = (typeof ABOUT_PARAGRAPHS)[number];

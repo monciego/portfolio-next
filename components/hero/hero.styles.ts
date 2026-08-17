@@ -44,7 +44,7 @@ export const HeroName = styled.h2`
 `;
 
 export const HeroTitle = styled.h1`
-  --min: 3em;
+  --min: 2.65em;
   --val: 6vw;
   --max: 5.5em;
   line-height: 0.9;

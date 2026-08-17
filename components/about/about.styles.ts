@@ -88,19 +88,38 @@ export const ResumeLink = styled.a`
   padding-bottom: 0.5rem;
   font-weight: 600;
   position: relative;
-  background: linear-gradient(to right, #d4e3e3, #c8d7d7),
+  background:
+    linear-gradient(to right, #d4e3e3, #c8d7d7),
     linear-gradient(to right, #21a0b6, #9892e3, #8798a9);
-  background-size: 100% 0.125em, 0 0.125em;
-  background-position: 100% 100%, 0 100%;
+  background-size:
+    100% 0.125em,
+    0 0.125em;
+  background-position:
+    100% 100%,
+    0 100%;
   background-repeat: no-repeat;
   transition: background-size 400ms;
 
   &:hover {
-    background-size: 0 0.125em, 100% 0.125em;
+    background-size:
+      0 0.125em,
+      100% 0.125em;
   }
 `;
 
 export const DownloadIcon = styled(Download)`
   padding-bottom: 0.5rem;
   height: 2rem;
+`;
+
+export const AboutSectionTitle = styled.h2`
+  --min: 1em;
+  --val: 3vw;
+  --max: 1.25em;
+  font-family: ${({ theme }) => theme.fonts.inter};
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 1rem 0;
+  letter-spacing: -0.01em;
 `;
