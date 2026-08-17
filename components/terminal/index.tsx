@@ -133,7 +133,11 @@ export const Terminal: React.FunctionComponent = () => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    inputRef.current?.focus({ preventScroll: true });
+    const isDesktop = window.matchMedia('(pointer: fine)').matches;
+
+    if (isDesktop) {
+      inputRef.current?.focus({ preventScroll: true });
+    }
   }, []);
 
   const handleKeyDown = useCallback(
