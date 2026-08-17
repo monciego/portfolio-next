@@ -113,7 +113,7 @@ export const DownloadIcon = styled(Download)`
 `;
 
 export const AboutSectionTitle = styled.h2`
-  --min: 1em;
+  --min: 1.15em;
   --val: 3vw;
   --max: 1.25em;
   font-family: ${({ theme }) => theme.fonts.inter};
