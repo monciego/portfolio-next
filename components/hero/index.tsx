@@ -23,7 +23,7 @@ export const Hero: React.FunctionComponent<IHeroProps> = () => {
       <RadialGradient />
       <HeroName>Jericho Bantiquete</HeroName>
       <HeroTitle>
-        indie fullstack <br /> developer
+        indie software <br /> developer
       </HeroTitle>
       <HeroSubTitle>
         I <span className="change-text"></span>{' '}

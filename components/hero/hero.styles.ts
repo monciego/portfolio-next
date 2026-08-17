@@ -35,10 +35,11 @@ export const RadialGradient = styled.div`
 `;
 
 export const HeroName = styled.h2`
-  --min: 1em;
+  --min: 0.85em;
   --val: 2.5vw;
-  --max: 1.5em;
+  --max: 1.35em;
   font-weight: 400;
+  font-family: ${({ theme }) => theme.fonts.mono};
   color: ${({ theme }) => theme.colors.lightViolet};
 `;
 
@@ -53,7 +54,8 @@ export const HeroTitle = styled.h1`
 `;
 
 export const HeroSubTitle = styled.p`
-  --min: 0.85em;
+  font-family: ${({ theme }) => theme.fonts.mono};
+  --min: 0.9em;
   --val: 2.5vw;
   --max: 1.35em;
 `;
