@@ -15,16 +15,21 @@ interface activeLinkProps {
 
 export const StyledNavbar = styled.nav<NavbarProps>`
   position: fixed;
-  top: ${({ $hidden }) => ($hidden ? '-14vh' : '0')};
+  top: ${({ $hidden }) => ($hidden ? '-5rem' : '0')};
   right: 0;
   left: 0;
-  height: 5rem;
+  height: 6rem;
   display: flex;
   align-items: center;
   margin: 0 auto;
   justify-content: space-between;
   z-index: 999;
   transition: top 0.35s ease;
+  pointer-events: none;
+
+  & > * {
+    pointer-events: auto;
+  }
 `;
 
 export const NavigationOverlay = styled.nav<isOpenProps>`
@@ -34,7 +39,7 @@ export const NavigationOverlay = styled.nav<isOpenProps>`
   top: ${({ $isOpen }) => ($isOpen ? '0' : '-120%')};
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   padding: 4em;
   transition: top 0.85s cubic-bezier(0.16, 1, 0.3, 1);
