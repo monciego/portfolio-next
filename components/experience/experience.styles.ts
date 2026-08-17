@@ -101,12 +101,11 @@ export const ExperienceCard = styled(Section)`
 export const ExperienceHeaderContent = styled.div`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
 `;
 
 export const ExperienceDetails = styled.div`
-  display: flex;
-  align-items: center;
   margin-top: 0.15rem;
   gap: 0.5rem;
 `;
@@ -121,15 +120,19 @@ export const Company = styled.p`
 export const ExperienceDate = styled.span`
   --min: 1rem;
   --val: 2.5vw;
-  --max: 1.1rem;
+  --max: 1rem;
 `;
 
-export const ExperienceDetail = styled.p`
+export const ExperienceDetail = styled.span`
   --min: 0.875rem;
   --val: 2vw;
   --max: 1rem;
   line-height: 1.5;
   color: #d1d5db;
+`;
+
+export const ExperienceDetailSeparator = styled.span`
+  margin: 0 0.5rem;
 `;
 
 export const EmptySection = styled(Section)`

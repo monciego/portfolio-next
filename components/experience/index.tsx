@@ -10,6 +10,7 @@ import {
   ExperienceDate,
   ExperienceDetail,
   ExperienceDetails,
+  ExperienceDetailSeparator,
   ExperienceHeaderContent,
   ExperiencePing,
   ExperienceSectionContainer,
@@ -167,7 +168,7 @@ function ExperienceCardContent({ experience }: { experience: TExperience }) {
 
       <ExperienceDetails>
         <ExperienceDetail>{experience.title}</ExperienceDetail>
-        &bull;
+        <ExperienceDetailSeparator>&bull;</ExperienceDetailSeparator>
         <ExperienceDetail>{experience.location}</ExperienceDetail>
       </ExperienceDetails>
 
