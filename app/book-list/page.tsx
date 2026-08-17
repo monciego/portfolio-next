@@ -110,49 +110,53 @@ const BOOKS_TO_READ: Book[] = [
 
 export default function BookListPage() {
   return (
-    <PageWrapper className="container">
-      <BackLink href="/">← back home</BackLink>
+    <main className="container">
+      <PageWrapper>
+        <BackLink href="/">← back home</BackLink>
 
-      <Header>
-        <SectionTitle $number="">book list</SectionTitle>
-        <SectionDetails>Books I&apos;ve read and plan to read.</SectionDetails>
-      </Header>
+        <Header>
+          <SectionTitle $number="">book list</SectionTitle>
+          <SectionDetails>
+            Books I&apos;ve read and plan to read.
+          </SectionDetails>
+        </Header>
 
-      <BookSection>
-        <SectionLabel>currently reading</SectionLabel>
-        <BookList>
-          {CURRENTLY_READING.map((book) => (
-            <BookItem key={book.title}>
-              <BookTitle>{book.title}</BookTitle>
-              <BookAuthor>{book.author}</BookAuthor>
-            </BookItem>
-          ))}
-        </BookList>
-      </BookSection>
+        <BookSection>
+          <SectionLabel>currently reading</SectionLabel>
+          <BookList>
+            {CURRENTLY_READING.map((book) => (
+              <BookItem key={book.title}>
+                <BookTitle>{book.title}</BookTitle>
+                <BookAuthor>{book.author}</BookAuthor>
+              </BookItem>
+            ))}
+          </BookList>
+        </BookSection>
 
-      <BookSection>
-        <SectionLabel>read</SectionLabel>
-        <BookList>
-          {BOOKS_READ.map((book) => (
-            <BookItem key={book.title}>
-              <BookTitle>{book.title}</BookTitle>
-              <BookAuthor>{book.author}</BookAuthor>
-            </BookItem>
-          ))}
-        </BookList>
-      </BookSection>
+        <BookSection>
+          <SectionLabel>read</SectionLabel>
+          <BookList>
+            {BOOKS_READ.map((book) => (
+              <BookItem key={book.title}>
+                <BookTitle>{book.title}</BookTitle>
+                <BookAuthor>{book.author}</BookAuthor>
+              </BookItem>
+            ))}
+          </BookList>
+        </BookSection>
 
-      <BookSection>
-        <SectionLabel>want to read</SectionLabel>
-        <BookList>
-          {BOOKS_TO_READ.map((book) => (
-            <BookItem key={book.title}>
-              <BookTitle>{book.title}</BookTitle>
-              <BookAuthor>{book.author}</BookAuthor>
-            </BookItem>
-          ))}
-        </BookList>
-      </BookSection>
-    </PageWrapper>
+        <BookSection>
+          <SectionLabel>want to read</SectionLabel>
+          <BookList>
+            {BOOKS_TO_READ.map((book) => (
+              <BookItem key={book.title}>
+                <BookTitle>{book.title}</BookTitle>
+                <BookAuthor>{book.author}</BookAuthor>
+              </BookItem>
+            ))}
+          </BookList>
+        </BookSection>
+      </PageWrapper>
+    </main>
   );
 }

@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
-export const TerminalContainer = styled.div``;
+export const TerminalContainer = styled.div`
+  margin-top: 2rem;
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    margin-top: 2.5rem;
+  }
+`;
 
 export const StyledTerminal = styled.div`
   background: linear-gradient(

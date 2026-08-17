@@ -1,17 +1,14 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 
-export const PageWrapper = styled.main`
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-`;
+export const PageWrapper = styled.section``;
 
 export const BackLink = styled(Link)`
   display: inline-block;
   color: #3b82f6;
   font-family: ${({ theme }) => theme.fonts.inter};
   font-size: clamp(0.8rem, 2vw, 0.9rem);
-  margin-bottom: 2.75rem;
+  margin-bottom: 1rem;
   transition: opacity 0.2s ease;
 
   &:hover {

@@ -19,7 +19,7 @@ interface ProjectProps {
 
 const Project = ({ project }: ProjectProps) => {
   return (
-    <>
+    <main>
       <ProjectDetailsContainer className="container">
         <ProjectSubtitle>{project.subTitle}</ProjectSubtitle>
         <ProjectDetailsTitle>{project.title}</ProjectDetailsTitle>
@@ -42,7 +42,7 @@ const Project = ({ project }: ProjectProps) => {
           </LinkContainer>
         </ContentContainer>
       </ProjectDetailsContainer>
-    </>
+    </main>
   );
 };
 

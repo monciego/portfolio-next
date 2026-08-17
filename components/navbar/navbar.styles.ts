@@ -18,7 +18,7 @@ export const StyledNavbar = styled.nav<NavbarProps>`
   top: ${({ $hidden }) => ($hidden ? '-14vh' : '0')};
   right: 0;
   left: 0;
-  height: 8vh;
+  height: 5rem;
   display: flex;
   align-items: center;
   margin: 0 auto;

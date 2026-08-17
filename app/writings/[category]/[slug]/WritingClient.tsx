@@ -29,20 +29,22 @@ export function WritingClient({
   content,
 }: WritingClientProps) {
   return (
-    <PageWrapper className="container">
-      <BackLink href={`/writings/${category}`}>← Back to {category}</BackLink>
+    <main className="container">
+      <PageWrapper>
+        <BackLink href={`/writings/${category}`}>← Back to {category}</BackLink>
 
-      <Layout>
-        <WritingTOC category={category as any} currentSlug={slug} />
-        <Content>
-          <Header>
-            <DateDisplay>{formatDate(date)}</DateDisplay>
-            <Title>{title}</Title>
-          </Header>
-          <MDXContent code={content} />
-        </Content>
-      </Layout>
-    </PageWrapper>
+        <Layout>
+          <WritingTOC category={category as any} currentSlug={slug} />
+          <Content>
+            <Header>
+              <DateDisplay>{formatDate(date)}</DateDisplay>
+              <Title>{title}</Title>
+            </Header>
+            <MDXContent code={content} />
+          </Content>
+        </Layout>
+      </PageWrapper>
+    </main>
   );
 }
 

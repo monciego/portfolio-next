@@ -7,11 +7,6 @@ export const HeroContainer = styled.section`
   gap: 0.5rem;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
-
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-    margin-top: 2rem;
-  }
 `;
 
 export const RadialGradient = styled.div`

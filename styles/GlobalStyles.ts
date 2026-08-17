@@ -40,21 +40,27 @@ export const GlobalStyles = createGlobalStyle`
         font-family: inherit;
     }
 
-    section,
-    footer {
-        padding: 6.32875rem 0 2.6125rem 0;
+    main {
+      padding-top: 5rem;
     }
 
     section {
         margin: 0 auto;
+        padding: 1.95rem 0;
+        scroll-margin-top: 5rem;
         overflow-x: hidden;
+
+        @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+            padding: 3.32875rem 0;
+        }
     }
+
 
     footer {
         padding: 4.32875rem 5% 7.6125rem 5%;
 
         @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-        padding: 4.32875rem 7.5% 7.6125rem 7.5%;
+            padding: 4.32875rem 7.5% 7.6125rem 7.5%;
         }
     }
 

@@ -13,14 +13,13 @@ export default function Home() {
   useRestoreHomeScroll();
 
   return (
-    <>
+    <main>
       <Hero />
-      <Terminal />
       <Projects />
       <About />
       <Experience />
       <Mantra />
       <Testimonials />
-    </>
+    </main>
   );
 }

@@ -1,10 +1,7 @@
 import Link from 'next/link';
 import { styled } from 'styled-components';
 
-export const PageWrapper = styled.main`
-  padding-top: 6rem;
-  padding-bottom: 5rem;
-`;
+export const PageWrapper = styled.section``;
 
 export const Inner = styled.div`
   width: 90%;
@@ -20,7 +17,7 @@ export const BackLink = styled(Link)`
   color: #3b82f6;
   font-family: ${({ theme }) => theme.fonts.inter};
   font-size: clamp(0.8rem, 2vw, 0.9rem);
-  margin-bottom: 2.75rem;
+  margin-bottom: 1rem;
   transition: opacity 0.2s ease;
 
   &:hover {

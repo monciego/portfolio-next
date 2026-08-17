@@ -14,6 +14,7 @@ import {
   HeroTitle,
   RadialGradient,
 } from './hero.styles';
+import { Terminal } from '../terminal';
 
 export interface IHeroProps {}
 
@@ -50,6 +51,8 @@ export const Hero: React.FunctionComponent<IHeroProps> = () => {
         <HeroLinks href="/writings">my writings </HeroLinks>·
         <HeroLinks href="/book-list">book list </HeroLinks>
       </HeroLinksContainer>
+
+      <Terminal />
     </HeroContainer>
   );
 };
