@@ -40,7 +40,7 @@ export const ProjectTitle = styled.span`
   font-size: clamp(var(--min), var(--val), var(--max));
   --min: 1em;
   --val: 2.5vw;
-  --max: 1.2em;
+  --max: 1.25em;
   letter-spacing: 0;
   line-height: 1.375;
   font-weight: 600;
@@ -113,7 +113,7 @@ export const ProjectLinksContainer = styled.div<ProjectStyledProps>`
   margin-top: 1rem;
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.25rem;
 `;
 
 export const ProjectLinkContainer = styled.div<ProjectStyledProps>`
@@ -122,14 +122,15 @@ export const ProjectLinkContainer = styled.div<ProjectStyledProps>`
 
 export const ProjectLink = styled.a<ProjectStyledProps>`
   font-size: clamp(var(--min), var(--val), var(--max));
-  --min: 0.95em;
+  --min: 0.85em;
   --val: 2.5vw;
-  --max: 1em;
+  --max: 0.9em;
   display: flex;
   align-items: center;
   gap: 0.25rem;
   position: relative;
   z-index: 50;
+  font-family: ${({ theme }) => theme.fonts.mono};
 
   cursor: ${(props) => (props.disabled ? 'not-allowed' : 'cursor')};
   opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};

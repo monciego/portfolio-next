@@ -82,7 +82,7 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <CodeXml size={20} />
+            <CodeXml size={18} />
             Source Code
           </ProjectLink>
         </ProjectLinkContainer>
@@ -96,7 +96,7 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SquareArrowOutUpRight size={20} />
+            <SquareArrowOutUpRight size={18} />
             Live Site
           </ProjectLink>
         </ProjectLinkContainer>
