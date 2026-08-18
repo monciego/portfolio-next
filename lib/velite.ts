@@ -64,27 +64,27 @@ export const WRITING_CATEGORIES = [
   {
     key: 'blogs',
     label: 'Blogs',
-    description: 'Technical posts and tutorials',
+    description: 'Longer thoughts, ideas, and perspectives',
   },
   {
     key: 'reflections',
     label: 'Reflections',
-    description: 'Longer thoughts on learning and growth',
+    description: 'Thoughts and realizations from experience',
   },
   {
     key: 'notes',
     label: 'Notes',
-    description: 'Quick thoughts and observations',
+    description: 'Short ideas and things I’m exploring',
   },
   {
     key: 'journal',
     label: 'Journal',
-    description: 'Daily logs and personal updates',
+    description: 'Personal thoughts, experiences, and updates',
   },
   {
     key: 'poems',
     label: 'Poems',
-    description: 'Code poetry and creative writing',
+    description: 'Poems inspired by thoughts and feelings',
   },
 ] as const;
 

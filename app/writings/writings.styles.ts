@@ -44,7 +44,7 @@ export const Subtitle = styled.p`
 export const Layout = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2rem;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     flex-direction: row;
