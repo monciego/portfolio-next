@@ -22,7 +22,6 @@ interface Book {
 }
 
 const CURRENTLY_READING: Book[] = [
-  { title: 'Message in a Bottle', author: 'Nicholas Sparks' },
   { title: 'The Mountain Is You', author: 'Brianna Wiest' },
   { title: 'Everything Is F*cked: A Book About Hope', author: 'Mark Manson' },
   { title: 'The Lean Startup', author: 'Eric Ries' },
@@ -34,6 +33,7 @@ const CURRENTLY_READING: Book[] = [
 const BOOKS_READ: Book[] = [
   { title: 'Atomic Habits', author: 'James Clear' },
   { title: 'Deep Work', author: 'Cal Newport' },
+  { title: 'Message in a Bottle', author: 'Nicholas Sparks' },
 ];
 
 const BOOKS_TO_READ: Book[] = [
