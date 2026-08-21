@@ -22,12 +22,12 @@ interface Book {
 }
 
 const CURRENTLY_READING: Book[] = [
-  { title: 'The Mountain Is You', author: 'Brianna Wiest' },
-  { title: 'Everything Is F*cked: A Book About Hope', author: 'Mark Manson' },
-  { title: 'The Lean Startup', author: 'Eric Ries' },
+  { title: 'A Street Cat Named Bob', author: 'James Bowen' },
   { title: 'The Complete Book of Five Rings', author: 'Miyamoto Musashi' },
   { title: 'Wonder Woman: Warbringer', author: 'Leigh Bardugo' },
   { title: 'The Odyssey', author: 'Homer (Translated by Robert Fagles)' },
+  { title: 'The Lean Startup', author: 'Eric Ries' },
+  { title: 'Everything Is F*cked: A Book About Hope', author: 'Mark Manson' },
 ];
 
 const BOOKS_READ: Book[] = [
@@ -56,6 +56,7 @@ const BOOKS_TO_READ: Book[] = [
     title: 'A Philosophy of Software Design',
     author: 'John Ousterhout',
   },
+  { title: 'The Mountain Is You', author: 'Brianna Wiest' },
   { title: "Man's Search for Meaning", author: 'Viktor E. Frankl' },
   { title: 'Rich Dad Poor Dad', author: 'Robert T. Kiyosaki' },
   { title: "Can't Hurt Me", author: 'David Goggins' },
