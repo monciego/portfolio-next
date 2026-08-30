@@ -1,0 +1,162 @@
+---
+title: 'My Dev Workflow'
+date: '2026-08-30'
+slug: 'my-dev-workflow'
+excerpt: 'A look at the tools and workflow I use to write, test, learn, and stay focused.'
+category: 'blogs'
+---
+
+Lately, I have been simplifying the way I work.
+
+I used to think a good development setup meant finding the perfect editor, installing every useful extension, and constantly tweaking my environment. Eventually, I realized I enjoy something much simpler: a small set of tools that work well together and stay out of my way.
+
+Right now, my main development environment is built around **Linux, [Ghostty](https://ghostty.org/), [tmux](https://github.com/tmux/tmux), and [Neovim](https://neovim.io/)**.
+
+It is not a complicated setup. In fact, that is the point.
+
+## The Environment
+
+I use **Linux** as my operating system and **Ghostty** as my terminal emulator.
+
+Inside Ghostty, I use **tmux** to manage my terminal workspace. My main editor is **Neovim**, which runs inside a tmux window.
+
+The basic structure looks like this:
+
+```text
+Linux
+└── Ghostty
+    └── tmux
+        ├── Neovim
+        ├── terminal
+        └── other processes
+```
+
+This gives me a persistent workspace that I can organize around the way I work.
+
+## Ghostty
+
+Ghostty is my terminal.
+
+I keep the configuration fairly minimal and mostly care about things like the font, background, and general appearance.
+
+The background is shared with the rest of my environment so that Ghostty, tmux, and Neovim feel like parts of the same workspace instead of completely separate applications.
+
+That's pretty much it.
+
+I don't need my terminal to do much more than provide a good place to work.
+
+## tmux
+
+tmux is what ties everything together.
+
+Instead of opening multiple terminal windows, I have one tmux session with multiple windows and panes.
+
+For example, I might have:
+
+```text
+Window 1
+├── Neovim
+└── terminal
+
+Window 2
+└── development server
+
+Window 3
+└── notes / miscellaneous commands
+```
+
+I also use `h`, `j`, `k`, and `l` to move between panes, which matches how I already navigate in Neovim.
+
+That's about as far as I've gone with tmux. I could spend hours making it prettier, but at some point it is better to just use it.
+
+## Neovim
+
+Neovim is my main editor.
+
+My configuration is managed with [lazy.nvim](https://github.com/folke/lazy.nvim), and I keep the setup focused on the things I actually use: LSP, Git integration, navigation, diagnostics, statusline, and a few quality-of-life plugins.
+
+One thing I particularly like about this setup is that Neovim and tmux don't feel like separate systems.
+
+For example, I can have Neovim running in one pane and use tmux to manage another pane for a server, tests, or a shell.
+
+I also use [vim-test](https://github.com/vim-test/vim-test) with [Vimux](https://github.com/preservim/vimux) when I want to run tests through tmux. That lets me stay inside Neovim while still using a dedicated tmux pane for test output.
+
+It is a simple edit → run → inspect workflow.
+
+## Zed Is Still There
+
+Neovim is my main editor, but I haven't completely abandoned **[Zed](https://zed.dev/)**.
+
+There are times when I want something more graphical, or I simply don't want to configure something in Neovim.
+
+In those cases, I use Zed.
+
+I don't think using one editor exclusively is necessary. Neovim is my default, but Zed is still a useful tool to have around.
+
+## Obsidian for Notes
+
+My development environment isn't just about writing code.
+
+I keep my notes in **[Obsidian](https://obsidian.md/)**.
+
+That is where I write down things I'm learning, ideas I have, project notes, and random thoughts that I don't want to lose.
+
+It gives me a place to think without mixing everything into my code editor.
+
+For me, that separation is useful:
+
+```text
+Neovim  → code
+tmux    → workspace
+Ghostty → terminal
+Obsidian → notes
+```
+
+Each tool has a job.
+
+## Zen Browser for Flow State
+
+When I really need to focus, I use the **[Zen Browser](https://zen-browser.app/)**.
+
+I like using it as a kind of flow-state environment. Fewer distractions, fewer tabs fighting for attention, and a more deliberate browsing experience.
+
+If I'm learning something, I might have the documentation or a reference open there while keeping my code inside Neovim.
+
+It sounds small, but having a separate environment for focused work helps me mentally switch modes.
+
+## How I Set It Up
+
+The actual setup is pretty straightforward.
+
+My configuration files live in a personal **[dotfiles repository](https://github.com/monciego/dotfiles)**. Instead of keeping separate copies of my configuration in different places, I keep the real files in the repository.
+
+That means I can keep everything version-controlled, make changes in one place, and reproduce the setup on another machine.
+
+Nothing here is particularly complicated. The point of the dotfiles is simply to make my environment portable and easy to rebuild.
+
+## The Actual Workflow
+
+Most days, the workflow is basically this:
+
+```text
+Ghostty
+   ↓
+tmux
+   ↓
+Neovim
+   ↓
+write code
+   ↓
+run tests / commands in tmux
+   ↓
+check notes in Obsidian when needed
+   ↓
+use Zen Browser when I need focused research
+```
+
+It is a small ecosystem of tools that fit together.
+
+And that is probably the most important thing I've learned from configuring all of this:
+
+**The best development environment is not the one with the most tools. It's the one that makes it easy to start working.**
+
