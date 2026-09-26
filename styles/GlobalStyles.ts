@@ -134,8 +134,36 @@ export const GlobalStyles = createGlobalStyle`
         color: #F78F85;
     }
 
-    .terminal-output a {
+    /* Gap between a social icon and its link */
+    .terminal-output svg + a {
         padding-left: .5rem;
+    }
+
+    /* Bulleted output (projects, writings): fixed bullet column so bullets
+       line up and wrapped lines hang under the text, not the bullet */
+    .terminal-output .terminal-list {
+        list-style: none;
+        padding-left: 2rem;
+        margin-bottom: 0.85rem;
+    }
+
+    .terminal-output .terminal-list li {
+        display: grid;
+        grid-template-columns: 1.25rem 1fr;
+        margin-bottom: 0.5rem;
+        font-size: clamp(var(--min), var(--val), var(--max));
+        --min: 0.85em;
+        --val: 2.5vw;
+        --max: 1em;
+    }
+
+    .terminal-output .terminal-list li::before {
+        content: '•';
+    }
+
+    .terminal-output .terminal-list em {
+        font-style: normal;
+        color: #9ca3af;
     }
 
     .terminal-output span {

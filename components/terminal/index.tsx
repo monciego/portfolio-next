@@ -1,9 +1,16 @@
 'use client';
 
-import { projects, testimonials } from '@/lib/velite';
+import type { Testimonial } from '@/lib/velite';
 import { ABOUT_PARAGRAPHS } from '@/lib/portfolio-data';
-import { escapeHtml, sortProjects, sortTestimonials } from '@/lib/utils';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { escapeHtml, type ProjectSummary } from '@/lib/utils';
+import type { WritingSummary } from '@/lib/writing-categories';
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import {
   BlueText,
   Command,
@@ -42,6 +49,11 @@ const COMMANDS = [
     description: 'Discover and learn more about who I am.',
   },
   {
+    id: 7,
+    title: 'writings',
+    description: 'Read my latest reflections, blogs, journals, and poems.',
+  },
+  {
     id: 3,
     title: 'testimonials',
     description: 'Read what other people think about me.',
@@ -66,38 +78,66 @@ const SECTION_IDS: Record<string, string> = {
   'cd experience': 'experience',
 };
 
-// Pre-compute output HTML for data-driven commands so handleKeyDown never
-// has to sort or iterate — it just reads a plain string.
+// Output HTML for data-driven commands is built once (memoized in the
+// component) so handleKeyDown just reads a plain string.
 
-const PROJECTS_OUTPUT = (() => {
-  const sorted = sortProjects(projects);
-  let html = '';
-  for (const project of sorted) {
-    const url =
+interface ListItem {
+  // Pre-escaped HTML
+  html: string;
+  href?: string | null;
+  external?: boolean;
+}
+
+function buildList(items: ListItem[]): string {
+  const lis = items
+    .map(({ html, href, external }) => {
+      if (!href) return `<li><div>${html}</div></li>`;
+      const target = external
+        ? ' target="_blank" rel="noopener noreferrer"'
+        : '';
+      return `<li><a href="${href}"${target}>${html}</a></li>`;
+    })
+    .join('');
+  return `<ul class="terminal-list">${lis}</ul>`;
+}
+
+function buildProjectsOutput(projects: ProjectSummary[]): string {
+  const items: ListItem[] = projects.map((project) => ({
+    html: escapeHtml(project.subTitle),
+    href:
       !project.isLiveLinkDisabled && project.liveLink
         ? project.liveLink
         : !project.isSourceCodeLinkDisabled && project.sourceCodeLink
           ? project.sourceCodeLink
-          : null;
+          : null,
+    external: true,
+  }));
+  items.push({
+    html: 'Want to see more? → github.com/monciego',
+    href: 'https://github.com/monciego',
+    external: true,
+  });
+  return buildList(items);
+}
 
-    html += url
-      ? `<h4><a target="_blank" rel="noopener noreferrer" href="${url}">• ${project.subTitle}</a></h4>`
-      : `<h4>• ${project.subTitle}</h4>`;
-  }
-  html += `<h4><a target="_blank" rel="noopener noreferrer" href="https://github.com/monciego">• Want to see more? → github.com/monciego</a></h4>`;
-  return html;
-})();
+function buildWritingsOutput(writings: WritingSummary[]): string {
+  const items: ListItem[] = writings.map((writing) => ({
+    html: `${escapeHtml(writing.title)} <em>(${writing.category})</em>`,
+    href: `/writings/${writing.category}/${writing.slug}`,
+  }));
+  items.push({ html: 'Read all writings → /writings', href: '/writings' });
+  return buildList(items);
+}
 
 const ABOUT_OUTPUT = (() => {
   return ABOUT_PARAGRAPHS.map((p) => `<h3>${p}</h3>`).join('');
 })();
 
-const TESTIMONIALS_OUTPUT = (() => {
-  const sorted = sortTestimonials(testimonials);
-  return sorted
+function buildTestimonialsOutput(testimonials: Testimonial[]): string {
+  return testimonials
     .map((t) => `<h3>${t.rawBody.trim()}<h4>— ${t.name}, ${t.title}</h4></h3>`)
     .join('');
-})();
+}
 
 const SOCIALS_OUTPUT = (() => {
   let html = '';
@@ -126,7 +166,30 @@ const SOCIALS_OUTPUT = (() => {
 // Component
 // ---------------------------------------------------------------------------
 
-export const Terminal: React.FunctionComponent = () => {
+interface TerminalProps {
+  // All expected pre-sorted (projects/testimonials by date, writings newest first)
+  projects: ProjectSummary[];
+  testimonials: Testimonial[];
+  writings: WritingSummary[];
+}
+
+export const Terminal: React.FunctionComponent<TerminalProps> = ({
+  projects,
+  testimonials,
+  writings,
+}) => {
+  const writingsOutput = useMemo(
+    () => buildWritingsOutput(writings),
+    [writings]
+  );
+  const projectsOutput = useMemo(
+    () => buildProjectsOutput(projects),
+    [projects]
+  );
+  const testimonialsOutput = useMemo(
+    () => buildTestimonialsOutput(testimonials),
+    [testimonials]
+  );
   const [commandInput, setCommandInput] = useState('');
   const [showCommands, setShowCommands] = useState(false);
   const [commandOutput, setCommandOutput] = useState('');
@@ -187,15 +250,19 @@ export const Terminal: React.FunctionComponent = () => {
 
       switch (trimmed) {
         case 'projects':
-          content = PROJECTS_OUTPUT;
+          content = projectsOutput;
           break;
 
         case 'about':
           content = ABOUT_OUTPUT;
           break;
 
+        case 'writings':
+          content = writingsOutput;
+          break;
+
         case 'testimonials':
-          content = TESTIMONIALS_OUTPUT;
+          content = testimonialsOutput;
           break;
 
         case 'socials':
@@ -211,7 +278,7 @@ export const Terminal: React.FunctionComponent = () => {
           `${prev}<h2><span>> </span>${escapeHtml(rawInput)}</h2>${content}`
       );
     },
-    [commandInput]
+    [commandInput, projectsOutput, testimonialsOutput, writingsOutput]
   );
 
   return (
