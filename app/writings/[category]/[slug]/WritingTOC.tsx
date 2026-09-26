@@ -2,10 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import type {
-  WritingCategory,
-  WritingSummary,
-} from '@/lib/writing-categories';
+import type { WritingCategory, WritingSummary } from '@/lib/writing-categories';
 import {
   TOCSidebar,
   TOCLabel,

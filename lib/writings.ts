@@ -27,12 +27,7 @@ export const WRITINGS: WritingSummary[] = allWritings.map((w) => ({
 }));
 
 export { WRITING_CATEGORIES, allWritings };
-export type {
-  Writing,
-  WritingCategory,
-  WritingCategoryConfig,
-  WritingSummary,
-};
+export type { Writing, WritingCategory, WritingCategoryConfig, WritingSummary };
 
 /**
  * Get writings for a specific category.
@@ -81,6 +76,9 @@ export function getWritingSlugsByCategory(category: WritingCategory) {
 /**
  * Strip the compiled MDX body so list views don't ship it to the client.
  */
-export function toSummary({ content: _content, ...rest }: Writing): WritingSummary {
+export function toSummary({
+  content: _content,
+  ...rest
+}: Writing): WritingSummary {
   return rest;
 }

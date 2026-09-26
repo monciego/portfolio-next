@@ -46,6 +46,10 @@ export const WRITING_CATEGORIES = [
     label: 'Poems',
     description: 'Poems inspired by thoughts and feelings',
   },
-] as const satisfies readonly { key: WritingCategory; label: string; description: string }[];
+] as const satisfies readonly {
+  key: WritingCategory;
+  label: string;
+  description: string;
+}[];
 
 export type WritingCategoryConfig = (typeof WRITING_CATEGORIES)[number];
