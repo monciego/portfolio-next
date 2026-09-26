@@ -18,6 +18,8 @@ const projects = defineCollection({
       isSourceCodeLinkDisabled: s.boolean().default(false).optional(),
       // Shown in the home page's projects section; everything is on /projects
       featured: s.boolean().default(false),
+      // Plain-text summary of the body, used as the meta description
+      excerpt: s.excerpt({ length: 160 }),
       content: s.mdx(),
     })
     .transform((data) => ({

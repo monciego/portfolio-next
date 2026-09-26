@@ -1,3 +1,5 @@
+import { pageMetadata } from '@/lib/seo';
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import {
   getWritingsByCategory,
@@ -10,6 +12,20 @@ import { CategoryPageClient } from './CategoryPageClient';
 
 interface CategoryPageProps {
   params: Promise<{ category: string }>;
+}
+
+export async function generateMetadata({
+  params,
+}: CategoryPageProps): Promise<Metadata> {
+  const { category } = await params;
+  const config = WRITING_CATEGORIES.find((c) => c.key === category);
+  if (!config) return {};
+
+  return pageMetadata({
+    title: `${config.label} — Writings`,
+    description: `${config.description}. ${config.label} by Jericho Bantiquete.`,
+    path: `/writings/${config.key}`,
+  });
 }
 
 export async function generateStaticParams() {

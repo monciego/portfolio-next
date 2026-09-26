@@ -1,4 +1,6 @@
+import { pageMetadata, toDescription } from '@/lib/seo';
 import { projects } from '@/lib/velite';
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Project from './project';
 
@@ -13,6 +15,25 @@ async function getProjectFromParams(params: { slug: string[] }) {
   const project = projects.find((project) => project.slugAsParams === slug);
 
   return project;
+}
+
+export async function generateMetadata({
+  params,
+}: ProjectPageProps): Promise<Metadata> {
+  const project = await getProjectFromParams(await params);
+  if (!project) return {};
+
+  return pageMetadata({
+    title: project.title,
+    description: toDescription(project.excerpt),
+    path: `/${project.slug}`,
+    image: {
+      url: project.coverImage.src,
+      width: project.coverImage.width,
+      height: project.coverImage.height,
+      alt: project.title,
+    },
+  });
 }
 
 export async function generateStaticParams(): Promise<{ slug: string[] }[]> {

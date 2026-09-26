@@ -116,7 +116,9 @@ export default function BookListPage() {
         <BackLink href="/">← back home</BackLink>
 
         <Header>
-          <SectionTitle $number="">book list</SectionTitle>
+          <SectionTitle as="h1" $number="">
+            book list
+          </SectionTitle>
           <SectionDetails>
             Books I&apos;ve read and plan to read.
           </SectionDetails>

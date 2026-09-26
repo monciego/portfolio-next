@@ -22,7 +22,7 @@ const Project = ({ project }: ProjectProps) => {
     <main>
       <ProjectDetailsContainer className="container">
         <ProjectSubtitle>{project.subTitle}</ProjectSubtitle>
-        <ProjectDetailsTitle>{project.title}</ProjectDetailsTitle>
+        <ProjectDetailsTitle as="h1">{project.title}</ProjectDetailsTitle>
         <ProjectDetailImageContainer>
           <ProjectDetailImage
             src={project.coverImage}

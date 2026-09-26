@@ -2,6 +2,13 @@ import { Footer } from '@/components/footer';
 import Navbar from '@/components/navbar';
 import { ThemeProvider } from '@/providers/theme-provider';
 import { theme } from '@/styles/theme';
+import {
+  AUTHOR,
+  HOME_DESCRIPTION,
+  SITE_NAME,
+  SITE_URL,
+  pageMetadata,
+} from '@/lib/seo';
 import { Metadata } from 'next';
 import localFont from 'next/font/local';
 
@@ -92,14 +99,18 @@ const fira_code = localFont({
   variable: '--font-fira-code',
 });
 
+// Site-wide defaults. No canonical here: it would be inherited by every page
+// that doesn't set its own, marking them all as duplicates of the home page.
 export const metadata: Metadata = {
-  title: 'Jericho Bantiquete Portfolio',
-  description:
-    'Jericho Bantiquete is a developer based in Philippines who specializes in building responsive websites.',
-  metadataBase: new URL('https://jerichobantiquete.vercel.app'),
-  authors: [{ name: 'Jericho P. Bantiquete' }],
-  creator: 'Jericho P. Bantiquete',
-  publisher: 'Jericho P. Bantiquete',
+  ...pageMetadata({ description: HOME_DESCRIPTION }),
+  title: {
+    default: SITE_NAME,
+    template: '%s | Jericho Bantiquete',
+  },
+  metadataBase: new URL(SITE_URL),
+  authors: [{ name: AUTHOR }],
+  creator: AUTHOR,
+  publisher: AUTHOR,
   keywords: [
     'portfolio',
     'front-end portfolio',
@@ -109,31 +120,6 @@ export const metadata: Metadata = {
     'web developer portfolio',
     'monciego',
   ],
-  openGraph: {
-    title: 'Jericho Bantiquete Portfolio',
-    description:
-      'Jericho Bantiquete is a software engineer based in Philippines who specializes in building responsive websites.',
-    url: 'https://jerichobantiquete.vercel.app/',
-    siteName: 'Jericho Bantiquete Portfolio',
-    images: [
-      {
-        url: 'https://i.ibb.co/D7ZpgxX/jericho-bantiquete.png',
-        width: 1200,
-        height: 630,
-        alt: 'Jericho Bantiquete Portfolio',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Jericho Bantiquete | Software Engineer',
-    description:
-      'Jericho Bantiquete is a front-end developer based in Philippines who specializes in building responsive websites.',
-    creator: '@monciego',
-    images: ['https://i.ibb.co/D7ZpgxX/jericho-bantiquete.png'],
-  },
   robots: {
     index: true,
     follow: true,
@@ -144,9 +130,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  alternates: {
-    canonical: 'https://jerichobantiquete.vercel.app',
   },
 };
 

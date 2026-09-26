@@ -45,7 +45,7 @@ export function WritingClient({
           <Content>
             <Header>
               <DateDisplay>{formatDate(date)}</DateDisplay>
-              <Title>{title}</Title>
+              <Title as="h1">{title}</Title>
             </Header>
             <MDXContent code={content} />
           </Content>

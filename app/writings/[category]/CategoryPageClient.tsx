@@ -80,7 +80,7 @@ export function CategoryPageClient({
           {/* ── Writings list ── */}
           <Content>
             <Header>
-              <CategoryTitle>{categoryConfig.label}</CategoryTitle>
+              <CategoryTitle as="h1">{categoryConfig.label}</CategoryTitle>
               <Subtitle>{categoryConfig.description}</Subtitle>
             </Header>
             {writings.map((piece) => (

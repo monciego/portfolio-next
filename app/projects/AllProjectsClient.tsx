@@ -24,7 +24,9 @@ export function AllProjectsClient({ projects }: AllProjectsClientProps) {
         <BackLink href="/">← Back Home</BackLink>
 
         <Header>
-          <SectionTitle $number={''}>projects</SectionTitle>
+          <SectionTitle as="h1" $number={''}>
+            projects
+          </SectionTitle>
           <SectionDetails>
             Everything I&apos;ve built — client work, systems, and side
             projects.

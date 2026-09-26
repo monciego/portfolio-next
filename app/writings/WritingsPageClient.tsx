@@ -59,7 +59,9 @@ export function WritingsPageClient({
         <BackLink href="/">← Back Home</BackLink>
 
         <Header>
-          <SectionTitle $number={''}>writings</SectionTitle>
+          <SectionTitle as="h1" $number={''}>
+            writings
+          </SectionTitle>
           <SectionDetails>
             A collection of reflections, blogs, journals, notes, and poems.
           </SectionDetails>
