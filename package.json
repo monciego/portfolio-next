@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "lucide-react": "^1.0.0",
-    "next": "^15.3.9",
+    "next": "^15.5.24",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-parallax": "^3.5.2",
