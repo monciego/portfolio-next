@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import {
   getWritingsByCategory,
+  toSummary,
   WRITING_CATEGORIES,
   type WritingCategory,
   type WritingCategoryConfig,
@@ -24,7 +25,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     | undefined;
   if (!categoryConfig) notFound();
 
-  const writings = getWritingsByCategory(catKey);
+  const writings = getWritingsByCategory(catKey).map(toSummary);
 
   return (
     <CategoryPageClient

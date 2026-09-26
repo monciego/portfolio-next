@@ -10,15 +10,17 @@ import {
   PageWrapper,
   Title,
 } from '../../writings.styles';
+import type { WritingCategory, WritingSummary } from '@/lib/writing-categories';
 import { WritingTOC } from './WritingTOC';
 
 interface WritingClientProps {
-  category: string;
+  category: WritingCategory;
   slug: string;
   title: string;
   date: string;
   excerpt: string;
   content: string;
+  tocWritings: WritingSummary[];
 }
 
 export function WritingClient({
@@ -27,6 +29,7 @@ export function WritingClient({
   title,
   date,
   content,
+  tocWritings,
 }: WritingClientProps) {
   return (
     <main className="container">
@@ -34,7 +37,11 @@ export function WritingClient({
         <BackLink href={`/writings/${category}`}>← Back to {category}</BackLink>
 
         <Layout>
-          <WritingTOC category={category as any} currentSlug={slug} />
+          <WritingTOC
+            category={category}
+            currentSlug={slug}
+            writings={tocWritings}
+          />
           <Content>
             <Header>
               <DateDisplay>{formatDate(date)}</DateDisplay>

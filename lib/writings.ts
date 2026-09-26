@@ -5,17 +5,20 @@ import {
   poems,
   journal,
   allWritings,
+} from '@/lib/velite';
+import {
   WRITING_CATEGORIES,
   type Writing,
   type WritingCategory,
   type WritingCategoryConfig,
-} from '@/lib/velite';
+  type WritingSummary,
+} from '@/lib/writing-categories';
 
 /**
  * All writings across all categories — used by the main writings index page
  * to display the TOC and link to individual writing pages.
  */
-export const WRITINGS = allWritings.map((w) => ({
+export const WRITINGS: WritingSummary[] = allWritings.map((w) => ({
   slug: w.slug,
   title: w.title,
   date: w.date,
@@ -24,12 +27,17 @@ export const WRITINGS = allWritings.map((w) => ({
 }));
 
 export { WRITING_CATEGORIES, allWritings };
-export type { Writing, WritingCategory, WritingCategoryConfig };
+export type {
+  Writing,
+  WritingCategory,
+  WritingCategoryConfig,
+  WritingSummary,
+};
 
 /**
  * Get writings for a specific category.
  */
-export function getWritingsByCategory(category: WritingCategory) {
+export function getWritingsByCategory(category: WritingCategory): Writing[] {
   switch (category) {
     case 'blogs':
       return blogs;
@@ -68,4 +76,11 @@ export function getAllWritingSlugs() {
  */
 export function getWritingSlugsByCategory(category: WritingCategory) {
   return getWritingsByCategory(category).map((w) => w.slug);
+}
+
+/**
+ * Strip the compiled MDX body so list views don't ship it to the client.
+ */
+export function toSummary({ content: _content, ...rest }: Writing): WritingSummary {
+  return rest;
 }

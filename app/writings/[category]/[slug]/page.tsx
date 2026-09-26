@@ -1,5 +1,9 @@
 import { notFound } from 'next/navigation';
-import { getWriting, getWritingsByCategory } from '@/lib/writings';
+import {
+  getWriting,
+  getWritingsByCategory,
+  toSummary,
+} from '@/lib/writings';
 import { WritingClient } from './WritingClient';
 
 interface WritingPageProps {
@@ -41,6 +45,7 @@ export default async function WritingPage({ params }: WritingPageProps) {
       date={writing.date}
       excerpt={writing.excerpt || ''}
       content={writing.content}
+      tocWritings={getWritingsByCategory(writing.category).map(toSummary)}
     />
   );
 }

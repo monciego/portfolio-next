@@ -44,3 +44,15 @@ export function escapeHtml(str: string): string {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
 }
+
+/**
+ * Project metadata without the compiled MDX body — what the home page needs.
+ */
+export type ProjectSummary = Omit<Project, 'content'>;
+
+export function toProjectSummary({
+  content: _content,
+  ...rest
+}: Project): ProjectSummary {
+  return rest;
+}

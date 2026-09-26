@@ -1,10 +1,10 @@
 'use client';
 
-import {
-  getWritingsByCategory,
-  type WritingCategory,
-  type WritingCategoryConfig,
-} from '@/lib/writings';
+import type {
+  WritingCategory,
+  WritingCategoryConfig,
+  WritingSummary,
+} from '@/lib/writing-categories';
 import Link from 'next/link';
 import { useState } from 'react';
 import {
@@ -30,7 +30,7 @@ import {
 interface CategoryPageClientProps {
   category: WritingCategory;
   categoryConfig: WritingCategoryConfig;
-  writings: ReturnType<typeof getWritingsByCategory>;
+  writings: WritingSummary[];
 }
 
 export function CategoryPageClient({

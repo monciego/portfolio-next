@@ -7,6 +7,12 @@ import reflectionsJson from '../.velite/reflections.json';
 import notesJson from '../.velite/notes.json';
 import poemsJson from '../.velite/poems.json';
 import journalJson from '../.velite/journal.json';
+import {
+  WRITING_CATEGORIES,
+  type Writing,
+  type WritingCategory,
+  type WritingCategoryConfig,
+} from './writing-categories';
 
 interface WritingRaw {
   title: string;
@@ -20,7 +26,10 @@ function stripPrefix(slug: string, prefix: string): string {
   return slug.replace(new RegExp(`^${prefix}/`), '');
 }
 
-function processWritings(raw: WritingRaw[], category: string) {
+function processWritings(
+  raw: WritingRaw[],
+  category: WritingCategory
+): Writing[] {
   return raw.map((w) => ({
     ...w,
     slug: stripPrefix(stripPrefix(w.slug, 'writings'), category),
@@ -43,50 +52,13 @@ export const journal = processWritings(journalJson as WritingRaw[], 'journal');
 
 export type { Project, Testimonial };
 
-export type Writing = {
-  title: string;
-  date: string;
-  slug: string;
-  excerpt?: string;
-  content: string;
-  category: 'blogs' | 'reflections' | 'notes' | 'poems' | 'journal';
-};
+export { WRITING_CATEGORIES };
+export type { Writing, WritingCategory, WritingCategoryConfig };
 
-export const allWritings = [
+export const allWritings: Writing[] = [
   ...blogs,
   ...reflections,
   ...notes,
   ...poems,
   ...journal,
 ];
-
-export const WRITING_CATEGORIES = [
-  {
-    key: 'blogs',
-    label: 'Blogs',
-    description: 'Longer thoughts, ideas, and perspectives',
-  },
-  {
-    key: 'reflections',
-    label: 'Reflections',
-    description: 'Thoughts and realizations from experience',
-  },
-  {
-    key: 'notes',
-    label: 'Notes',
-    description: 'Short ideas and things I’m exploring',
-  },
-  {
-    key: 'journal',
-    label: 'Journal',
-    description: 'Personal thoughts, experiences, and updates',
-  },
-  {
-    key: 'poems',
-    label: 'Poems',
-    description: 'Poems inspired by thoughts and feelings',
-  },
-] as const;
-
-export type WritingCategory = (typeof WRITING_CATEGORIES)[number]['key'];
-export type WritingCategoryConfig = (typeof WRITING_CATEGORIES)[number];

@@ -2,7 +2,10 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { getWritingsByCategory, type WritingCategory } from '@/lib/writings';
+import type {
+  WritingCategory,
+  WritingSummary,
+} from '@/lib/writing-categories';
 import {
   TOCSidebar,
   TOCLabel,
@@ -15,11 +18,15 @@ import {
 interface WritingTOCProps {
   category: WritingCategory;
   currentSlug: string;
+  writings: WritingSummary[];
 }
 
-export function WritingTOC({ category, currentSlug }: WritingTOCProps) {
+export function WritingTOC({
+  category,
+  currentSlug,
+  writings,
+}: WritingTOCProps) {
   const [tocOpen, setTocOpen] = useState(false);
-  const writings = getWritingsByCategory(category);
 
   return (
     <TOCSidebar>
