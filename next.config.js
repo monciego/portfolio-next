@@ -2,6 +2,8 @@ process.env.NEXT_TELEMETRY_DISABLED = '1';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Pin the project root so stray lockfiles in parent folders aren't picked up
+  outputFileTracingRoot: __dirname,
   compiler: {
     // ssr and displayName are configured by default
     styledComponents: true,
