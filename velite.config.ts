@@ -16,6 +16,8 @@ const projects = defineCollection({
       liveLink: s.string().max(99).optional(),
       isLiveLinkDisabled: s.boolean().default(false).optional(),
       isSourceCodeLinkDisabled: s.boolean().default(false).optional(),
+      // Shown in the home page's projects section; everything is on /projects
+      featured: s.boolean().default(false),
       content: s.mdx(),
     })
     .transform((data) => ({

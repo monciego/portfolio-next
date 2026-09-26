@@ -1,13 +1,21 @@
-import { projects } from '@/lib/velite';
-import { sortProjects } from '@/lib/utils';
-import React, { useMemo } from 'react';
+import type { ProjectSummary } from '@/lib/utils';
+import { saveHomeScroll } from '@/lib/use-scroll-restoration';
+import React from 'react';
 import { SectionHeading } from '../ui/section-heading';
 import ProjectList from './project-list';
-import { ProjectContainer, ProjectListContainer } from './projects.styles';
+import {
+  ProjectContainer,
+  ProjectListContainer,
+  ViewMoreContainer,
+  ViewMoreLink,
+} from './projects.styles';
 
-const Projects: React.FunctionComponent = () => {
-  const sortedProjects = useMemo(() => sortProjects(projects), []);
+interface ProjectsProps {
+  // Featured projects only, expected pre-sorted by date
+  projects: ProjectSummary[];
+}
 
+const Projects: React.FunctionComponent<ProjectsProps> = ({ projects }) => {
   return (
     <ProjectContainer id="projects" className="container">
       <SectionHeading
@@ -20,7 +28,7 @@ const Projects: React.FunctionComponent = () => {
 
       {/* First two projects are above the fold — prioritise their images */}
       <ProjectListContainer>
-        {sortedProjects.slice(0, 2).map((project) => (
+        {projects.slice(0, 2).map((project) => (
           <ProjectList
             key={project.slug}
             subTitle={project.subTitle}
@@ -33,6 +41,7 @@ const Projects: React.FunctionComponent = () => {
             preloadImage={true}
             isLiveLinkDisabled={project.isLiveLinkDisabled}
             isSourceCodeLinkDisabled={project.isSourceCodeLinkDisabled}
+            onNavigate={saveHomeScroll}
           />
         ))}
       </ProjectListContainer>
@@ -41,7 +50,7 @@ const Projects: React.FunctionComponent = () => {
         style={{ marginTop: '1rem' }}
         $templateColumns="repeat(3, minmax(0, 1fr))"
       >
-        {sortedProjects.slice(2).map((project) => (
+        {projects.slice(2).map((project) => (
           <ProjectList
             key={project.slug}
             subTitle={project.subTitle}
@@ -54,9 +63,14 @@ const Projects: React.FunctionComponent = () => {
             preloadImage={false}
             isLiveLinkDisabled={project.isLiveLinkDisabled}
             isSourceCodeLinkDisabled={project.isSourceCodeLinkDisabled}
+            onNavigate={saveHomeScroll}
           />
         ))}
       </ProjectListContainer>
+
+      <ViewMoreContainer>
+        <ViewMoreLink href="/projects">View more projects →</ViewMoreLink>
+      </ViewMoreContainer>
     </ProjectContainer>
   );
 };

@@ -1,4 +1,7 @@
 import { FolderClosedIcon, User2Icon } from 'lucide-react';
+import type { ProjectSummary } from '@/lib/utils';
+import type { Testimonial } from '@/lib/velite';
+import type { WritingSummary } from '@/lib/writing-categories';
 import React from 'react';
 import {
   ActionButton,
@@ -16,9 +19,17 @@ import {
 } from './hero.styles';
 import { Terminal } from '../terminal';
 
-export interface IHeroProps {}
+export interface IHeroProps {
+  projects: ProjectSummary[];
+  testimonials: Testimonial[];
+  writings: WritingSummary[];
+}
 
-export const Hero: React.FunctionComponent<IHeroProps> = () => {
+export const Hero: React.FunctionComponent<IHeroProps> = ({
+  projects,
+  testimonials,
+  writings,
+}) => {
   return (
     <HeroContainer>
       <RadialGradient />
@@ -52,7 +63,11 @@ export const Hero: React.FunctionComponent<IHeroProps> = () => {
         <HeroLinks href="/book-list">book list </HeroLinks>
       </HeroLinksContainer>
 
-      <Terminal />
+      <Terminal
+        projects={projects}
+        testimonials={testimonials}
+        writings={writings}
+      />
     </HeroContainer>
   );
 };

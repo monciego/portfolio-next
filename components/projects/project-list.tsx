@@ -1,6 +1,5 @@
 'use client';
 
-import { saveHomeScroll } from '@/lib/use-scroll-restoration';
 import { CodeXml, SquareArrowOutUpRight } from 'lucide-react';
 import type { StaticImageData } from 'next/image';
 import Link from 'next/link';
@@ -30,6 +29,7 @@ export interface IProjectListProps {
   preloadImage: boolean;
   isLiveLinkDisabled?: boolean;
   isSourceCodeLinkDisabled?: boolean;
+  onNavigate?: () => void;
 }
 
 const ProjectList: React.FunctionComponent<IProjectListProps> = ({
@@ -43,10 +43,11 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
   preloadImage,
   isLiveLinkDisabled,
   isSourceCodeLinkDisabled,
+  onNavigate,
 }) => {
   return (
     <ProjectStyledContainer>
-      <Link href={`${slug}`} onClick={saveHomeScroll}>
+      <Link href={`/${slug}`} onClick={onNavigate}>
         <ProjectImageContainer>
           <StyledProjectImage
             src={coverImage}
@@ -54,6 +55,8 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
             sizes="80vw"
             fill
             style={{ objectFit: 'cover' }}
+            // Velite images carry a blurDataURL; plain string srcs don't
+            placeholder={typeof coverImage === 'string' ? 'empty' : 'blur'}
             priority={preloadImage ? true : false}
           />
           <ProjectTransitionImage
@@ -68,7 +71,7 @@ const ProjectList: React.FunctionComponent<IProjectListProps> = ({
       </Link>
       <CategoryLabel>{subTitle}</CategoryLabel>
       <ProjectTitleContainer>
-        <Link href={`${slug}`} onClick={saveHomeScroll}>
+        <Link href={`/${slug}`} onClick={onNavigate}>
           <ProjectTitle>{title}</ProjectTitle>
         </Link>
       </ProjectTitleContainer>

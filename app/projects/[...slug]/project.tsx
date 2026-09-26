@@ -29,6 +29,7 @@ const Project = ({ project }: ProjectProps) => {
             alt={`Cover Image for ${project.title}`}
             width={1150}
             height={530}
+            placeholder="blur"
             priority
           />
         </ProjectDetailImageContainer>
@@ -36,9 +37,7 @@ const Project = ({ project }: ProjectProps) => {
           <MDXContent code={project.content} />
 
           <LinkContainer>
-            <Link href="/" scroll={false}>
-              ← View more projects
-            </Link>
+            <Link href="/projects">← View all projects</Link>
           </LinkContainer>
         </ContentContainer>
       </ProjectDetailsContainer>

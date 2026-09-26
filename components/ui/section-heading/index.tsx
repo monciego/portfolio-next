@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import {
   SectionDetails,
@@ -26,7 +27,11 @@ export const SectionHeading: React.FunctionComponent<ISectionHeadingProps> = ({
       <SectionTitle $number={titleNumber}>{sectionTitle}</SectionTitle>
       <SectionDetails>
         {sectionDetails}{' '}
-        <SectionHeadingLink href={sectionHeadingLink}>
+        <SectionHeadingLink
+          href={sectionHeadingLink}
+          // Client-side navigation for internal routes
+          as={sectionHeadingLink?.startsWith('/') ? Link : undefined}
+        >
           {sectionHeadingLinkContent}
         </SectionHeadingLink>
       </SectionDetails>

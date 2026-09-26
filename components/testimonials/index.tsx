@@ -1,6 +1,5 @@
-import { testimonials } from '@/lib/velite';
-import { sortTestimonials } from '@/lib/utils';
-import React, { useMemo } from 'react';
+import type { Testimonial } from '@/lib/velite';
+import React from 'react';
 import { SectionHeading } from '../ui/section-heading';
 import { TestimonialCard } from './testimonial-card';
 import {
@@ -8,9 +7,14 @@ import {
   TestimonialsContainer,
 } from './testimonials.styles';
 
-export const Testimonials: React.FunctionComponent = () => {
-  const sortedTestimonials = useMemo(() => sortTestimonials(testimonials), []);
+interface TestimonialsProps {
+  // Expected pre-sorted by date
+  testimonials: Testimonial[];
+}
 
+export const Testimonials: React.FunctionComponent<TestimonialsProps> = ({
+  testimonials,
+}) => {
   return (
     <TestimonialsContainer id="testimonials" className="container">
       <SectionHeading
@@ -20,7 +24,7 @@ export const Testimonials: React.FunctionComponent = () => {
       />
 
       <TestimonialCardsContainer>
-        {sortedTestimonials.map((testimonial) => (
+        {testimonials.map((testimonial) => (
           <TestimonialCard key={testimonial.date} {...testimonial} />
         ))}
       </TestimonialCardsContainer>

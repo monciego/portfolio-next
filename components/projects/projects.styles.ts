@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 interface ProjectStyledProps {
@@ -171,4 +172,23 @@ export const ProjectLink = styled.a<ProjectStyledProps>`
 
 export const Dot = styled.span`
   margin: 0 0.5rem;
+`;
+
+export const ViewMoreContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+`;
+
+export const ViewMoreLink = styled(Link)`
+  font-family: ${({ theme }) => theme.fonts.mono};
+  font-size: 0.9rem;
+  color: ${({ theme }) => theme.colors.lightViolet};
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.75;
+  }
 `;
