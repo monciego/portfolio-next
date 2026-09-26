@@ -38,7 +38,16 @@ export const Hero: React.FunctionComponent<IHeroProps> = ({
         indie software <br /> developer
       </HeroTitle>
       <HeroSubTitle>
-        I <span className="change-text"></span>{' '}
+        {/* The animated verb is CSS ::before content, which crawlers and
+            screen readers don't reliably read — so the real word is in the
+            HTML (visually hidden) and the animation is aria-hidden.
+            Kept inside one wrapper span so the .responsive letters'
+            nth-of-type animation delays below don't shift. */}
+        I{' '}
+        <span>
+          <span className="change-text" aria-hidden="true"></span>
+          <span className="sr-only">create</span>
+        </span>{' '}
         <span className="responsive">t</span>
         <span className="responsive">h</span>
         <span className="responsive">i</span>

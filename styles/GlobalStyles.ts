@@ -176,6 +176,20 @@ export const GlobalStyles = createGlobalStyle`
         animation: change infinite 5s;
     }
 
+    /* Visually hidden but present in the HTML for crawlers and screen
+       readers, e.g. the real word behind the CSS-animated .change-text */
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
     .mdx-blockquote p {
         all: unset;  /* Resets all styles */
         display: block;
