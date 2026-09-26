@@ -34,6 +34,7 @@ export const TestimonialCard: React.FunctionComponent<
               alt={name}
               fill
               style={{ objectFit: 'cover' }}
+              placeholder="blur"
               priority={false}
             />
           </AvatarContainer>

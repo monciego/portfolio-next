@@ -19,6 +19,7 @@ export const AboutImage: React.FunctionComponent<IAboutImageProps> = () => {
           sizes="80vw"
           fill
           style={{ objectFit: 'cover' }}
+          placeholder="blur"
           priority={false}
         />
       </ImageWrapper>
@@ -29,6 +30,7 @@ export const AboutImage: React.FunctionComponent<IAboutImageProps> = () => {
           sizes="80vw"
           fill
           style={{ objectFit: 'cover' }}
+          placeholder="blur"
           priority={false}
         />
       </ImageWrapper>
@@ -39,6 +41,7 @@ export const AboutImage: React.FunctionComponent<IAboutImageProps> = () => {
           sizes="80vw"
           fill
           style={{ objectFit: 'cover' }}
+          placeholder="blur"
           priority={false}
         />
       </ImageWrapper>
