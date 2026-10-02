@@ -1,5 +1,6 @@
 {
   "extends": ["next", "next/core-web-vitals", "eslint:recommended"],
+  "ignorePatterns": [".next", ".velite", "public", "next-env.d.ts"],
   "globals": {
     "React": "readonly"
   },

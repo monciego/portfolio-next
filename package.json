@@ -18,7 +18,7 @@
     "dev": "next dev",
     "build": "run-s build:*",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prettier": "prettier --write .",
     "prepare": "husky"
   },
