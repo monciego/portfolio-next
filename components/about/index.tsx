@@ -53,16 +53,14 @@ export const About: React.FunctionComponent<IAboutProps> = () => {
         {/* ── Tools ── */}
         <AboutSectionTitle>Tools</AboutSectionTitle>
         <AboutDescription>
-          I use{' '}
-          <StyledLink
-            href="https://github.com/monciego/dotfiles"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vim and Zed
-          </StyledLink>{' '}
-          as my primary editors. I&apos;ve also been gradually building and
-          maintaining my own{' '}
+          My development environment is built around Linux, Ghostty, tmux, and
+          Neovim, with Zed still around for when I want something more
+          graphical. I keep my notes in Obsidian and use Zen Browser when I need
+          to focus. I wrote more about this setup in{' '}
+          <StyledNextLink href="/writings/blogs/my-dev-workflow">
+            My Dev Workflow
+          </StyledNextLink>
+          . I&apos;ve also been gradually building and maintaining my own{' '}
           <StyledLink
             href="https://github.com/monciego/dotfiles"
             target="_blank"
